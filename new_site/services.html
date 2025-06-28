@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/lotus_services_hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .service-card .card-header i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card .card-header h3 {
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        .service-card .card-body {
+            padding: 30px;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 20px;
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* New styles for enhanced service cards */
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .service-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .service-benefits {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .service-benefits h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .service-benefits ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .service-benefits li {
+            margin-bottom: 5px;
+        }
+        
+        .service-tag {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-card .quote {
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .testimonial-card .quote:before {
+            content: '"';
+            font-size: 2rem;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            color: var(--accent-color);
+        }
+        
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card .service {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p class="lead">Comprehensive healthcare tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p class="lead">Personalized care for all stages of life</p>
+            </div>
+            
+            <!-- Primary Care -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3>Primary Care</h3>
+                            <span class="service-tag">Included in Membership</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Comprehensive primary care services for patients of all ages. We take the time to listen to your concerns and develop personalized treatment plans that address your unique health needs.</p>
+                            
+                            <div class="accordion" id="primaryCareAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="primaryCareHeading1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#primaryCareCollapse1" aria-expanded="true" aria-controls="primaryCareCollapse1">
+                                            What's Included
+                                        </button>
+                                    </h2>
+                                    <div id="primaryCareCollapse1" class="accordion-collapse collapse show" aria-labelledby="primaryCareHeading1" data-bs-parent="#primaryCareAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><strong>Annual Physical Exams:</strong> Comprehensive yearly check-ups with thorough health assessments</li>
+                                                <li><strong>Acute Care Visits:</strong> Same or next-day appointments for illnesses and injuries</li>
+                                                <li><strong>Chronic Disease Management:</strong> Ongoing care for conditions like diabetes, hypertension, and asthma</li>
+                                                <li><strong>Preventive Screenings:</strong> Age and risk-appropriate health screenings</li>
+                                                <li><strong>Basic Office Procedures:</strong> Including skin biopsies, joint injections, and minor wound care</li>
+                                                <li><strong>Health Coaching:</strong> Guidance on lifestyle modifications to improve health outcomes</li>
+                                                <li><strong>Medication Management:</strong> Regular review and optimization of medications</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="primaryCareHeading2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryCareCollapse2" aria-expanded="false" aria-controls="primaryCareCollapse2">
+                                            The DPC Difference
+                                        </button>
+                                    </h2>
+                                    <div id="primaryCareCollapse2" class="accordion-collapse collapse" aria-labelledby="primaryCareHeading2" data-bs-parent="#primaryCareAccordion">
+                                        <div class="accordion-body">
+                                            <p>Unlike traditional primary care practices where appointments are rushed and often delayed, at Lotus Direct Care:</p>
+                                            <ul>
+                                                <li>Your appointments are 30-60 minutes long, not the typical 7-15 minutes</li>
+                                                <li>You'll see your doctor, not a rotating cast of providers</li>
+                                                <li>Same or next-day appointments when you're sick</li>
+                                                <li>Direct communication with your doctor via phone, text, or email</li>
+                                                <li>No rushing through your concerns or feeling like "just another patient"</li>
+                                                <li>Comprehensive care that addresses root causes, not just symptoms</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="direct-primary-care.html" class="btn btn-primary">Learn More About Our Approach</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="quote">
+                            "After years of feeling rushed through appointments and never getting to the root of my health issues, finding Dr. Rosenberg was life-changing. He takes the time to truly listen and develop a plan that works for my specific needs. For the first time, I feel like I have a doctor who knows me as a person, not just a chart."
+                        </div>
+                        <div class="author">Jennifer M.</div>
+                        <div class="service">Primary Care Patient • Member since 2021</div>
+                        <div class="mt-2">
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="service-benefits mt-4">
+                        <h4>Benefits of Our Primary Care Approach:</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Personalized attention</li>
+                                    <li>Comprehensive care plans</li>
+                                    <li>Preventive focus</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Reduced ER visits</li>
+                                    <li>Better health outcomes</li>
+                                    <li>Improved quality of life</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Preventive Care -->
+            <div class="row align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Preventive Care</h3>
+                            <span class="service-tag">Included in Membership</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Proactive healthcare focused on preventing illness and maintaining optimal health through regular screenings, assessments, and personalized wellness strategies.</p>
+                            
+                            <div class="accordion" id="preventiveCareAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="preventiveCareHeading1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#preventiveCareCollapse1" aria-expanded="true" aria-controls="preventiveCareCollapse1">
+                                            What's Included
+                                        </button>
+                                    </h2>
+                                    <div id="preventiveCareCollapse1" class="accordion-collapse collapse show" aria-labelledby="preventiveCareHeading1" data-bs-parent="#preventiveCareAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><strong>Comprehensive Health Risk Assessments:</strong> Detailed evaluation of your health risks based on personal and family history</li>
+                                                <li><strong>Age-Appropriate Screenings:</strong> Cancer screenings, cardiovascular assessments, and other preventive tests</li>
+                                                <li><strong>Immunizations:</strong> Up-to-date vaccinations based on age and risk factors</li>
+                                                <li><strong>Personalized Wellness Plans:</strong> Customized strategies to optimize your health</li>
+                                                <li><strong>Nutrition Counseling:</strong> Evidence-based dietary guidance for your specific needs</li>
+                                                <li><strong>Stress Management:</strong> Techniques and resources to reduce stress and improve mental wellbeing</li>
+                                                <li><strong>Sleep Optimization:</strong> Assessment and strategies for better sleep quality</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="preventiveCareHeading2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preventiveCareCollapse2" aria-expanded="false" aria-controls="preventiveCareCollapse2">
+                                            Our Preventive Approach
+                                        </button>
+                                    </h2>
+                                    <div id="preventiveCareCollapse2" class="accordion-collapse collapse" aria-labelledby="preventiveCareHeading2" data-bs-parent="#preventiveCareAccordion">
+                                        <div class="accordion-body">
+                                            <p>At Lotus Direct Care, we believe that preventing disease is always better than treating it. Our preventive approach includes:</p>
+                                            <ul>
+                                                <li>Taking time to understand your unique health risks</li>
+                                                <li>Creating personalized prevention strategies</li>
+                                                <li>Regular monitoring of key health indicators</li>
+                                                <li>Early intervention when warning signs appear</li>
+                                                <li>Empowering you with knowledge and tools for optimal health</li>
+                                                <li>Addressing lifestyle factors that impact long-term health</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="direct-primary-care.html" class="btn btn-primary">Learn More About Preventive Care</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="quote">
+                            "Dr. Rosenberg's preventive approach helped me identify several health risks before they became serious problems. The comprehensive testing and personalized wellness plan have made a tremendous difference in my energy levels and overall wellbeing. I feel like I'm finally taking control of my health rather than just reacting to problems."
+                        </div>
+                        <div class="author">Robert T.</div>
+                        <div class="service">Preventive Care Patient • Member since 2022</div>
+                        <div class="mt-2">
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="service-benefits mt-4">
+                        <h4>Benefits of Preventive Care:</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Early detection of health issues</li>
+                                    <li>Reduced healthcare costs</li>
+                                    <li>Fewer emergency visits</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Improved quality of life</li>
+                                    <li>Extended lifespan</li>
+                                    <li>Greater peace of mind</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chronic Disease Management -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="service-card">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </div>
+                            <h3>Chronic Disease Management</h3>
+                            <span class="service-tag">Included in Membership</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Comprehensive care for ongoing health conditions with a focus on improving quality of life, preventing complications, and addressing root causes rather than just managing symptoms.</p>
+                            
+                            <div class="accordion" id="chronicCareAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="chronicCareHeading1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chronicCareCollapse1" aria-expanded="true" aria-controls="chronicCareCollapse1">
+                                            Conditions We Manage
+                                        </button>
+                                    </h2>
+                                    <div id="chronicCareCollapse1" class="accordion-collapse collapse show" aria-labelledby="chronicCareHeading1" data-bs-parent="#chronicCareAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><strong>Diabetes:</strong> Type 1, Type 2, and prediabetes</li>
+                                                <li><strong>Cardiovascular Conditions:</strong> Hypertension, high cholesterol, heart disease</li>
+                                                <li><strong>Respiratory Disorders:</strong> Asthma, COPD</li>
+                                                <li><strong>Thyroid Disorders:</strong> Hypothyroidism, hyperthyroidism</li>
+                                                <li><strong>Autoimmune Conditions:</strong> Rheumatoid arthritis, lupus, Hashimoto's</li>
+                                                <li><strong>Digestive Issues:</strong> IBS, GERD, Crohn's disease</li>
+                                                <li><strong>Mental Health:</strong> Depression, anxiety, ADHD</li>
+                                                <li><strong>Metabolic Disorders:</strong> Metabolic syndrome, PCOS</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="chronicCareHeading2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chronicCareCollapse2" aria-expanded="false" aria-controls="chronicCareCollapse2">
+                                            Our Management Approach
+                                        </button>
+                                    </h2>
+                                    <div id="chronicCareCollapse2" class="accordion-collapse collapse" aria-labelledby="chronicCareHeading2" data-bs-parent="#chronicCareAccordion">
+                                        <div class="accordion-body">
+                                            <p>Our approach to chronic disease management goes beyond prescription medications to address underlying causes:</p>
+                                            <ul>
+                                                <li>Comprehensive initial assessment and regular monitoring</li>
+                                                <li>Personalized treatment plans that evolve with your condition</li>
+                                                <li>Integration of conventional and functional medicine approaches</li>
+                                                <li>Focus on lifestyle modifications that improve outcomes</li>
+                                                <li>Regular follow-up to adjust treatments as needed</li>
+                                                <li>Coordination with specialists when necessary</li>
+                                                <li>Patient education and self-management support</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="direct-primary-care.html" class="btn btn-primary">Learn More About Our Approach</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="quote">
+                            "Living with diabetes for 15 years, I've seen many doctors, but none have taken the comprehensive approach that Dr. Rosenberg does. He looks beyond my blood sugar to address sleep, stress, and nutrition. For the first time, my numbers are consistently good, and I'm taking less medication than before. The regular check-ins and direct access make all the difference."
+                        </div>
+                        <div class="author">David L.</div>
+                        <div class="service">Diabetes Management Patient • Member since 2020</div>
+                        <div class="mt-2">
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="service-benefits mt-4">
+                        <h4>Benefits of Our Chronic Disease Management:</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Improved disease control</li>
+                                    <li>Reduced medication dependence</li>
+                                    <li>Fewer hospitalizations</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Better quality of life</li>
+                                    <li>Comprehensive approach</li>
+                                    <li>Ongoing support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Services Section -->
+            <div class="section-title mt-5">
+                <h2>Specialized Services</h2>
+                <p class="lead">Advanced care options for specific health needs</p>
+            </div>
+            
+            <div class="row">
+                <!-- Functional Medicine -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-card h-100">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <h3>Functional Medicine</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>A systems-based approach that addresses the root causes of disease by looking at the interactions between genetics, environment, and lifestyle factors.</p>
+                            <ul>
+                                <li>Comprehensive testing and assessment</li>
+                                <li>Root cause analysis</li>
+                                <li>Personalized treatment plans</li>
+                                <li>Nutritional and lifestyle interventions</li>
+                                <li>Targeted supplementation</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="functional-medicine.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ketamine Therapy -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-card h-100">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Ketamine Therapy</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Innovative treatment for depression, anxiety, PTSD, and chronic pain conditions that haven't responded to traditional therapies.</p>
+                            <ul>
+                                <li>Comprehensive evaluation</li>
+                                <li>Personalized treatment protocols</li>
+                                <li>Monitored administration</li>
+                                <li>Integration support</li>
+                                <li>Follow-up care</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="ketamine-therapy.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Addiction & Suboxone Treatment -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-card h-100">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <h3>Addiction & Suboxone Treatment</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Compassionate, evidence-based care for opioid use disorder in a private, judgment-free environment.</p>
+                            <ul>
+                                <li>Medication-assisted treatment (MAT)</li>
+                                <li>Comprehensive evaluation</li>
+                                <li>Personalized treatment plans</li>
+                                <li>Ongoing support and monitoring</li>
+                                <li>Coordination with counseling services</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="addiction-suboxone-treatment.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PRP Injections -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-card h-100">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <h3>PRP Injections</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Platelet-Rich Plasma therapy harnesses your body's natural healing abilities to treat joint pain, injuries, and certain aesthetic concerns.</p>
+                            <ul>
+                                <li>Joint pain and osteoarthritis</li>
+                                <li>Tendon and ligament injuries</li>
+                                <li>Hair restoration</li>
+                                <li>Facial rejuvenation</li>
+                                <li>Sexual health treatments</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="prp-injections.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Telemedicine -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-card h-100">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <h3>Telemedicine</h3>
+                            <span class="service-tag">Included in Membership</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Virtual healthcare services that provide convenient access to medical care from the comfort of your home.</p>
+                            <ul>
+                                <li>Video consultations</li>
+                                <li>Phone appointments</li>
+                                <li>Secure messaging with your doctor</li>
+                                <li>Prescription refills</li>
+                                <li>Follow-up visits</li>
+                                <li>Remote monitoring</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="direct-primary-care.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mental Health -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-card h-100">
+                        <div class="card-header">
+                            <div class="service-icon">
+                                <i class="fas fa-heart-pulse"></i>
+                            </div>
+                            <h3>Mental Health</h3>
+                            <span class="service-tag">Included in Membership</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Integrated mental health care as part of your comprehensive primary care experience.</p>
+                            <ul>
+                                <li>Depression and anxiety management</li>
+                                <li>Stress reduction strategies</li>
+                                <li>Sleep disorder treatment</li>
+                                <li>Medication management</li>
+                                <li>Lifestyle interventions</li>
+                                <li>Specialist referrals when needed</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="direct-primary-care.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Stories Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Patient Success Stories</h2>
+                <p class="lead">Real results from our comprehensive approach</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="quote">
+                            "After struggling with chronic fatigue for years and seeing multiple specialists with no answers, Dr. Rosenberg's functional medicine approach finally identified the root causes. Six months later, my energy has returned and I'm back to enjoying life again."
+                        </div>
+                        <div class="author">Maria S.</div>
+                        <div class="service">Functional Medicine Patient</div>
+                        <div class="mt-2">
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="quote">
+                            "The PRP injections for my knee arthritis have been life-changing. After years of pain and limited mobility, I'm now able to walk, garden, and even play with my grandchildren again. The improvement has been remarkable."
+                        </div>
+                        <div class="author">Thomas W.</div>
+                        <div class="service">PRP Treatment Patient</div>
+                        <div class="mt-2">
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="quote">
+                            "The telemedicine option has been invaluable for our family. With three young children, being able to consult with Dr. Rosenberg from home has saved us countless hours and stress. The care is just as thorough as in-person visits."
+                        </div>
+                        <div class="author">Rebecca J.</div>
+                        <div class="service">Family Medicine Patient</div>
+                        <div class="mt-2">
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color: var(--accent-color);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <div class="mb-3">
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                </div>
+                <p class="lead">5.0 out of 5 stars based on 24 patient reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Better Healthcare?</h2>
+            <p>Join Lotus Direct Care today and discover what healthcare should be: personal, accessible, and focused on you.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary">Schedule a Free Meet & Greet</a>
+                <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-lg btn-outline-light">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care" class="img-fluid" style="max-width: 250px;">
+                    <p class="mt-3">At Lotus Direct Care, we believe in a better approach to healthcare—one that prioritizes your needs, gives you time with your doctor, and provides transparent, affordable pricing.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Primary Care</a></li>
+                        <li><a href="services.html">Preventive Care</a></li>
+                        <li><a href="services.html">Chronic Disease Management</a></li>
+                        <li><a href="functional-medicine.html">Functional Medicine</a></li>
+                        <li><a href="ketamine-therapy.html">Ketamine Therapy</a></li>
+                        <li><a href="prp-injections.html">PRP Injections</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, Suite 456, Anytown, CA 12345</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@lotusdirectcare.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9am-5pm</li>
+                    </ul>
+                    <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule an Appointment</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All rights reserved.</p>
+                <div class="mt-3 d-flex justify-content-center">
+                    <script src="https://static.legitscript.com/seals/17561062.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

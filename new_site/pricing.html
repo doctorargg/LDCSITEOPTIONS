@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Membership - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/lotus-pricing-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .pricing-table {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-table:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-table .pricing-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .pricing-table .pricing-header h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-table .pricing-header .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .pricing-table .pricing-header .price-period {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .pricing-table .pricing-body {
+            padding: 30px;
+        }
+        
+        .pricing-table .pricing-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+        }
+        
+        .pricing-table .pricing-body ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table .pricing-body ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-table .pricing-body ul li i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        .pricing-table.featured {
+            transform: scale(1.05);
+            z-index: 1;
+            border: 2px solid var(--accent-color);
+        }
+        
+        .pricing-table.featured .pricing-header {
+            background-color: var(--accent-color);
+        }
+        
+        .pricing-table.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 15px;
+            font-weight: 600;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .service-pricing {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .service-pricing .table {
+            margin-bottom: 0;
+        }
+        
+        .service-pricing th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+        }
+        
+        .service-pricing td {
+            padding: 15px;
+            vertical-align: middle;
+        }
+        
+        .service-pricing tr:nth-child(even) {
+            background-color: rgba(0,0,0,0.02);
+        }
+        
+        .calculator {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        .calculator .form-label {
+            font-weight: 600;
+        }
+        
+        .calculator .result {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .calculator .result h4 {
+            margin-bottom: 15px;
+        }
+        
+        .calculator .result .savings {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .testimonial .quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial .client {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial .client-info h5 {
+            margin-bottom: 5px;
+        }
+        
+        .testimonial .client-info p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 20px;
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-table.featured {
+                transform: none;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+            
+            .pricing-table.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Membership & Pricing</h1>
+            <p class="lead">Transparent, affordable healthcare with no hidden fees</p>
+        </div>
+    </section>
+
+    <!-- Membership Plans Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Membership Plans</h2>
+                <p class="lead">Choose the plan that's right for you and your family</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100">
+                        <div class="pricing-header">
+                            <h3>Individual</h3>
+                            <div class="price">$165</div>
+                            <div class="price-period">per month</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Unlimited office visits</li>
+                                <li><i class="fas fa-check"></i> Same/next-day appointments</li>
+                                <li><i class="fas fa-check"></i> Direct access to your doctor</li>
+                                <li><i class="fas fa-check"></i> Telemedicine included</li>
+                                <li><i class="fas fa-check"></i> Wholesale labs & medications</li>
+                                <li><i class="fas fa-check"></i> Basic procedures included</li>
+                                <li><i class="fas fa-check"></i> Annual physical</li>
+                            </ul>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100 position-relative">
+                        <div class="pricing-header" style="background-color: var(--primary-color);">
+                            <h3>Couple</h3>
+                            <div class="price">$220</div>
+                            <div class="price-period">per month</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> All Individual benefits</li>
+                                <li><i class="fas fa-check"></i> Coverage for 2 adults</li>
+                                <li><i class="fas fa-check"></i> Shared appointments available</li>
+                                <li><i class="fas fa-check"></i> Coordinated care</li>
+                                <li><i class="fas fa-check"></i> Family health planning</li>
+                                <li><i class="fas fa-check"></i> $110 savings vs. individual plans</li>
+                                <li><i class="fas fa-check"></i> Annual physicals for both</li>
+                            </ul>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100">
+                        <div class="pricing-header">
+                            <h3>Additional Family Members</h3>
+                            <div class="price">$20</div>
+                            <div class="price-period">per month</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> All Couple benefits</li>
+                                <li><i class="fas fa-check"></i> Coverage for 2 adults + children</li>
+                                <li><i class="fas fa-check"></i> Pediatric care included</li>
+                                <li><i class="fas fa-check"></i> Family wellness planning</li>
+                                <li><i class="fas fa-check"></i> School & sports physicals</li>
+                                <li><i class="fas fa-check"></i> Significant savings per child</li>
+                                <li><i class="fas fa-check"></i> Annual physicals for all</li>
+                            </ul>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100">
+                        <div class="pricing-header">
+                            <h3>Business</h3>
+                            <div class="price">Custom</div>
+                            <div class="price-period">pricing</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Employee healthcare benefit</li>
+                                <li><i class="fas fa-check"></i> Volume discounts available</li>
+                                <li><i class="fas fa-check"></i> Reduce employee sick days</li>
+                                <li><i class="fas fa-check"></i> Workplace wellness programs</li>
+                                <li><i class="fas fa-check"></i> On-site services available</li>
+                                <li><i class="fas fa-check"></i> Customized care plans</li>
+                                <li><i class="fas fa-check"></i> Detailed reporting options</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary w-100">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="lead">All plans include unlimited primary care visits with no copays or hidden fees.</p>
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-outline-primary mt-3">Schedule a Free Meet & Greet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Additional Services</h2>
+                <p class="lead">Transparent pricing for services beyond your membership</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3>Lab Work</h3>
+                    <p>We offer lab tests at near-wholesale prices, typically 70-90% less than what hospitals and traditional practices charge.</p>
+                    <div class="service-pricing">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Test</th>
+                                    <th>Our Price</th>
+                                    <th>Typical Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Complete Blood Count (CBC)</td>
+                                    <td>$5</td>
+                                    <td>$50-150</td>
+                                </tr>
+                                <tr>
+                                    <td>Basic Metabolic Panel</td>
+                                    <td>$10</td>
+                                    <td>$100-200</td>
+                                </tr>
+                                <tr>
+                                    <td>Comprehensive Metabolic Panel</td>
+                                    <td>$15</td>
+                                    <td>$200-300</td>
+                                </tr>
+                                <tr>
+                                    <td>Lipid Panel</td>
+                                    <td>$10</td>
+                                    <td>$100-200</td>
+                                </tr>
+                                <tr>
+                                    <td>Hemoglobin A1C</td>
+                                    <td>$15</td>
+                                    <td>$80-150</td>
+                                </tr>
+                                <tr>
+                                    <td>Thyroid Panel</td>
+                                    <td>$25</td>
+                                    <td>$150-300</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h3>In-Office Procedures</h3>
+                    <p>Many basic procedures are included in your membership. More complex procedures are available at transparent, affordable prices.</p>
+                    <div class="service-pricing">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Procedure</th>
+                                    <th>Member Price</th>
+                                    <th>Typical Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EKG</td>
+                                    <td>Included</td>
+                                    <td>$100-300</td>
+                                </tr>
+                                <tr>
+                                    <td>Skin Tag Removal</td>
+                                    <td>Included</td>
+                                    <td>$100-200</td>
+                                </tr>
+                                <tr>
+                                    <td>Skin Biopsy</td>
+                                    <td>$50</td>
+                                    <td>$200-400</td>
+                                </tr>
+                                <tr>
+                                    <td>Joint Injection</td>
+                                    <td>$40-60</td>
+                                    <td>$200-500</td>
+                                </tr>
+                                <tr>
+                                    <td>Laceration Repair</td>
+                                    <td>$75-150</td>
+                                    <td>$500-1000</td>
+                                </tr>
+                                <tr>
+                                    <td>Ingrown Toenail</td>
+                                    <td>$75</td>
+                                    <td>$250-500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h3>Medications</h3>
+                    <p>We dispense many common medications directly from our office at wholesale prices, often saving you trips to the pharmacy and reducing costs.</p>
+                    <div class="service-pricing">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Medication Example</th>
+                                    <th>Our Price</th>
+                                    <th>Typical Retail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Amoxicillin (generic)</td>
+                                    <td>$5</td>
+                                    <td>$15-30</td>
+                                </tr>
+                                <tr>
+                                    <td>Lisinopril (generic)</td>
+                                    <td>$4 (30-day)</td>
+                                    <td>$10-25</td>
+                                </tr>
+                                <tr>
+                                    <td>Atorvastatin (generic)</td>
+                                    <td>$6 (30-day)</td>
+                                    <td>$15-40</td>
+                                </tr>
+                                <tr>
+                                    <td>Albuterol Inhaler</td>
+                                    <td>$25</td>
+                                    <td>$50-100</td>
+                                </tr>
+                                <tr>
+                                    <td>Prednisone (generic)</td>
+                                    <td>$5</td>
+                                    <td>$10-20</td>
+                                </tr>
+                                <tr>
+                                    <td>Azithromycin (generic)</td>
+                                    <td>$10</td>
+                                    <td>$30-50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h3>Ketamine Therapy</h3>
+                    <p>Innovative treatment for depression, anxiety, PTSD, and chronic pain conditions that haven't responded to traditional therapies.</p>
+                    <div class="service-pricing">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Initial Consultation</td>
+                                    <td>$150</td>
+                                </tr>
+                                <tr>
+                                    <td>Single Treatment Session</td>
+                                    <td>$350</td>
+                                </tr>
+                                <tr>
+                                    <td>6-Session Package</td>
+                                    <td>$1,800 ($300/session)</td>
+                                </tr>
+                                <tr>
+                                    <td>Maintenance Session</td>
+                                    <td>$300</td>
+                                </tr>
+                                <tr>
+                                    <td>Integration Support</td>
+                                    <td>Included</td>
+                                </tr>
+                                <tr>
+                                    <td>Follow-up Visit</td>
+                                    <td>Included for members</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Savings Calculator</h2>
+                <p class="lead">See how much you could save with Direct Primary Care</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="calculator">
+                        <form id="savingsCalculator">
+                            <div class="mb-3">
+                                <label for="currentPremium" class="form-label">Current Monthly Insurance Premium</label>
+                                <input type="number" class="form-control" id="currentPremium" placeholder="e.g., 500">
+                            </div>
+                            <div class="mb-3">
+                                <label for="annualDeductible" class="form-label">Annual Deductible</label>
+                                <input type="number" class="form-control" id="annualDeductible" placeholder="e.g., 2000">
+                            </div>
+                            <div class="mb-3">
+                                <label for="officeVisits" class="form-label">Average Number of Office Visits Per Year</label>
+                                <input type="number" class="form-control" id="officeVisits" placeholder="e.g., 4">
+                            </div>
+                            <div class="mb-3">
+                                <label for="averageCopay" class="form-label">Average Copay Per Visit</label>
+                                <input type="number" class="form-control" id="averageCopay" placeholder="e.g., 30">
+                            </div>
+                            <div class="mb-3">
+                                <label for="labTests" class="form-label">Average Number of Lab Tests Per Year</label>
+                                <input type="number" class="form-control" id="labTests" placeholder="e.g., 2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="averageLabCost" class="form-label">Average Cost Per Lab Test</label>
+                                <input type="number" class="form-control" id="averageLabCost" placeholder="e.g., 150">
+                            </div>
+                            <div class="mb-3">
+                                <label for="membershipType" class="form-label">DPC Membership Type</label>
+                                <select class="form-select" id="membershipType">
+                                    <option value="75">Individual ($75/month)</option>
+                                    <option value="140">Couple ($140/month)</option>
+                                    <option value="175">Family ($175/month)</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="calculateSavings()">Calculate Savings</button>
+                        </form>
+                        <div class="result" id="calculatorResult" style="display: none;">
+                            <h4>Your Estimated Annual Savings</h4>
+                            <div class="savings" id="annualSavings">$0</div>
+                            <p class="mt-3">By switching to a high-deductible plan and joining our Direct Primary Care practice, you could save significantly on your healthcare costs while receiving better care.</p>
+                            <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule a Meet & Greet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Members Say</h2>
+                <p class="lead">Real experiences from real patients</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="testimonial h-100">
+                        <div class="quote">
+                            "I was paying over $600 a month for insurance with a $5,000 deductible. By switching to a high-deductible plan and joining Lotus Direct Care, I'm saving over $4,000 a year while getting better care than I've ever had."
+                        </div>
+                        <div class="client">
+                            <div class="client-image">
+                                <img src="images/testimonial1.jpg" alt="Robert J.">
+                            </div>
+                            <div class="client-info">
+                                <h5>Robert J.</h5>
+                                <p>Member since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="testimonial h-100">
+                        <div class="quote">
+                            "As a small business owner, I was struggling with healthcare costs for my family. The family plan at Lotus Direct Care has been a game-changer. We're saving money and getting care when we need it without the hassle."
+                        </div>
+                        <div class="client">
+                            <div class="client-image">
+                                <img src="images/testimonial2.jpg" alt="Lisa & Mark T.">
+                            </div>
+                            <div class="client-info">
+                                <h5>Lisa & Mark T.</h5>
+                                <p>Members since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="testimonial h-100">
+                        <div class="quote">
+                            "I have a chronic condition that requires regular lab work. Before joining Lotus Direct Care, I was paying over $300 per test. Now I pay less than $30 for the same tests. The membership has paid for itself many times over."
+                        </div>
+                        <div class="client">
+                            <div class="client-image">
+                                <img src="images/testimonial3.jpg" alt="Patricia M.">
+                            </div>
+                            <div class="client-info">
+                                <h5>Patricia M.</h5>
+                                <p>Member since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Common questions about our pricing and membership</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="pricingAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Are there any enrollment fees?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <p>No, we do not charge any enrollment fees or registration fees. You only pay the monthly membership fee for your selected plan.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Can I cancel my membership at any time?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes, you can cancel your membership at any time with 30 days' notice. There are no long-term contracts or cancellation fees. We believe in earning your trust and business each month.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How do you define a "family" for the family plan?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <p>Our family plan includes two adults and their dependent children (under age 26) living in the same household. If you have a unique family situation, please contact us to discuss options that might work best for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <p>We accept all major credit cards, debit cards, and ACH bank transfers for monthly membership payments. We can also accommodate HSA/FSA cards for qualified expenses. For your convenience, we set up automatic monthly payments.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Can I use my HSA to pay for membership?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <p>Currently, IRS regulations are unclear regarding the use of HSA funds for DPC membership fees. Some patients choose to use their HSA, while others pay directly. We recommend consulting with your tax advisor for guidance specific to your situation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Better Healthcare?</h2>
+            <p>Join our practice or schedule a free meet and greet to learn more about how Direct Primary Care can benefit you and your family.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary">Schedule a Meet & Greet</a>
+                <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-lg btn-light">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/lotus_logo.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                        <h4 class="mb-0">Lotus Direct Care</h4>
+                    </div>
+                    <p>Direct Primary Care in Anytown, USA</p>
+                    <p>123 Healing Way<br>Anytown, USA 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@lotusdirectcare.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday: 9:00 AM - 5:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                        <li>Thursday: 9:00 AM - 5:00 PM</li>
+                        <li>Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Membership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/490329635881207?appointment_types=">Patient Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class            <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All rights reserved.</p>
+                <div class="mt-3 d-flex justify-content-center">
+                    <script src="https://static.legitscript.com/seals/17561062.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>ipt>
+    
+    <!-- Savings Calculator Script -->
+    <script>
+        function calculateSavings() {
+            // Get input values
+            const currentPremium = parseFloat(document.getElementById('currentPremium').value) || 0;
+            const annualDeductible = parseFloat(document.getElementById('annualDeductible').value) || 0;
+            const officeVisits = parseFloat(document.getElementById('officeVisits').value) || 0;
+            const averageCopay = parseFloat(document.getElementById('averageCopay').value) || 0;
+            const labTests = parseFloat(document.getElementById('labTests').value) || 0;
+            const averageLabCost = parseFloat(document.getElementById('averageLabCost').value) || 0;
+            const membershipType = parseFloat(document.getElementById('membershipType').value) || 75;
+            
+            // Calculate current costs
+            const currentAnnualPremium = currentPremium * 12;
+            const currentAnnualCopays = officeVisits * averageCopay;
+            const currentAnnualLabCosts = labTests * averageLabCost;
+            const currentTotalCost = currentAnnualPremium + currentAnnualCopays + currentAnnualLabCosts;
+            
+            // Calculate DPC costs
+            const dpcMembershipAnnual = membershipType * 12;
+            const dpcLabCosts = labTests * 15; // Assuming average $15 per test with DPC
+            const hdpPremiumReduction = currentPremium * 0.3; // Assuming 30% reduction with HDHP
+            const hdpAnnualPremium = (currentPremium - hdpPremiumReduction) * 12;
+            const dpcTotalCost = dpcMembershipAnnual + dpcLabCosts + hdpAnnualPremium;
+            
+            // Calculate savings
+            const annualSavings = currentTotalCost - dpcTotalCost;
+            
+            // Display result
+            document.getElementById('annualSavings').textContent = '$' + annualSavings.toFixed(0);
+            document.getElementById('calculatorResult').style.display = 'block';
+        }
+    </script>
+    
+    <!-- Zapier Chatbot -->
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='clwr4o9dz0005jxumpvwrduto' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
+</body>
+</html>

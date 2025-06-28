@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Primary Care - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/lotus_dpc_hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-box i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h3 {
+            margin-bottom: 15px;
+        }
+        
+        .comparison-table {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table .table {
+            margin-bottom: 0;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            vertical-align: middle;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: rgba(0,0,0,0.02);
+        }
+        
+        .comparison-table .check {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .comparison-table .times {
+            color: #dc3545;
+            font-size: 1.2rem;
+        }
+        
+        .step-box {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 30px;
+            height: 100%;
+        }
+        
+        .step-box .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .testimonial .quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial .client {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial .client-info h5 {
+            margin-bottom: 5px;
+        }
+        
+        .testimonial .client-info p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 20px;
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Direct Primary Care</h1>
+            <p class="lead">A better approach to healthcare that puts patients first</p>
+        </div>
+    </section>
+
+    <!-- What is DPC Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>What is Direct Primary Care?</h2>
+                    <p class="lead">A membership-based healthcare model that eliminates the middleman</p>
+                    <p>Direct Primary Care (DPC) is an innovative healthcare model that removes insurance companies from the doctor-patient relationship. Instead of billing insurance, DPC practices charge a transparent monthly membership fee that covers all or most primary care services.</p>
+                    <p>This approach allows us to spend more time with each patient, offer same-day or next-day appointments, and provide care at a fraction of the cost of traditional practices. It's healthcare the way it should be—focused on you, not paperwork.</p>
+                    <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule a Free Meet & Greet</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/dpc-comparison.jpg" alt="Direct Primary Care vs Traditional Care" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Benefits of Direct Primary Care</h2>
+                <p class="lead">Why our members love the DPC model</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box h-100">
+                        <i class="fas fa-clock"></i>
+                        <h3>Extended Visits</h3>
+                        <p>Enjoy unhurried appointments that typically last 30-60 minutes, giving you ample time to discuss all your health concerns. No more feeling rushed through a 7-minute visit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box h-100">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Same/Next-Day Appointments</h3>
+                        <p>Get care when you need it with same-day or next-day appointments for acute issues. No more waiting weeks to see your doctor when you're sick.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box h-100">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Direct Access</h3>
+                        <p>Communicate directly with your doctor via phone, text, email, or video chat. No more navigating phone trees or waiting for callbacks from nurses.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box h-100">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Transparent Pricing</h3>
+                        <p>Enjoy predictable monthly membership fees with no copays, deductibles, or surprise bills. Know exactly what you're paying for healthcare.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box h-100">
+                        <i class="fas fa-flask"></i>
+                        <h3>Wholesale Labs & Medications</h3>
+                        <p>Access lab tests and medications at or near wholesale prices, often saving 70-90% compared to traditional healthcare settings.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box h-100">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Personalized Care</h3>
+                        <p>Receive care from a doctor who knows you personally and has time to address your unique health needs and goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>DPC vs. Traditional Practice</h2>
+                <p class="lead">See how Direct Primary Care compares to the traditional model</p>
+            </div>
+            <div class="comparison-table">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Direct Primary Care</th>
+                            <th>Traditional Practice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average Wait Time for Appointment</td>
+                            <td>Same/Next Day</td>
+                            <td>2-3 Weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Average Visit Length</td>
+                            <td>30-60 Minutes</td>
+                            <td>7-15 Minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Direct Access to Doctor</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>After-Hours Access</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Copays</td>
+                            <td>None</td>
+                            <td>$20-50+ per visit</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance Billing</td>
+                            <td>None</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td>Wholesale Lab Pricing</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Telemedicine Included</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td>Often Extra Fee</td>
+                        </tr>
+                        <tr>
+                            <td>Focus on Prevention</td>
+                            <td>High</td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Patient-Doctor Relationship</td>
+                            <td>Personal</td>
+                            <td>Transactional</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p class="lead">Becoming a member is simple</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="step-box h-100">
+                        <div class="step-number">1</div>
+                        <h3>Schedule a Meet & Greet</h3>
+                        <p>Start with a free, no-obligation meet and greet to discuss your health needs and learn more about our practice.</p>
+                        <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="step-box h-100">
+                        <div class="step-number">2</div>
+                        <h3>Choose Your Membership</h3>
+                        <p>Select the membership plan that best fits your needs—individual, couple, family, or business.</p>
+                        <a href="pricing.html" class="btn btn-primary mt-3">View Plans</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="step-box h-100">
+                        <div class="step-number">3</div>
+                        <h3>Complete Enrollment</h3>
+                        <p>Fill out our simple enrollment forms and set up your monthly membership payment.</p>
+                        <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary mt-3">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="step-box h-100">
+                        <div class="step-number">4</div>
+                        <h3>Start Receiving Care</h3>
+                        <p>Schedule your first appointment and begin experiencing healthcare the way it should be.</p>
+                        <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Members Say</h2>
+                <p class="lead">Real experiences from real patients</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="testimonial h-100">
+                        <div class="quote">
+                            "Joining Lotus Direct Care was the best healthcare decision I've ever made. I can actually reach my doctor when I need to, and I never feel rushed during appointments. The savings on labs and medications alone have paid for my membership!"
+                        </div>
+                        <div class="client">
+                            <div class="client-image">
+                                <img src="images/testimonial1.jpg" alt="Sarah M.">
+                            </div>
+                            <div class="client-info">
+                                <h5>Sarah M.</h5>
+                                <p>Member since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="testimonial h-100">
+                        <div class="quote">
+                            "As someone with a chronic condition, having direct access to my doctor has been life-changing. Dr. Rosenberg takes the time to understand my health holistically and works with me to find solutions that actually work for my lifestyle."
+                        </div>
+                        <div class="client">
+                            <div class="client-image">
+                                <img src="images/testimonial2.jpg" alt="Michael T.">
+                            </div>
+                            <div class="client-info">
+                                <h5>Michael T.</h5>
+                                <p>Member since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="testimonial h-100">
+                        <div class="quote">
+                            "Our family of five switched to Lotus Direct Care last year, and we couldn't be happier. The kids love not having to sit in a waiting room full of sick people, and I love the peace of mind knowing we can reach our doctor anytime."
+                        </div>
+                        <div class="client">
+                            <div class="client-image">
+                                <img src="images/testimonial3.jpg" alt="Jennifer & David K.">
+                            </div>
+                            <div class="client-info">
+                                <h5>Jennifer & David K.</h5>
+                                <p>Members since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Common questions about Direct Primary Care</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="dpcAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Do I still need insurance with DPC?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#dpcAccordion">
+                                <div class="accordion-body">
+                                    <p>While DPC covers your primary care needs, we recommend maintaining some form of coverage for catastrophic events, specialist care, and hospitalization. Many of our patients pair their DPC membership with:</p>
+                                    <ul>
+                                        <li>A high-deductible health plan (HDHP)</li>
+                                        <li>A health sharing ministry</li>
+                                        <li>A health savings account (HSA)</li>
+                                    </ul>
+                                    <p>We're happy to discuss options that might work best for your situation during your meet and greet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What's included in my membership?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#dpcAccordion">
+                                <div class="accordion-body">
+                                    <p>Your membership includes:</p>
+                                    <ul>
+                                        <li>Unlimited office visits with no copays</li>
+                                        <li>Annual comprehensive physical</li>
+                                        <li>Same-day or next-day appointments for acute issues</li>
+                                        <li>Telemedicine visits (phone, video, text, email)</li>
+                                        <li>Basic in-office procedures</li>
+                                        <li>Chronic disease management</li>
+                                        <li>Preventive care and wellness planning</li>
+                                        <li>Coordination with specialists when needed</li>
+                                        <li>Access to wholesale pricing on labs and medications</li>
+                                    </ul>
+                                    <p>Some services may incur additional costs, such as certain procedures, labs, and medications, but these are always provided at or near wholesale prices with complete transparency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can I use my HSA to pay for DPC?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#dpcAccordion">
+                                <div class="accordion-body">
+                                    <p>Currently, IRS regulations are unclear regarding the use of HSA funds for DPC membership fees. Some patients choose to use their HSA, while others pay directly. We recommend consulting with your tax advisor for guidance specific to your situation.</p>
+                                    <p>There is legislation pending that would explicitly allow HSA funds to be used for DPC memberships, and we're hopeful this will pass in the near future.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What if I need to see a specialist?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#dpcAccordion">
+                                <div class="accordion-body">
+                                    <p>While we can handle approximately 80-90% of your healthcare needs, there are times when specialist care is necessary. In these cases:</p>
+                                    <ul>
+                                        <li>We'll refer you to trusted specialists in our network</li>
+                                        <li>We'll help coordinate your care and communicate with specialists</li>
+                                        <li>Your insurance would typically cover specialist visits according to your plan's terms</li>
+                                        <li>We'll help you interpret specialist findings and incorporate them into your overall care plan</li>
+                                    </ul>
+                                    <p>Our goal is to serve as your healthcare advocate and coordinator, ensuring you receive the best possible care even when it extends beyond our practice.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Can I cancel my membership?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#dpcAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes, you can cancel your membership at any time with 30 days' notice. There are no long-term contracts or cancellation fees. We believe in earning your trust and business each month.</p>
+                                    <p>If you need to cancel due to financial hardship or other circumstances, please talk to us. We're committed to working with our patients to ensure they receive the care they need.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Better Healthcare?</h2>
+            <p>Join our practice or schedule a free meet and greet to learn more about how Direct Primary Care can benefit you and your family.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary">Schedule a Meet & Greet</a>
+                <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-lg btn-light">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/lotus_logo.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                        <h4 class="mb-0">Lotus Direct Care</h4>
+                    </div>
+                    <p>Direct Primary Care in Anytown, USA</p>
+                    <p>123 Healing Way<br>Anytown, USA 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@lotusdirectcare.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday: 9:00 AM - 5:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                        <li>Thursday: 9:00 AM - 5:00 PM</li>
+                        <li>Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Membership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/490329635881207?appointment_types=">Patient Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div cl            <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All rights reserved.</p>
+                <div class="mt-3 d-flex justify-content-center">
+                    <script src="https://static.legitscript.com/seals/17561062.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>script>
+    
+    <!-- Zapier Chatbot -->
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='clwr4o9dz0005jxumpvwrduto' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
+</body>
+</html>

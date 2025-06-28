@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ketamine Therapy - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/lotus-ketamine-therapy-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-box .feature-icon {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .feature-box .feature-icon i {
+            font-size: 3rem;
+        }
+        
+        .feature-box .feature-content {
+            padding: 30px;
+        }
+        
+        .feature-box .feature-content h3 {
+            margin-bottom: 15px;
+        }
+        
+        .process-step {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .process-step .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            margin-bottom: 15px;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .testimonial .quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial .client {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial .client-info h5 {
+            margin-bottom: 5px;
+        }
+        
+        .testimonial .client-info p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 20px;
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Ketamine Therapy</h1>
+            <p class="lead">Innovative treatment for depression, anxiety, PTSD, and chronic pain</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>A New Hope for Treatment-Resistant Conditions</h2>
+                    <p>Ketamine therapy represents a breakthrough in mental health treatment, offering rapid relief for conditions that haven't responded to traditional therapies. Originally FDA-approved as an anesthetic, ketamine has emerged as a powerful tool in treating depression, anxiety, PTSD, and chronic pain.</p>
+                    <p>At Lotus Direct Care, we provide medically supervised ketamine therapy in a comfortable, supportive environment. Our approach combines the latest evidence-based protocols with personalized care to help you find relief and healing.</p>
+                    <p>Studies show that over 70% of patients experience significant reduction in symptoms, often within hours or days of treatment—compared to weeks or months with traditional antidepressants.</p>
+                    <div class="mt-4">
+                        <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary me-3">Schedule a Consultation</a>
+                        <a href="#how-it-works" class="btn btn-outline-primary">Learn How It Works</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/ketamine-therapy-hero.png" alt="Patient receiving ketamine therapy in comfortable chair" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Ketamine Therapy Works</h2>
+                <p class="lead">Understanding the science behind rapid symptom relief</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Neuroplasticity</h3>
+                            <p>Ketamine works differently than traditional antidepressants. Rather than simply adjusting neurotransmitter levels, ketamine promotes neuroplasticity—the brain's ability to form new neural connections.</p>
+                            <p>By blocking NMDA receptors and activating AMPA receptors, ketamine triggers a cascade of events that leads to the growth of new synapses and neural pathways, essentially helping the brain "rewire" itself in positive ways.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Rapid Relief</h3>
+                            <p>Unlike traditional antidepressants that can take weeks to work, ketamine often provides relief within hours to days after treatment. This rapid action can be life-changing, especially for those experiencing suicidal thoughts or severe depression.</p>
+                            <p>The effects of a single treatment typically last days to weeks, with a series of treatments often providing more sustained relief. Maintenance treatments may be recommended to extend benefits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Breaking Negative Patterns</h3>
+                            <p>Many mental health conditions involve getting "stuck" in negative thought patterns and emotional responses. Ketamine helps disrupt these patterns, creating a window of opportunity for new perspectives and healing.</p>
+                            <p>This neurobiological reset, combined with proper integration support, can help patients develop healthier thought patterns and coping mechanisms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Anti-inflammatory Effects</h3>
+                            <p>Research suggests that inflammation plays a role in depression and chronic pain. Ketamine has powerful anti-inflammatory properties that may contribute to its effectiveness in treating these conditions.</p>
+                            <p>By reducing inflammation in key brain regions and throughout the body, ketamine helps address both the symptoms and potential underlying causes of various conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Treated Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conditions We Treat</h2>
+                <p class="lead">Ketamine therapy can help with a range of treatment-resistant conditions</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-cloud-rain text-primary me-2"></i> Depression</h3>
+                            <p class="card-text">Particularly effective for treatment-resistant depression that hasn't responded to traditional antidepressants. Ketamine can provide rapid relief from depressive symptoms, including suicidal thoughts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-bolt text-primary me-2"></i> Anxiety Disorders</h3>
+                            <p class="card-text">Can help reduce symptoms of generalized anxiety, social anxiety, and panic disorder by disrupting the neurological patterns that contribute to anxious thoughts and feelings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-shield-alt text-primary me-2"></i> PTSD</h3>
+                            <p class="card-text">Helps process traumatic memories and reduce the emotional charge associated with them. Many patients report significant reduction in flashbacks, nightmares, and hypervigilance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-fire-alt text-primary me-2"></i> Chronic Pain</h3>
+                            <p class="card-text">Effective for various chronic pain conditions by modulating pain signals in the brain and reducing central sensitization. Often helps patients reduce reliance on opioid medications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-pills text-primary me-2"></i> Substance Use Disorders</h3>
+                            <p class="card-text">Can help reduce cravings and address underlying depression or trauma that often accompanies addiction. Particularly promising for alcohol and opioid use disorders.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star-of-life text-primary me-2"></i> End-of-Life Distress</h3>
+                            <p class="card-text">Provides relief from existential distress, depression, and anxiety in patients with terminal illness, improving quality of life and emotional well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Process Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Treatment Process</h2>
+                <p class="lead">A comprehensive approach to ketamine therapy</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Initial Consultation</h3>
+                        <p>A thorough evaluation of your medical history, current symptoms, and treatment goals. We'll determine if ketamine therapy is appropriate for your specific situation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Personalized Treatment Plan</h3>
+                        <p>We develop a customized protocol based on your needs, including dosage, frequency, and number of sessions. We'll also discuss complementary therapies to enhance results.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Monitored Treatment Sessions</h3>
+                        <p>During each session, you'll receive ketamine in a comfortable setting with continuous monitoring by our medical team. Sessions typically last 1-2 hours.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Integration & Follow-up</h3>
+                        <p>We provide support to help you process your experience and integrate insights. Regular follow-ups track your progress and adjust treatment as needed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Most patients receive an initial series of 4-6 treatments over 2-3 weeks, followed by maintenance sessions as needed. The exact protocol will be tailored to your specific needs and response.</p>
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What to Expect During Treatment</h2>
+                <p class="lead">Understanding the ketamine therapy experience</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Before Your Session</h3>
+                    <ul>
+                        <li>Fast for 4 hours before treatment (clear liquids are permitted)</li>
+                        <li>Arrange for transportation home, as you cannot drive after treatment</li>
+                        <li>Wear comfortable clothing</li>
+                        <li>Consider bringing headphones and a playlist of calming music</li>
+                        <li>Complete any pre-session questionnaires</li>
+                    </ul>
+                    
+                    <h3 class="mt-4">During Your Session</h3>
+                    <ul>
+                        <li>You'll be comfortably seated or reclined in a private room</li>
+                        <li>Vital signs will be monitored throughout the session</li>
+                        <li>The ketamine will be administered via IV, intramuscular injection, or other methods depending on your treatment plan</li>
+                        <li>You may experience a sense of dissociation, changes in perception, or a dreamlike state</li>
+                        <li>Our medical team will be present to ensure your comfort and safety</li>
+                        <li>Sessions typically last 1-2 hours</li>
+                    </ul>
+                    
+                    <h3 class="mt-4">After Your Session</h3>
+                    <ul>
+                        <li>You'll spend 30-60 minutes in our recovery area</li>
+                        <li>Most effects subside within 1-2 hours after treatment</li>
+                        <li>You may feel tired or slightly "foggy" for the remainder of the day</li>
+                        <li>Many patients report improved mood and reduced symptoms within hours or days</li>
+                        <li>We'll schedule a follow-up to discuss your experience and response</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title">Common Experiences During Treatment</h3>
+                            <p>Ketamine therapy can produce a range of experiences that vary from person to person. These may include:</p>
+                            <ul>
+                                <li>A feeling of detachment from your body or surroundings</li>
+                                <li>Changes in visual or auditory perception</li>
+                                <li>A sense of floating or weightlessness</li>
+                                <li>Heightened sensory awareness</li>
+                                <li>Emotional release or insights</li>
+                                <li>A sense of peace or connection</li>
+                            </ul>
+                            <p>These experiences are normal and often therapeutic. Our team will guide you through the process and help you interpret and integrate your experience.</p>
+                            
+                            <div class="alert alert-info mt-4">
+                                <h4><i class="fas fa-info-circle"></i> Important Note</h4>
+                                <p>While many patients experience significant improvement after ketamine therapy, results can vary. Some patients may require multiple sessions before noticing benefits, while others may experience immediate relief.</p>
+                                <p>We closely monitor your response and adjust your treatment plan accordingly to maximize benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Information Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Safety Information</h2>
+                <p class="lead">What you need to know about ketamine therapy</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3>Medical Supervision</h3>
+                            <p>All ketamine treatments at Lotus Direct Care are administered under direct medical supervision. Our protocols follow the latest safety guidelines and best practices in the field.</p>
+                            
+                            <h3 class="mt-4">Potential Side Effects</h3>
+                            <p>Most side effects are mild and temporary, resolving within hours after treatment. These may include:</p>
+                            <ul>
+                                <li>Nausea (anti-nausea medication is provided if needed)</li>
+                                <li>Temporary increase in blood pressure</li>
+                                <li>Dizziness or lightheadedness</li>
+                                <li>Blurred vision</li>
+                                <li>Feeling of dissociation or dreamlike state</li>
+                            </ul>
+                            
+                            <h3 class="mt-4">Contraindications</h3>
+                            <p>Ketamine therapy may not be appropriate for everyone. Contraindications include:</p>
+                            <ul>
+                                <li>Uncontrolled high blood pressure</li>
+                                <li>Unstable heart disease</li>
+                                <li>Active psychosis or schizophrenia</li>
+                                <li>Pregnancy or breastfeeding</li>
+                                <li>History of ketamine abuse</li>
+                                <li>Certain medications (will be reviewed during consultation)</li>
+                            </ul>
+                            
+                            <h3 class="mt-4">FDA Status</h3>
+                            <p>While ketamine is FDA-approved as an anesthetic, its use for depression, anxiety, PTSD, and chronic pain is considered "off-label." Off-label prescribing is common and legal in medical practice when supported by scientific evidence.</p>
+                            <p>In 2019, the FDA approved esketamine (Spravato), a derivative of ketamine, specifically for treatment-resistant depression, further validating ketamine's therapeutic potential.</p>
+                            
+                            <div class="alert alert-warning mt-4">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Important Safety Information</h4>
+                                <p>Ketamine therapy is a medical treatment that should only be administered by qualified healthcare providers. It is not a recreational drug, and misuse can lead to serious health consequences.</p>
+                                <p>Always disclose your full medical history and all medications you're taking during your consultation to ensure your safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Common questions about ketamine therapy</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How many treatments will I need?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Most patients begin with a series of 4-6 treatments over 2-3 weeks. After this initial series, the need for maintenance treatments varies by individual. Some patients maintain benefits for months after a single series, while others benefit from periodic maintenance sessions every 2-6 weeks.</p>
+                                    <p>We'll work with you to determine the optimal treatment schedule based on your response and needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Is ketamine therapy covered by insurance?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Currently, most insurance companies do not cover ketamine therapy for mental health conditions or chronic pain, as it's considered an off-label use. However, some insurance plans may cover portions of the initial consultation or certain aspects of treatment.</p>
+                                    <p>We offer transparent pricing and can provide documentation for you to submit to your insurance for possible reimbursement. We also offer payment plans to make treatment more accessible.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Will I need to stop my current medications?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>In most cases, you can continue your current medications while receiving ketamine therapy. However, certain medications may reduce ketamine's effectiveness or increase side effects.</p>
+                                    <p>During your consultation, we'll review all your medications and make recommendations. Never stop prescribed medications without consulting the prescribing physician.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Is ketamine therapy addictive?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>When administered in a medical setting at therapeutic doses and frequencies, ketamine has not been shown to be addictive. The dosing schedule used for depression, anxiety, and PTSD (typically once every few weeks) does not lead to physical dependence.</p>
+                                    <p>We carefully monitor all patients and structure treatment protocols to minimize any risk of dependence or misuse.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    How quickly will I notice results?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Many patients report improvement in symptoms within hours to days after their first treatment. However, the full benefits often develop over the course of the initial treatment series.</p>
+                                    <p>Some patients may require multiple sessions before noticing significant improvement. We track your response using standardized assessments to objectively measure your progress.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Explore Ketamine Therapy?</h2>
+            <p>Schedule a consultation to learn if ketamine therapy is right for you. Our team will answer your questions and develop a personalized treatment plan to address your specific needs.</p>
+            <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary mt-3">Schedule Your Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/lotus_logo.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                        <h4 class="mb-0">Lotus Direct Care</h4>
+                    </div>
+                    <p>Direct Primary Care in Anytown, USA</p>
+                    <p>123 Healing Way<br>Anytown, USA 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@lotusdirectcare.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday: 9:00 AM - 5:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                        <li>Thursday: 9:00 AM - 5:00 PM</li>
+                        <li>Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Membership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://app.elationpassport.com/passport/login/">Patient Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

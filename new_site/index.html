@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+        .pricing-badge {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 15px;
+            font-weight: 600;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .stats-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .stats-item {
+            display: inline-block;
+            margin: 0 15px;
+            text-align: center;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+        
+        .stats-text {
+            font-size: 1rem;
+            color: white;
+        }
+        
+        .highlight-text {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-table.featured {
+                transform: none;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+            
+            .pricing-table.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-item {
+                margin: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div style="position: relative; margin-bottom: 30px; margin-top: 20px;">
+                        <div style="background-color: rgba(0,0,0,0.4); display: inline-block; padding: 20px; border-radius: 50%; box-shadow: 0 0 30px rgba(0,0,0,0.5);">
+                            <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care - Primary Care & Functional Medicine" class="img-fluid" style="max-width: 300px; height: auto; filter: drop-shadow(0 0 20px rgba(230, 182, 85, 1)); animation: glow 2s infinite alternate;">
+                        </div>
+                    </div>
+                    <style>
+                        @keyframes glow {
+                            from {
+                                filter: drop-shadow(0 0 15px rgba(230, 182, 85, 0.9));
+                            }
+                            to {
+                                filter: drop-shadow(0 0 25px rgba(230, 182, 85, 1));
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+            <h1>Healthcare Without Barriers: The Way Medicine Should Be</h1>
+            <p>Imagine a doctor who truly knows you, has time for you, and is directly accessible when you need them. At Lotus Direct Care, we've removed the barriers between you and your physician.</p>
+            
+            <div class="stats-container">
+                <div class="stats-item">
+                    <span class="stats-number">30-60</span>
+                    <span class="stats-text">minute appointments</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">Direct</span>
+                    <span class="stats-text">physician access</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">70-90%</span>
+                    <span class="stats-text">savings on labs</span>
+                </div>
+            </div>
+            
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary">Schedule a Free Meet & Greet</a>
+                <a href="direct-primary-care.html" class="btn btn-lg btn-outline-light">Learn About Direct Primary Care</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Journey Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Healthcare Journey</h2>
+                <p class="lead">Choose the path that's right for you</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="journey-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-user-plus"></i>
+                            <h3>New Patients</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Considering Direct Primary Care? Start with a free, no-obligation meet and greet to tour our office and discuss how our approach can work for you.</p>
+                            <p>Experience the difference of unhurried appointments and personalized care before making a decision.</p>
+                            <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary w-100">Schedule a Free Meet & Greet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="journey-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-clipboard-check"></i>
+                            <h3>Ready to Join</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Ready to experience better healthcare? Becoming a member is simple. Select your membership plan and complete our straightforward enrollment process.</p>
+                            <p>Start enjoying the benefits of Direct Primary Care right away with same-day appointments and direct access to your doctor.</p>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="journey-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-user-md"></i>
+                            <h3>Current Patients</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Already a member? Access your patient portal to schedule appointments, view your health records, and communicate directly with Dr. Rosenberg.</p>
+                            <p>Enjoy the convenience of same or next-day appointments and virtual visits when needed.</p>
+                            <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/490329635881207?appointment_types=" class="btn btn-primary w-100">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Membership Plans</h2>
+                <p class="lead">Choose the plan that's right for you and your family</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100">
+                        <div class="pricing-header">
+                            <h3>Individual</h3>
+                            <div class="price">$165</div>
+                            <div class="price-period">per month</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Unlimited office visits</li>
+                                <li><i class="fas fa-check"></i> Same/next-day appointments</li>
+                                <li><i class="fas fa-check"></i> Direct access to your doctor</li>
+                                <li><i class="fas fa-check"></i> Telemedicine included</li>
+                                <li><i class="fas fa-check"></i> Wholesale labs & medications</li>
+                                <li><i class="fas fa-check"></i> Basic procedures included</li>
+                                <li><i class="fas fa-check"></i> Annual physical</li>
+                            </ul>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100 position-relative">
+                        <div class="pricing-header" style="background-color: var(--primary-color);">
+                            <h3>Couple</h3>
+                            <div class="price">$220</div>
+                            <div class="price-period">per month</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> All Individual benefits</li>
+                                <li><i class="fas fa-check"></i> Coverage for 2 adults</li>
+                                <li><i class="fas fa-check"></i> Shared appointments available</li>
+                                <li><i class="fas fa-check"></i> Coordinated care</li>
+                                <li><i class="fas fa-check"></i> Family health planning</li>
+                                <li><i class="fas fa-check"></i> $110 savings vs. individual plans</li>
+                                <li><i class="fas fa-check"></i> Annual physicals for both</li>
+                            </ul>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100">
+                        <div class="pricing-header">
+                            <h3>Additional Family Members</h3>
+                            <div class="price">$20</div>
+                            <div class="price-period">per month</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> All Couple benefits</li>
+                                <li><i class="fas fa-check"></i> Coverage for 2 adults + children</li>
+                                <li><i class="fas fa-check"></i> Pediatric care included</li>
+                                <li><i class="fas fa-check"></i> Family wellness planning</li>
+                                <li><i class="fas fa-check"></i> School & sports physicals</li>
+                                <li><i class="fas fa-check"></i> Significant savings per child</li>
+                                <li><i class="fas fa-check"></i> Annual physicals for all</li>
+                            </ul>
+                            <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-primary w-100">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="pricing-table h-100">
+                        <div class="pricing-header">
+                            <h3>Business</h3>
+                            <div class="price">Custom</div>
+                            <div class="price-period">pricing</div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Employee healthcare benefit</li>
+                                <li><i class="fas fa-check"></i> Volume discounts available</li>
+                                <li><i class="fas fa-check"></i> Reduce employee sick days</li>
+                                <li><i class="fas fa-check"></i> Workplace wellness programs</li>
+                                <li><i class="fas fa-check"></i> On-site services available</li>
+                                <li><i class="fas fa-check"></i> Customized care plans</li>
+                                <li><i class="fas fa-check"></i> Detailed reporting options</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary w-100">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="lead">All plans include unlimited primary care visits with no copays or hidden fees.</p>
+                <a href="pricing.html" class="btn btn-outline-primary">View Full Pricing Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Direct Primary Care</h2>
+                <p class="lead">Experience the benefits of membership-based healthcare</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-clock"></i>
+                        <h3>Extended Appointments</h3>
+                        <p>Enjoy 30-60 minute appointments instead of the typical 7-15 minutes in traditional practices.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Same/Next-Day Appointments</h3>
+                        <p>Get seen quickly when you're sick, often on the same day you call.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-comments"></i>
+                        <h3>Direct Communication</h3>
+                        <p>Text, email, or call your doctor directly without going through a receptionist or nurse.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Transparent Pricing</h3>
+                        <p>No surprise bills or hidden fees. Know exactly what you'll pay for services.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-video"></i>
+                        <h3>Virtual Visits</h3>
+                        <p>Convenient telemedicine appointments included in your membership.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-flask"></i>
+                        <h3>Discounted Labs & Procedures</h3>
+                        <p>Save 70-90% on lab work and other services compared to insurance pricing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="direct-primary-care.html" class="btn btn-primary">Learn More About DPC</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section class="section doctor-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="doctor-image">
+                        <img src="images/dr_rosenberg_new.jpg" alt="Dr. Aaron Rosenberg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h2>Meet Dr. Aaron Rosenberg</h2>
+                    <p class="lead">Board-Certified Physician Dedicated to Personalized Care</p>
+                    <p>Dr. Rosenberg founded Lotus Direct Care with a vision to restore the doctor-patient relationship and provide truly personalized healthcare. With over 15 years of experience in primary care and functional medicine, he takes the time to listen, understand your concerns, and develop comprehensive treatment plans tailored to your unique needs.</p>
+                    <p>Dr. Rosenberg's approach combines the best of conventional medicine with evidence-based functional medicine practices, addressing not just symptoms but the root causes of health issues.</p>
+                    <div class="mt-4">
+                        <a href="about.html" class="btn btn-primary">Learn More About Dr. Rosenberg</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Patients Say</h2>
+                <p class="lead">Real stories from real patients</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"After years of frustration with traditional healthcare, finding Lotus Direct Care has been life-changing. Dr. Rosenberg takes the time to listen and truly understand my health concerns. I never feel rushed, and I love being able to reach him directly when I have questions."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Member since 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"As someone with a chronic condition, having a doctor who knows me and is available when I need them has made all the difference. The money I save on labs and medications more than covers my membership fee. Plus, I've never had to wait more than a day for an appointment."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Michael Rodriguez</h4>
+                                    <p>Member since 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <div class="mb-3">
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                    <span class="fa fa-star" style="color: var(--accent-color);"></span>
+                </div>
+                <p class="lead">5.0 out of 5 stars based on 24 patient reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Health Insights</h2>
+                <p class="lead">Tips and information to help you live your healthiest life</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card blog-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">The Benefits of Annual Physicals: Why Regular Check-ups Matter</h5>
+                            <p class="card-text">Regular check-ups are essential for maintaining good health and catching potential issues early. Learn why annual physicals should be a priority in your healthcare routine.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Posted on May 1, 2025</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card blog-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Managing Chronic Conditions: A Personalized Approach</h5>
+                            <p class="card-text">Living with a chronic condition requires ongoing care and attention. Discover how a personalized approach can improve your quality of life and prevent complications.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Posted on April 22, 2025</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card blog-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">5 Common Nutrition Myths Debunked by Science</h5>
+                            <p class="card-text">There's a lot of misinformation about nutrition floating around. Let's separate fact from fiction and explore what the science really says about healthy eating.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Posted on April 8, 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn-primary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Better Healthcare?</h2>
+            <p>Join Lotus Direct Care today and discover what healthcare should be: personal, accessible, and focused on you.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary">Schedule a Free Meet & Greet</a>
+                <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-lg btn-accent">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care" class="img-fluid" style="max-width: 150px;">
+                    <p class="mt-3">At Lotus Direct Care, we believe in a better approach to healthcare—one that prioritizes your needs, gives you time with your doctor, and provides transparent, affordable pricing.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Primary Care</a></li>
+                        <li><a href="services.html">Preventive Care</a></li>
+                        <li><a href="services.html">Chronic Disease Management</a></li>
+                        <li><a href="services.html">Functional Medicine</a></li>
+                        <li><a href="services.html">Mental Health</a></li>
+                        <li><a href="services.html">Telemedicine</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, Suite 456, Anytown, CA 12345</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@lotusdirectcare.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9am-5pm</li>
+                    </ul>
+                    <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule an Appointment</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All rights reserved.</p>
+                <div class="mt-3 d-flex justify-content-center">
+                    <script src="https://static.legitscript.com/seals/17561062.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

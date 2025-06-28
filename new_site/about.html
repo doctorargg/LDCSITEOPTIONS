@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #d1a43e;
+            border-color: #d1a43e;
+            color: white;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/lotus_about_hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .doctor-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            margin-left: -1px;
+            background-color: #e9ecef;
+        }
+        
+        .timeline > li {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 50px;
+        }
+        
+        .timeline > li:after, .timeline > li:before {
+            content: " ";
+            display: table;
+        }
+        
+        .timeline > li:after {
+            clear: both;
+        }
+        
+        .timeline > li .timeline-panel {
+            float: left;
+            position: relative;
+            width: 46%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        
+        .timeline > li .timeline-panel:before {
+            position: absolute;
+            top: 26px;
+            right: -15px;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 15px solid #ccc;
+            border-right: 0 solid #ccc;
+            border-bottom: 15px solid transparent;
+            content: " ";
+        }
+        
+        .timeline > li .timeline-panel:after {
+            position: absolute;
+            top: 27px;
+            right: -14px;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 14px solid #fff;
+            border-right: 0 solid #fff;
+            border-bottom: 14px solid transparent;
+            content: " ";
+        }
+        
+        .timeline > li .timeline-image {
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            text-align: center;
+            color: white;
+            border: 7px solid #e9ecef;
+            border-radius: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline > li .timeline-image h4 {
+            font-size: 10px;
+            line-height: 14px;
+            margin-top: 12px;
+        }
+        
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+        
+        .timeline > li.timeline-inverted > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+        
+        .timeline > li.timeline-inverted > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+        
+        .timeline > li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline .timeline-heading h4 {
+            margin-top: 0;
+            color: inherit;
+        }
+        
+        .timeline .timeline-heading h4.subheading {
+            text-transform: none;
+        }
+        
+        .timeline .timeline-body > ul,
+        .timeline .timeline-body > p {
+            margin-bottom: 0;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .value-card .card-header i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .value-card .card-header h3 {
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        .value-card .card-body {
+            padding: 30px;
+        }
+        
+        .office-gallery {
+            margin-bottom: 30px;
+        }
+        
+        .office-gallery img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline:before {
+                left: 40px;
+            }
+            
+            .timeline > li .timeline-panel {
+                width: calc(100% - 90px);
+                width: -moz-calc(100% - 90px);
+                width: -webkit-calc(100% - 90px);
+                float: right;
+            }
+            
+            .timeline > li .timeline-image {
+                left: 15px;
+                margin-left: 0;
+                top: 16px;
+            }
+            
+            .timeline > li > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+            
+            .timeline > li > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline > li .timeline-image {
+                width: 50px;
+                height: 50px;
+                margin-left: 0;
+                top: 30px;
+            }
+            
+            .timeline > li .timeline-panel {
+                width: calc(100% - 65px);
+                width: -moz-calc(100% - 65px);
+                width: -webkit-calc(100% - 65px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Lotus Direct Care</h1>
+            <p class="lead">Our mission is to restore the doctor-patient relationship through personalized, accessible healthcare</p>
+        </div>
+    </section>
+
+    <!-- Practice Overview Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>Our Practice</h2>
+                    <p class="lead">A new approach to primary care that puts patients first</p>
+                    <p>Lotus Direct Care was founded on the belief that healthcare should be personal, accessible, and affordable. As a Direct Primary Care practice, we've removed the barriers that often stand between patients and their doctor, creating a healthcare experience that truly serves your needs.</p>
+                    <p>Our practice is built on the principle that the doctor-patient relationship is sacred and should be the foundation of good healthcare. By limiting our patient panel size and eliminating insurance bureaucracy, we're able to provide the kind of personalized care that everyone deserves.</p>
+                    <p>At Lotus Direct Care, you'll never feel rushed during appointments, struggle to reach your doctor, or be surprised by unexpected bills. Instead, you'll experience healthcare the way it should be—focused on you.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care - Primary Care & Functional Medicine" class="img-fluid" style="max-width: 250px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Profile Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Dr. Aaron Rosenberg</h2>
+                <p class="lead">Physician Dedicated to Personalized Care</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="doctor-image">
+                        <img src="images/dr_rosenberg_new.jpg" alt="Dr. Aaron Rosenberg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p>Dr. Rosenberg founded Lotus Direct Care with a vision to restore the doctor-patient relationship and provide truly personalized healthcare. With over 15 years of experience in primary care and functional medicine, he takes the time to listen, understand your concerns, and develop comprehensive treatment plans tailored to your unique needs.</p>
+                    <p>Dr. Rosenberg's approach combines the best of conventional medicine with evidence-based functional medicine practices, addressing not just symptoms but the root causes of health issues. He believes in empowering patients through education and partnership, working together to achieve optimal health outcomes.</p>
+                    <p>When not caring for patients, Dr. Rosenberg enjoys hiking, reading, and spending time with his family. He is actively involved in the community and regularly participates in local health education initiatives.</p>
+                    <div class="mt-4">
+                        <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary">Schedule a Meet & Greet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Timeline Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Journey</h2>
+                <p class="lead">Dr. Rosenberg's path to Direct Primary Care</p>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image">
+                        <h4>2007</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Medical Education</h4>
+                            <h4 class="subheading">UAG - Guadalajara, Mexico</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Graduated from Universidad Autónoma de Guadalajara School of Medicine, with a focus on primary care and community health.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>2012</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Residency</h4>
+                            <h4 class="subheading">UC Davis Affiliated Family Practice Residency</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Trained in Family Medicine at UC Davis Affiliated Family Practice Residency, gaining hands-on experience in comprehensive patient care.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image">
+                        <h4>2016</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Traditional Practice</h4>
+                            <h4 class="subheading">Spectrum Health Medical</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Practiced in a traditional insurance-based setting, experiencing firsthand the limitations of the conventional healthcare model.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>2018</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Private Practice</h4>
+                            <h4 class="subheading">Rosenberg Medical Clinic</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Established a private medical practice focused on providing more personalized care and building stronger patient relationships.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image">
+                        <h4>2021</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Lotus Direct Care</h4>
+                            <h4 class="subheading">Founding of DPC Practice</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Founded Lotus Direct Care to provide personalized, accessible healthcare that prioritizes the doctor-patient relationship.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>Today</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Continuing Growth</h4>
+                            <h4 class="subheading">Expanding Services & Community</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Continuously expanding services and building a community of patients who experience healthcare the way it should be.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p class="lead">The principles that guide our practice</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-user-md"></i>
+                            <h3>Relationship-Centered Care</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>We believe that the doctor-patient relationship is the foundation of good healthcare. By taking the time to truly know our patients, we can provide more personalized and effective care.</p>
+                            <p>Our limited patient panel ensures that Dr. Rosenberg can develop meaningful relationships with each person under his care.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h3>Compassionate Service</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Healthcare should be delivered with empathy and understanding. We treat each patient with the compassion and respect they deserve, recognizing that illness can be both physically and emotionally challenging.</p>
+                            <p>Our team approaches every interaction with kindness and a genuine desire to help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-search"></i>
+                            <h3>Root Cause Focus</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Rather than simply treating symptoms, we strive to identify and address the underlying causes of health issues. This approach leads to more effective, long-lasting solutions and better overall health.</p>
+                            <p>We combine conventional medicine with functional medicine principles to provide comprehensive care.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Patient Education</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>We believe in empowering patients through education. When you understand your health condition and treatment options, you can make informed decisions and take an active role in your healthcare.</p>
+                            <p>Dr. Rosenberg takes the time to explain complex medical concepts in accessible terms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Preventive Approach</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Prevention is always better than cure. We emphasize proactive health measures, regular screenings, and lifestyle modifications that can prevent disease before it starts.</p>
+                            <p>Our comprehensive annual physicals and ongoing health monitoring help catch potential issues early.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-dollar-sign"></i>
+                            <h3>Transparency</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>We believe in complete transparency in all aspects of our practice, from pricing to medical decision-making. You'll never encounter surprise bills or hidden fees at Lotus Direct Care.</p>
+                            <p>Our membership model provides predictable costs and clear expectations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Tour Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Office</h2>
+                <p class="lead">A comfortable, welcoming environment for your care</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 office-gallery">
+                    <img src="images/office1.jpg" alt="Lotus Direct Care Reception Area" class="img-fluid">
+                    <h4>Reception Area</h4>
+                    <p>Our welcoming reception area is designed for comfort, with minimal wait times.</p>
+                </div>
+                <div class="col-md-6 col-lg-4 office-gallery">
+                    <img src="images/office2.jpg" alt="Lotus Direct Care Exam Room" class="img-fluid">
+                    <h4>Exam Rooms</h4>
+                    <p>Clean, comfortable exam rooms equipped with modern medical technology.</p>
+                </div>
+                <div class="col-md-6 col-lg-4 office-gallery">
+                    <img src="images/office3.jpg" alt="Lotus Direct Care Consultation Room" class="img-fluid">
+                    <h4>Consultation Room</h4>
+                    <p>A private space for in-depth discussions about your health concerns and goals.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>We invite you to visit our office in person and see the difference for yourself.</p>
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary">Schedule a Meet & Greet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Better Healthcare?</h2>
+            <p>Join our practice or schedule a free meet and greet to learn more about how Direct Primary Care can benefit you and your family.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary">Schedule a Meet & Greet</a>
+                <a href="https://lotusdirectcare.hint.com/signup/membership/contacts?=" class="btn btn-lg btn-accent">Become a Member</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/lotus_logo.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                        <h4 class="mb-0">Lotus Direct Care</h4>
+                    </div>
+                    <p>Direct Primary Care in Anytown, USA</p>
+                    <p>123 Healing Way<br>Anytown, USA 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@lotusdirectcare.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday: 9:00 AM - 5:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                        <li>Thursday: 9:00 AM - 5:00 PM</li>
+                        <li>Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Membership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/490329635881207?appointment_types=">Patient Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+                      <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All rights reserved.</p>
+                <div class="mt-3 d-flex justify-content-center">
+                    <script src="https://static.legitscript.com/seals/17561062.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>in.js"></script>
+</body>
+</html>

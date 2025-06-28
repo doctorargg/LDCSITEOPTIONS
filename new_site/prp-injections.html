@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRP Injections - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/lotus-prp-injections-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-box .feature-icon {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .feature-box .feature-icon i {
+            font-size: 3rem;
+        }
+        
+        .feature-box .feature-content {
+            padding: 30px;
+        }
+        
+        .feature-box .feature-content h3 {
+            margin-bottom: 15px;
+        }
+        
+        .process-step {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .process-step .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            margin-bottom: 15px;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .testimonial .quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial .client {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial .client-info h5 {
+            margin-bottom: 5px;
+        }
+        
+        .testimonial .client-info p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 20px;
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        .condition-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .condition-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .condition-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+        }
+        
+        .condition-card .card-body {
+            padding: 20px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .comparison-table .feature {
+            font-weight: 600;
+        }
+        
+        .comparison-table .check {
+            color: #28a745;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .comparison-table .times {
+            color: #dc3545;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>PRP Injections</h1>
+            <p class="lead">Harnessing your body's natural healing power for musculoskeletal injuries</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>What is PRP Therapy?</h2>
+                    <p>Platelet-Rich Plasma (PRP) therapy is an innovative, minimally invasive treatment that uses your body's own healing mechanisms to accelerate recovery from musculoskeletal injuries and reduce pain from chronic conditions.</p>
+                    <p>The procedure involves drawing a small amount of your blood, processing it to concentrate the platelets, and then injecting this platelet-rich solution directly into the injured area. These concentrated platelets contain growth factors that stimulate and enhance your body's natural healing processes.</p>
+                    <p>PRP therapy offers several advantages over traditional treatments:</p>
+                    <ul>
+                        <li>Minimally invasive alternative to surgery</li>
+                        <li>Uses your body's own healing factors (autologous)</li>
+                        <li>Minimal downtime and quick recovery</li>
+                        <li>Reduced risk of adverse reactions</li>
+                        <li>Can be effective for conditions that haven't responded to conventional treatments</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary me-3">Schedule a Consultation</a>
+                        <a href="#how-it-works" class="btn btn-outline-primary">Learn How It Works</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/prp-medical-hero.png" alt="Doctor preparing PRP injection" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>How PRP Therapy Works</h2>
+                <p class="lead">Understanding the science behind platelet-rich plasma</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>The Power of Platelets</h3>
+                            <p>Platelets are small cell fragments in your blood that are primarily known for their role in clotting. However, they also contain hundreds of proteins called growth factors that play a crucial role in healing injuries.</p>
+                            <p>These growth factors:</p>
+                            <ul>
+                                <li>Signal stem cells to come to the injured area</li>
+                                <li>Stimulate cell reproduction and tissue regeneration</li>
+                                <li>Promote healing by increasing collagen production</li>
+                                <li>Initiate new blood vessel formation</li>
+                                <li>Reduce inflammation and associated pain</li>
+                            </ul>
+                            <p>PRP concentrates these platelets to levels 5-10 times higher than what is typically found in blood, creating a powerful healing solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>The Healing Process</h3>
+                            <p>When injected into damaged tissues, PRP initiates a localized inflammation response that triggers the healing cascade:</p>
+                            <ol>
+                                <li><strong>Inflammation Phase (1-3 days):</strong> The concentrated platelets release growth factors that attract healing cells to the area and begin the repair process.</li>
+                                <li><strong>Proliferation Phase (3-21 days):</strong> New tissue begins to develop as cells multiply and produce collagen and other structural proteins.</li>
+                                <li><strong>Remodeling Phase (21 days - 1 year):</strong> The new tissue gradually strengthens and matures, improving function and reducing pain.</li>
+                            </ol>
+                            <p>This process helps accelerate healing in injured tendons, ligaments, muscles, and joints, often providing relief when other treatments have failed.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>The Science Behind PRP</h3>
+                            <p>Research on PRP continues to evolve, with numerous studies showing promising results for various musculoskeletal conditions:</p>
+                            <ul>
+                                <li>A 2021 meta-analysis found that PRP injections provided significant pain reduction and functional improvement in knee osteoarthritis compared to placebo or hyaluronic acid injections.</li>
+                                <li>Studies have shown 70-80% success rates for chronic tennis elbow when treated with PRP.</li>
+                                <li>Research indicates that PRP can accelerate healing in acute muscle injuries and reduce return-to-play time for athletes.</li>
+                                <li>Multiple studies support PRP's effectiveness for rotator cuff injuries, particularly for partial tears and tendinopathy.</li>
+                            </ul>
+                            <p>While research is ongoing, the growing body of evidence supports PRP as an effective option for many patients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Advantages Over Other Treatments</h3>
+                            <p>PRP offers several benefits compared to conventional treatments:</p>
+                            <ul>
+                                <li><strong>Natural healing:</strong> Uses your own blood components, minimizing risk of adverse reactions</li>
+                                <li><strong>Non-surgical:</strong> Avoids the risks, costs, and recovery time associated with surgery</li>
+                                <li><strong>Minimal downtime:</strong> Most patients return to normal activities within days</li>
+                                <li><strong>Few side effects:</strong> Typically limited to temporary soreness at the injection site</li>
+                                <li><strong>Long-lasting results:</strong> Many patients experience relief for months to years after treatment</li>
+                                <li><strong>Reduced need for medications:</strong> May decrease reliance on pain medications, including opioids</li>
+                            </ul>
+                            <p>These advantages make PRP an attractive option for many patients seeking alternatives to surgery or long-term medication use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Treated Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conditions We Treat With PRP</h2>
+                <p class="lead">Effective for a wide range of musculoskeletal injuries and conditions</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="condition-card h-100">
+                        <div class="card-header">
+                            <h3 class="mb-0">Knee Conditions</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Osteoarthritis</li>
+                                <li>Meniscus tears</li>
+                                <li>Patellar tendinopathy (Jumper's knee)</li>
+                                <li>MCL/LCL sprains</li>
+                                <li>Post-surgical recovery</li>
+                                <li>Cartilage defects</li>
+                            </ul>
+                            <p>PRP injections can reduce pain and improve function in knee conditions, potentially delaying or eliminating the need for knee replacement surgery in some patients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="condition-card h-100">
+                        <div class="card-header">
+                            <h3 class="mb-0">Shoulder Conditions</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Rotator cuff tears and tendinopathy</li>
+                                <li>Labral tears</li>
+                                <li>Shoulder impingement</li>
+                                <li>AC joint injuries</li>
+                                <li>Frozen shoulder</li>
+                                <li>Biceps tendinopathy</li>
+                            </ul>
+                            <p>PRP can help heal damaged shoulder tissues and reduce inflammation, improving range of motion and decreasing pain in chronic and acute shoulder conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="condition-card h-100">
+                        <div class="card-header">
+                            <h3 class="mb-0">Elbow & Wrist</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Tennis elbow (lateral epicondylitis)</li>
+                                <li>Golfer's elbow (medial epicondylitis)</li>
+                                <li>Wrist tendinopathy</li>
+                                <li>Carpal tunnel syndrome</li>
+                                <li>Ligament sprains</li>
+                                <li>Arthritis</li>
+                            </ul>
+                            <p>PRP is particularly effective for chronic tendon issues in the elbow and wrist, with studies showing success rates of 70-80% for conditions like tennis elbow.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="condition-card h-100">
+                        <div class="card-header">
+                            <h3 class="mb-0">Hip & Pelvis</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Hip osteoarthritis</li>
+                                <li>Labral tears</li>
+                                <li>Trochanteric bursitis</li>
+                                <li>Hamstring tendinopathy</li>
+                                <li>Piriformis syndrome</li>
+                                <li>Sacroiliac joint pain</li>
+                            </ul>
+                            <p>PRP injections can provide significant pain relief and improved mobility for hip and pelvic conditions, helping patients avoid more invasive procedures.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="condition-card h-100">
+                        <div class="card-header">
+                            <h3 class="mb-0">Foot & Ankle</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Plantar fasciitis</li>
+                                <li>Achilles tendinopathy</li>
+                                <li>Ankle sprains</li>
+                                <li>Peroneal tendinopathy</li>
+                                <li>Posterior tibial tendon dysfunction</li>
+                                <li>Arthritis</li>
+                            </ul>
+                            <p>Chronic foot and ankle conditions often respond well to PRP therapy, with many patients experiencing significant improvement after just 1-2 treatments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="condition-card h-100">
+                        <div class="card-header">
+                            <h3 class="mb-0">Spine & Neck</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Facet joint pain</li>
+                                <li>Sacroiliac joint dysfunction</li>
+                                <li>Ligament sprains</li>
+                                <li>Muscle strains</li>
+                                <li>Degenerative disc disease</li>
+                                <li>Whiplash injuries</li>
+                            </ul>
+                            <p>PRP injections can help reduce inflammation and promote healing in specific spine and neck conditions, potentially providing an alternative to steroid injections or surgery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Process Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>The PRP Treatment Process</h2>
+                <p class="lead">What to expect during your PRP therapy</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Consultation & Assessment</h3>
+                        <p>We begin with a thorough evaluation of your condition, including a review of your medical history, physical examination, and any relevant imaging studies. We'll determine if PRP therapy is appropriate for your specific situation and develop a personalized treatment plan.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Blood Collection & Processing</h3>
+                        <p>On the day of treatment, we draw a small amount of your blood (typically 30-60ml, similar to a routine blood test). The blood is then placed in a centrifuge that spins at high speed to separate the platelets from other blood components, creating the platelet-rich plasma.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>PRP Injection</h3>
+                        <p>The concentrated PRP is injected directly into the injured area using ultrasound guidance for precise placement. This ensures the healing factors reach exactly where they're needed most. The procedure typically takes 30-60 minutes from blood draw to completion.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Recovery & Follow-up</h3>
+                        <p>After treatment, we'll provide specific post-procedure instructions. Most patients can return to normal activities within a day or two, with some activity modifications. We'll schedule follow-up appointments to monitor your progress and determine if additional treatments are needed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Most conditions require 1-3 PRP treatments spaced 4-6 weeks apart for optimal results. Improvement typically begins within 2-6 weeks after treatment, with continued healing for up to 6-12 months.</p>
+                <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-primary mt-3">Schedule Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>PRP vs. Other Treatments</h2>
+                <p class="lead">How PRP compares to conventional treatment options</p>
+            </div>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PRP Therapy</th>
+                            <th>Corticosteroid Injections</th>
+                            <th>Surgery</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature">Uses body's natural healing</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Minimally invasive</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Promotes tissue healing</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Quick recovery time</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Long-lasting results</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Low risk of side effects</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">No tissue damage</td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Anesthesia required</td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="times"><i class="fas fa-times"></i></td>
+                            <td class="check"><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-5">
+                <h3>When to Consider PRP</h3>
+                <p>PRP therapy may be particularly beneficial if:</p>
+                <ul>
+                    <li>You've tried conventional treatments without success</li>
+                    <li>You want to avoid surgery or are not a good surgical candidate</li>
+                    <li>You're concerned about the side effects of corticosteroid injections</li>
+                    <li>You're looking for a treatment that addresses the underlying cause, not just symptoms</li>
+                    <li>You prefer a natural approach using your body's own healing mechanisms</li>
+                    <li>You need to return to activities quickly with minimal downtime</li>
+                </ul>
+                <p>During your consultation, we'll discuss whether PRP is the right option for your specific condition and goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Common questions about PRP therapy</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Is PRP therapy painful?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Most patients experience minimal discomfort during PRP treatment. The blood draw is similar to having routine lab work done. For the injection, we use a local anesthetic to numb the area before administering the PRP.</p>
+                                    <p>After the procedure, some patients experience mild soreness or swelling at the injection site for 24-48 hours. This is actually a positive sign that the healing response has been triggered. Over-the-counter pain relievers (except NSAIDs like ibuprofen, which can interfere with the healing process) can help manage any discomfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How many treatments will I need?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>The number of treatments needed varies depending on the condition being treated, its severity, and your individual response. In general:</p>
+                                    <ul>
+                                        <li>Most patients require 1-3 treatments spaced 4-6 weeks apart</li>
+                                        <li>Acute injuries may respond well to a single treatment</li>
+                                        <li>Chronic conditions typically benefit from a series of treatments</li>
+                                        <li>Severe arthritis may require maintenance treatments every 6-12 months</li>
+                                    </ul>
+                                    <p>We'll develop a personalized treatment plan based on your specific condition and monitor your progress to determine if additional treatments would be beneficial.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How quickly will I see results?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>PRP works by stimulating your body's natural healing processes, which takes time. The typical timeline for results is:</p>
+                                    <ul>
+                                        <li><strong>First 1-2 weeks:</strong> You may experience increased soreness as the inflammatory healing response begins</li>
+                                        <li><strong>2-6 weeks:</strong> Most patients begin to notice improvement in pain and function</li>
+                                        <li><strong>6-12 weeks:</strong> Continued improvement as tissue healing progresses</li>
+                                        <li><strong>3-6 months:</strong> Maximum benefits typically achieved</li>
+                                    </ul>
+                                    <p>Results continue to develop for up to 6-12 months as the tissues heal and remodel. This gradual improvement is actually a sign that true healing is occurring, rather than just masking symptoms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Is PRP therapy covered by insurance?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Currently, most insurance companies consider PRP therapy to be experimental or investigational and do not provide coverage. However, this is changing as more research demonstrates its effectiveness.</p>
+                                    <p>As a Direct Primary Care practice, we don't bill insurance directly for our services. We offer transparent, affordable pricing for PRP treatments and can provide documentation for you to submit to your insurance for possible reimbursement.</p>
+                                    <p>Many patients find that the cost of PRP therapy is comparable to or less than their out-of-pocket expenses for surgery, with significantly less downtime and risk. We're happy to discuss payment options during your consultation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What are the potential risks or side effects?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>PRP therapy is considered very safe, with minimal risk of complications since it uses your own blood components. Potential side effects are generally mild and temporary:</p>
+                                    <ul>
+                                        <li>Pain or soreness at the injection site (24-48 hours)</li>
+                                        <li>Minor swelling or bruising</li>
+                                        <li>Temporary increase in pain as the healing response begins</li>
+                                        <li>Rare risk of infection (minimized by our sterile technique)</li>
+                                    </ul>
+                                    <p>Serious complications are extremely rare. The use of ultrasound guidance for injections further reduces risks by ensuring accurate placement.</p>
+                                    <p>During your consultation, we'll review your medical history to identify any factors that might increase your risk and discuss whether PRP is appropriate for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Explore PRP Therapy?</h2>
+            <p>Schedule a consultation to learn if PRP injections could help with your joint pain, tendon injury, or musculoskeletal condition. Our team will evaluate your specific situation and develop a personalized treatment plan.</p>
+            <a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/933212881617143?appointment_types=" class="btn btn-lg btn-primary mt-3">Schedule Your Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/lotus_logo.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                        <h4 class="mb-0">Lotus Direct Care</h4>
+                    </div>
+                    <p>Direct Primary Care in Anytown, USA</p>
+                    <p>123 Healing Way<br>Anytown, USA 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@lotusdirectcare.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday: 9:00 AM - 5:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                        <li>Thursday: 9:00 AM - 5:00 PM</li>
+                        <li>Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Membership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://app.elationpassport.com/passport/login/">Patient Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

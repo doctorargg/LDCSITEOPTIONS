@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Lotus Direct Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/lotus-blog-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .blog-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-card .card-body {
+            padding: 25px;
+        }
+        
+        .blog-card .card-title {
+            margin-bottom: 15px;
+        }
+        
+        .blog-card .card-text {
+            margin-bottom: 20px;
+        }
+        
+        .blog-card .card-footer {
+            background-color: white;
+            border-top: 1px solid #eee;
+            padding: 15px 25px;
+        }
+        
+        .blog-card .card-footer .text-muted {
+            font-size: 0.9rem;
+        }
+        
+        .featured-post {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .featured-post .row {
+            align-items: center;
+        }
+        
+        .featured-post .featured-image {
+            height: 100%;
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .featured-post .featured-content {
+            padding: 40px;
+        }
+        
+        .featured-post .featured-content h3 {
+            margin-bottom: 15px;
+        }
+        
+        .featured-post .featured-content p {
+            margin-bottom: 20px;
+        }
+        
+        .featured-post .featured-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-sidebar {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .blog-sidebar h4 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .blog-sidebar h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .blog-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .blog-sidebar ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .blog-sidebar ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .blog-sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-sidebar ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .blog-sidebar .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .blog-sidebar .tag-cloud a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-sidebar .tag-cloud a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .blog-sidebar .form-control {
+            border-radius: 5px;
+        }
+        
+        .pagination {
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        .pagination .page-item .page-link {
+            color: var(--primary-color);
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        
+        .pagination .page-item.active .page-link {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .pagination .page-item .page-link:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .pagination .page-item.active .page-link:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .author-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .author-box .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-box .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-box .author-info h5 {
+            margin-bottom: 5px;
+        }
+        
+        .author-box .author-info p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 991px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .featured-post .featured-image {
+                min-height: 200px;
+            }
+            
+            .featured-post .featured-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-header {
+                padding: 40px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .featured-post .featured-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/LOGOTRANSPARENTFLOWERONLY1.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                Lotus Direct Care
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="direct-primary-care.html">Direct Primary Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="https://app.elationpassport.com/passport/login/">Patient Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Blog</h1>
+            <p class="lead">Health insights, practice updates, and medical information</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Featured Post -->
+                    <div class="featured-post">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="featured-image" style="background-image: url('images/blog-featured.jpg');"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="featured-content">
+                                    <div class="featured-meta">
+                                        <span><i class="far fa-calendar-alt me-2"></i>May 15, 2025</span>
+                                        <span class="ms-3"><i class="far fa-folder me-2"></i>Direct Primary Care</span>
+                                    </div>
+                                    <h3>Why Direct Primary Care is Revolutionizing Healthcare</h3>
+                                    <p>The traditional healthcare system is broken. Long wait times, short appointments, and skyrocketing costs have left both patients and doctors frustrated. Direct Primary Care offers a solution that benefits everyone involved.</p>
+                                    <div class="author-box">
+                                        <div class="author-image">
+                                            <img src="images/dr_rosenberg_new.jpg" alt="Dr. Aaron Rosenberg">
+                                        </div>
+                                        <div class="author-info">
+                                            <h5>Dr. Aaron Rosenberg</h5>
+                                            <p>Founder, Lotus Direct Care</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Posts Grid -->
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card h-100">
+                                <img src="images/blog1.jpg" class="card-img-top" alt="Understanding Lab Results">
+                                <div class="card-body">
+                                    <h5 class="card-title">Understanding Your Lab Results: What the Numbers Really Mean</h5>
+                                    <p class="card-text">Lab tests can be confusing with their reference ranges and medical terminology. Learn how to interpret your results and what questions to ask your doctor.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Posted on April 28, 2025 | Health Education</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card h-100">
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video: The Benefits of Meditation for Stress Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">The Benefits of Meditation for Stress Management</h5>
+                                    <p class="card-text">In this video, Dr. Rosenberg discusses how regular meditation practice can help reduce stress, lower blood pressure, and improve overall well-being.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Posted on April 15, 2025 | Wellness</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card h-100">
+                                <img src="images/blog2.jpg" class="card-img-top" alt="Ketamine Therapy">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ketamine Therapy: A Breakthrough for Treatment-Resistant Depression</h5>
+                                    <p class="card-text">Explore how ketamine therapy is offering new hope for patients with treatment-resistant depression, anxiety, and PTSD.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Posted on March 22, 2025 | Mental Health</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card h-100">
+                                <img src="images/blog3.jpg" class="card-img-top" alt="Seasonal Allergies">
+                                <div class="card-body">
+                                    <h5 class="card-title">Surviving Seasonal Allergies: Tips and Treatments</h5>
+                                    <p class="card-text">Spring is beautiful but can be miserable for allergy sufferers. Learn effective strategies to minimize symptoms and enjoy the season.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Posted on March 10, 2025 | Seasonal Health</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card h-100">
+                                <img src="images/blog4.jpg" class="card-img-top" alt="Heart Health">
+                                <div class="card-body">
+                                    <h5 class="card-title">Heart Health at Any Age: Prevention Strategies That Work</h5>
+                                    <p class="card-text">Cardiovascular disease remains the leading cause of death worldwide. Discover evidence-based approaches to keep your heart healthy.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Posted on February 14, 2025 | Preventive Care</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="blog-card h-100">
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video: Office Tour - Welcome to Lotus Direct Care" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Office Tour: Welcome to Lotus Direct Care</h5>
+                                    <p class="card-text">Take a virtual tour of our office and meet our team. See firsthand how our practice differs from traditional medical offices.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Posted on January 30, 2025 | Practice News</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Blog pagination">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="blog-sidebar">
+                        <h4>Search</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="blog-sidebar">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Direct Primary Care <span class="float-end">(12)</span></a></li>
+                            <li><a href="#">Preventive Health <span class="float-end">(8)</span></a></li>
+                            <li><a href="#">Mental Health <span class="float-end">(6)</span></a></li>
+                            <li><a href="#">Nutrition <span class="float-end">(5)</span></a></li>
+                            <li><a href="#">Wellness <span class="float-end">(4)</span></a></li>
+                            <li><a href="#">Practice News <span class="float-end">(3)</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts Widget -->
+                    <div class="blog-sidebar">
+                        <h4>Recent Posts</h4>
+                        <ul>
+                            <li><a href="#">Why Direct Primary Care is Revolutionizing Healthcare</a></li>
+                            <li><a href="#">Understanding Your Lab Results: What the Numbers Really Mean</a></li>
+                            <li><a href="#">The Benefits of Meditation for Stress Management</a></li>
+                            <li><a href="#">Ketamine Therapy: A Breakthrough for Treatment-Resistant Depression</a></li>
+                            <li><a href="#">Surviving Seasonal Allergies: Tips and Treatments</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="blog-sidebar">
+                        <h4>Tags</h4>
+                        <div class="tag-cloud">
+                            <a href="#">DPC</a>
+                            <a href="#">Wellness</a>
+                            <a href="#">Prevention</a>
+                            <a href="#">Mental Health</a>
+                            <a href="#">Nutrition</a>
+                            <a href="#">Exercise</a>
+                            <a href="#">Chronic Disease</a>
+                            <a href="#">Healthcare</a>
+                            <a href="#">Ketamine</a>
+                            <a href="#">Allergies</a>
+                            <a href="#">Heart Health</a>
+                            <a href="#">Stress</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="blog-sidebar">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to our newsletter to receive health tips and practice updates.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email Address">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/lotus_logo.png" alt="Lotus Direct Care Logo" height="40" class="me-2">
+                        <h4 class="mb-0">Lotus Direct Care</h4>
+                    </div>
+                    <p>Direct Primary Care in Anytown, USA</p>
+                    <p>123 Healing Way<br>Anytown, USA 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@lotusdirectcare.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday: 9:00 AM - 5:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                        <li>Thursday: 9:00 AM - 5:00 PM</li>
+                        <li>Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
+                        <li><a href="pricing.html">Membership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://app.elationemr.com/book/lotusdirectcare/service-locations/490329635881207?appointment_types=">Patient Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+              <div class="copyright">
+                <p>&copy; 2025 Lotus Direct Care. All rights reserved.</p>
+                <div class="mt-3 d-flex justify-content-center">
+                    <script src="https://static.legitscript.com/seals/17561062.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>bundle.min.js"></script>
+    
+    <!-- Zapier Chatbot -->
+    <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='clwr4o9dz0005jxumpvwrduto' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
+</body>
+</html>

@@ -1,0 +1,410 @@
+        :root {
+            --primary-color: #1E5B94;
+            --secondary-color: #7AB99B;
+            --accent-color: #E6B655;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #164a7e;
+            border-color: #164a7e;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #d1a43e;
+            border-color: #d1a43e;
+            color: white;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/lotus-homepage-new.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .journey-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .journey-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .journey-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .journey-card .card-header i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .journey-card .card-header h3 {
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        .journey-card .card-body {
+            padding: 30px;
+        }
+        
+        .journey-card .card-body p {
+            margin-bottom: 20px;
+        }
+        
+        .feature-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .feature-box i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-section {
+            background-color: var(--light-gray);
+        }
+        
+        .doctor-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '\201C';
+            font-size: 5rem;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            color: rgba(0,0,0,0.1);
+            font-family: serif;
+        }
+        
+        .testimonial .testimonial-content {
+            padding-left: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial .testimonial-author {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .testimonial .testimonial-author .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .testimonial .testimonial-author .author-info p {
+            margin-bottom: 0;
+            color: #6c757d;
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .blog-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-card .card-body {
+            padding: 25px;
+        }
+        
+        .blog-card .card-title {
+            margin-bottom: 15px;
+        }
+        
+        .blog-card .card-text {
+            margin-bottom: 20px;
+        }
+        
+        .blog-card .card-footer {
+            background-color: white;
+            border-top: 1px solid #eee;
+            padding: 15px 25px;
+        }
+        
+        .blog-card .card-footer .text-muted {
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/cta-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        footer h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        footer ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        footer .social-icons {
+            margin-top: 20px;
+        }
+        
+        footer .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* New styles for pricing section */
+        .pricing-table {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-table:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-table .pricing-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .pricing-table .pricing-header h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-table .pricing-header .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .pricing-table .pricing-header .price-period {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .pricing-table .pricing-body {
+            padding: 20px;
+        }
+        
+        .pricing-table .pricing-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pricing-table .pricing-body ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-table .pricing-body ul li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-table .pricing-footer {
+            padding: 20px;
+            text-align: center;
+        }
