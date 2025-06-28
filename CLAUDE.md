@@ -94,6 +94,10 @@ npm run build  # Production build
 npm run lint   # Linting
 ```
 
+## GitHub Repository
+- Repository URL: https://github.com/doctorargg/LDCSITE2025
+- GitHub Token: [Stored securely - not in repository]
+
 ## Notes
 - Dr. Aaron Rosenberg is the primary physician
 - Focus on Direct Primary Care model benefits
