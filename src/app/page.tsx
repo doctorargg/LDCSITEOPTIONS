@@ -71,6 +71,36 @@ export default function Home() {
       <TestimonialsSection />
 
       <BlogPreviewSection />
+
+      {/* Website Variants Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">Explore Our Design Variants</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Experience Lotus Direct Care through different visual themes. Each variant maintains our full functionality while offering a unique aesthetic experience.
+          </p>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { name: "Desert Oasis", path: "/variants/desert", color: "from-amber-500 to-orange-500", icon: "☀️" },
+              { name: "Japanese Sakura", path: "/variants/sakura", color: "from-pink-500 to-red-500", icon: "🌸" },
+              { name: "Nordic Wellness", path: "/variants/nordic", color: "from-cyan-500 to-blue-600", icon: "❄️" },
+              { name: "Industrial Care", path: "/variants/industrial", color: "from-gray-600 to-gray-800", icon: "⚙️" },
+              { name: "Fantasy Magic", path: "/variants/fantasy", color: "from-purple-500 to-indigo-600", icon: "✨" }
+            ].map((variant, index) => (
+              <Link 
+                key={index}
+                href={variant.path}
+                className={`bg-gradient-to-br ${variant.color} p-6 rounded-lg text-white hover:shadow-xl transform hover:scale-105 transition-all duration-300`}
+              >
+                <div className="text-center">
+                  <div className="text-4xl mb-3">{variant.icon}</div>
+                  <h3 className="font-semibold text-lg">{variant.name}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

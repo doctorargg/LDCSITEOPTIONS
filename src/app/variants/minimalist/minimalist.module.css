@@ -1,0 +1,536 @@
+/* Minimalist Variant Styles */
+
+/* Wrapper and Base Styles */
+.minimalistWrapper {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+  min-height: 100vh;
+  background: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.minimalistWrapper.dark {
+  background: black;
+  color: white;
+}
+
+/* Header Styles */
+.minimalistHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.dark .minimalistHeader {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom-color: #262626;
+}
+
+.headerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #737373;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: black;
+}
+
+.dark .backButton {
+  color: #a3a3a3;
+}
+
+.dark .backButton:hover {
+  color: white;
+}
+
+.headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoInvert {
+  filter: invert(1);
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.darkModeToggle {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: inherit;
+}
+
+.darkModeToggle:hover {
+  background: #f5f5f5;
+}
+
+.dark .darkModeToggle:hover {
+  background: #262626;
+}
+
+/* Hero Section */
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.displayHeading {
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.heroSubtext {
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+}
+
+.heroSubtext p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #737373;
+  line-height: 1.8;
+}
+
+.dark .heroSubtext p {
+  color: #a3a3a3;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 64rem;
+  margin: 0 auto 4rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #737373;
+}
+
+.dark .statLabel {
+  color: #a3a3a3;
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.minimalButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.dark .minimalButton {
+  background: white;
+  color: black;
+}
+
+.minimalButton:hover {
+  background: #262626;
+}
+
+.dark .minimalButton:hover {
+  background: #e5e5e5;
+}
+
+.minimalButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: 2px solid black;
+  color: black;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.dark .minimalButtonOutline {
+  border-color: white;
+  color: white;
+}
+
+.minimalButtonOutline:hover {
+  background: black;
+  color: white;
+}
+
+.dark .minimalButtonOutline:hover {
+  background: white;
+  color: black;
+}
+
+.buttonIcon {
+  transition: transform 0.3s ease;
+}
+
+.minimalButton:hover .buttonIcon {
+  transform: translateX(4px);
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5rem;
+  height: 2.5rem;
+  border: 2px solid #a3a3a3;
+  border-radius: 1.25rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scrollIndicator::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0.5rem;
+  width: 0.25rem;
+  height: 0.75rem;
+  background: #a3a3a3;
+  border-radius: 0.25rem;
+  transform: translateX(-50%);
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Background Pattern */
+.backgroundPattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+.dark .backgroundPattern {
+  opacity: 0.1;
+}
+
+.floatingCircle {
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  animation: float 20s ease-in-out infinite;
+}
+
+.dark .floatingCircle {
+  border-color: #262626;
+}
+
+.circle1 {
+  top: 25%;
+  left: 25%;
+  width: 24rem;
+  height: 24rem;
+}
+
+.circle2 {
+  bottom: 25%;
+  right: 25%;
+  width: 16rem;
+  height: 16rem;
+  animation-delay: 2s;
+}
+
+.circle3 {
+  top: 50%;
+  right: 33%;
+  width: 8rem;
+  height: 8rem;
+  animation-delay: 4s;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 6rem 0;
+  background: #fafafa;
+}
+
+.dark .servicesSection {
+  background: #0a0a0a;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: #737373;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.dark .sectionSubtitle {
+  color: #a3a3a3;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  height: 16rem;
+  background: white;
+  border: 1px solid #e5e5e5;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.dark .serviceCard {
+  background: #0a0a0a;
+  border-color: #262626;
+}
+
+.serviceCard:hover {
+  background: black;
+  color: white;
+}
+
+.dark .serviceCard:hover {
+  background: white;
+  color: black;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.5s ease;
+}
+
+.serviceCard p {
+  color: #737373;
+  transition: color 0.5s ease;
+}
+
+.serviceCard:hover p {
+  color: #e5e5e5;
+}
+
+.dark .serviceCard p {
+  color: #a3a3a3;
+}
+
+.dark .serviceCard:hover p {
+  color: #525252;
+}
+
+.serviceArrow {
+  position: absolute;
+  bottom: 2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+.serviceCard:hover .serviceArrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Component Wrapper */
+.minimalistComponents {
+  background: white;
+  color: black;
+}
+
+.minimalistComponents.dark {
+  background: black;
+  color: white;
+}
+
+/* Override styles for child components */
+.minimalistComponents :global(.section-padding) {
+  background: transparent !important;
+}
+
+.minimalistComponents :global(h2),
+.minimalistComponents :global(h3),
+.minimalistComponents :global(h4) {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.minimalistComponents :global(.text-gray-600) {
+  color: #737373 !important;
+}
+
+.dark .minimalistComponents :global(.text-gray-600) {
+  color: #a3a3a3 !important;
+}
+
+.minimalistComponents :global(.bg-gray-50) {
+  background: #fafafa !important;
+}
+
+.dark .minimalistComponents :global(.bg-gray-50) {
+  background: #0a0a0a !important;
+}
+
+.minimalistComponents :global(.bg-white) {
+  background: white !important;
+}
+
+.dark .minimalistComponents :global(.bg-white) {
+  background: black !important;
+}
+
+.minimalistComponents :global(.border-gray-200) {
+  border-color: #e5e5e5 !important;
+}
+
+.dark .minimalistComponents :global(.border-gray-200) {
+  border-color: #262626 !important;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .displayHeading {
+    font-size: 3.5rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .headerContent {
+    padding: 1rem 1.5rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+}

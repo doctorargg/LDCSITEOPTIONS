@@ -8,8 +8,8 @@ const BlogCard = ({ image, title, excerpt, link }: { image: string, title: strin
         <Image 
           src={image} 
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
         />
       </div>
     </Link>
@@ -27,19 +27,19 @@ const BlogPreviewSection = () => {
   // Placeholder data for blog posts
   const posts = [
     {
-      image: '/images/blog-1.jpg', // Placeholder
+      image: '/images/lotus_blog_hero.png',
       title: 'The Benefits of a Strong Doctor-Patient Relationship',
       excerpt: 'Discover how direct primary care fosters trust and leads to better health outcomes...',
       link: '/blog/doctor-patient-relationship'
     },
     {
-      image: '/images/blog-2.jpg', // Placeholder
+      image: '/images/lotus-functional-medicine-hero.png',
       title: 'Understanding Functional Medicine: A Holistic Approach',
       excerpt: 'Learn how we look at the root cause of illness to help you achieve optimal wellness...',
       link: '/blog/understanding-functional-medicine'
     },
     {
-      image: '/images/blog-3.jpg', // Placeholder
+      image: '/images/lotus_pricing_hero.png',
       title: 'Navigating Healthcare Costs: How DPC Can Save You Money',
       excerpt: 'An inside look at the transparent pricing of DPC and how it compares to insurance...',
       link: '/blog/navigating-healthcare-costs'

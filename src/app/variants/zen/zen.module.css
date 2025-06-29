@@ -1,0 +1,646 @@
+/* Zen Meditative Variant */
+
+/* Base wrapper */
+.zenWrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f5f1eb, #e8e0d5);
+  color: #4a4a4a;
+  font-family: 'Noto Sans', 'Arial', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ripple container */
+.rippleContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 90;
+}
+
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 69, 19, 0.5);
+  transform: translate(-50%, -50%);
+  animation: rippleEffect 2s ease-out forwards;
+}
+
+@keyframes rippleEffect {
+  to {
+    width: 200px;
+    height: 200px;
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+/* Zen pattern background */
+.zenPattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.ensoCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border: 3px solid #8b4513;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+.zenLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.zenLine {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8b4513, transparent);
+  opacity: 0.3;
+}
+
+/* Header */
+.zenHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 241, 235, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8b4513;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  color: #a0522d;
+}
+
+.headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lotusContainer {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.logoImage {
+  position: relative;
+  z-index: 2;
+  filter: sepia(0.5) hue-rotate(15deg);
+}
+
+.lotusGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(139, 69, 19, 0.2) 0%, transparent 70%);
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  letter-spacing: 0.1em;
+}
+
+.breathIndicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(139, 69, 19, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b4513;
+  transition: all 4s ease-in-out;
+}
+
+.breathIndicator[data-phase="inhale"] {
+  transform: scale(1);
+  background: rgba(139, 69, 19, 0.1);
+}
+
+.breathIndicator[data-phase="hold"] {
+  transform: scale(1.2);
+  background: rgba(139, 69, 19, 0.2);
+}
+
+.breathIndicator[data-phase="exhale"] {
+  transform: scale(0.8);
+  background: rgba(139, 69, 19, 0.05);
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.heroContent {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.zenBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 2rem;
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: #8b4513;
+}
+
+.mainTitle {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+}
+
+.titleLine {
+  display: block;
+  margin: 0.2em 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.titleLine:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.titleLine:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.titleLine:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.heroSubtext {
+  font-size: 1.125rem;
+  color: #6a6a6a;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Chakra display */
+.chakraDisplay {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.chakra {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+
+.activeChakra {
+  opacity: 1;
+  transform: scale(1.5);
+  box-shadow: 0 0 20px currentColor;
+}
+
+/* Zen Stats */
+.zenStats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statIcon {
+  font-size: 2rem;
+  color: #8b4513;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.875rem;
+  color: #8b4513;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.zenButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: #8b4513;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.zenButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.zenButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.zenButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
+}
+
+.zenButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  color: #8b4513;
+  text-decoration: none;
+  border: 2px solid #8b4513;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.zenButtonOutline:hover {
+  background: #8b4513;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  transition: transform 0.3s ease;
+}
+
+.zenButton:hover .buttonIcon,
+.zenButtonOutline:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+/* Floating symbols */
+.floatingSymbols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.symbol1,
+.symbol2,
+.symbol3 {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(139, 69, 19, 0.2);
+  animation: float 20s ease-in-out infinite;
+}
+
+.symbol1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.symbol2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: -7s;
+}
+
+.symbol3 {
+  top: 40%;
+  left: 80%;
+  animation-delay: -14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0) rotate(180deg);
+  }
+  75% {
+    transform: translateY(20px) rotate(270deg);
+  }
+}
+
+/* Services Section */
+.servicesSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+}
+
+.mandala {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 3rem;
+  background: radial-gradient(circle, #8b4513 10%, transparent 10%),
+              radial-gradient(circle, #8b4513 10%, transparent 10%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.1;
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  position: relative;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #4a4a4a;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(139, 69, 19, 0.1);
+  border-color: rgba(139, 69, 19, 0.3);
+}
+
+.serviceSymbol {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #8b4513;
+  opacity: 0.7;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #4a4a4a;
+}
+
+.serviceCard p {
+  color: #6a6a6a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.zenDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8b4513;
+  opacity: 0.3;
+}
+
+.serviceCard:hover .zenDot {
+  opacity: 0.6;
+}
+
+/* Meditation Section */
+.meditationSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, rgba(139, 69, 19, 0.05), transparent);
+}
+
+.meditationContent {
+  text-align: center;
+}
+
+.meditationContent h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: #4a4a4a;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pillar {
+  text-align: center;
+}
+
+.pillarIcon {
+  font-size: 3rem;
+  color: #8b4513;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.pillar h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #4a4a4a;
+}
+
+.pillar p {
+  color: #6a6a6a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Component wrapper */
+.zenComponents {
+  position: relative;
+  z-index: 10;
+}
+
+.zenComponents > * {
+  background: linear-gradient(to bottom, #f5f1eb, #e8e0d5);
+  border-top: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+  
+  .zenStats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .zenButton,
+  .zenButtonOutline {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pillars {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}

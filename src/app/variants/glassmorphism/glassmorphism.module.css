@@ -1,0 +1,181 @@
+/* Glassmorphism Base Styles */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glassDark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glassPurple {
+  background: rgba(139, 92, 246, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.glassBlue {
+  background: rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.glassPink {
+  background: rgba(236, 72, 153, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+/* Glass Components */
+.glassPanel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glassCard {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glassCard:hover {
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.4);
+  transform: translateY(-4px);
+}
+
+.glassButton {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.glassButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.5);
+}
+
+/* Gradient Text */
+.gradientText {
+  background: linear-gradient(to right, #8B5CF6, #3B82F6, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.6), 0 0 60px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.animateFloat {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animateGradientShift {
+  animation: gradientShift 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animateGlow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Neon Shadows */
+.shadowNeonPurple:hover {
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.5);
+}
+
+.shadowNeonBlue:hover {
+  box-shadow: 0 0 50px rgba(59, 130, 246, 0.5);
+}
+
+.shadowNeonPink:hover {
+  box-shadow: 0 0 50px rgba(236, 72, 153, 0.5);
+}
+
+/* Background Gradients */
+.bgGradientPrimary {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e293b 100%);
+}
+
+.bgGradientGlass {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+}
+
+/* Particle Background Support */
+.particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom Scrollbar */
+.customScrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 10px;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.3);
+}

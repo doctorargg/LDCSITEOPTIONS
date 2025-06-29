@@ -1,0 +1,630 @@
+/* Corporate Professional Variant */
+
+/* Base wrapper */
+.corporateWrapper {
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Grid background */
+.gridBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  z-index: 1;
+  background-image: 
+    linear-gradient(#e1e4e8 1px, transparent 1px),
+    linear-gradient(90deg, #e1e4e8 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Header */
+.corporateHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.backButton:hover {
+  color: #1a73e8;
+}
+
+.headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.corporateLogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  filter: grayscale(1) brightness(0.4);
+}
+
+.logoTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: -0.02em;
+}
+
+.logoTagline {
+  font-size: 0.75rem;
+  color: #6c757d;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.timeDisplay {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: 500;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding-top: 100px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 600px;
+}
+
+.trustBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #e3f2fd;
+  color: #1a73e8;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  letter-spacing: -0.03em;
+}
+
+.titleHighlight {
+  display: block;
+  color: #1a73e8;
+  margin-top: 0.5rem;
+}
+
+.heroSubtext {
+  font-size: 1.125rem;
+  color: #5f6368;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.valueProps {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.valueProp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.valueProp svg {
+  color: #1a73e8;
+  font-size: 1.25rem;
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: #1a73e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton:hover {
+  background: #1557b0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #1a73e8;
+  text-decoration: none;
+  border: 2px solid #e1e4e8;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background: #f8f9fa;
+  border-color: #1a73e8;
+}
+
+.buttonIcon {
+  transition: transform 0.2s ease;
+}
+
+.primaryButton:hover .buttonIcon {
+  transform: translateX(3px);
+}
+
+/* Hero Visual */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+}
+
+.statsCard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-width: 350px;
+}
+
+.statsCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.statItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.statItem:last-child {
+  border-bottom: none;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+.statLabel {
+  font-size: 0.95rem;
+  color: #5f6368;
+}
+
+/* Services Section */
+.servicesSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: white;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 1.125rem;
+  color: #5f6368;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #1a73e8;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover::before {
+  transform: translateX(0);
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #e1e4e8;
+  background: white;
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  background: #e3f2fd;
+  color: #1a73e8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.serviceCard p {
+  color: #5f6368;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.featureList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.featureList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+.cardCTA {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1a73e8;
+  font-weight: 600;
+  transition: gap 0.2s ease;
+}
+
+.serviceCard:hover .cardCTA {
+  gap: 0.75rem;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.testimonialsSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonialSlide {
+  min-width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.testimonialSlide blockquote {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.testimonialAuthor strong {
+  font-size: 1.125rem;
+  color: #2c3e50;
+}
+
+.testimonialAuthor span {
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e1e4e8;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activeDot {
+  width: 24px;
+  border-radius: 4px;
+  background: #1a73e8;
+}
+
+/* CTA Section */
+.ctaSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #1a73e8, #1557b0);
+  color: white;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: white;
+  color: #1a73e8;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ctaButtonOutline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Component wrapper */
+.corporateComponents {
+  position: relative;
+  z-index: 10;
+}
+
+.corporateComponents > * {
+  background: white;
+  border-top: 1px solid #e1e4e8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .heroVisual {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .valueProps {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .statsCard {
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .ctaButton,
+  .ctaButtonOutline {
+    width: 100%;
+    justify-content: center;
+  }
+}

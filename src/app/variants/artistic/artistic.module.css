@@ -1,0 +1,586 @@
+/* Artistic Paint/Canvas Variant */
+
+/* Base wrapper */
+.artisticWrapper {
+  min-height: 100vh;
+  background: #fafafa;
+  color: #333;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Paint canvas background */
+.paintCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+  filter: blur(100px);
+}
+
+/* Paint splatters */
+.paintSplatters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.paintSplatter {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0;
+  animation: splatter 1s ease-out forwards;
+}
+
+@keyframes splatter {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1) rotate(180deg);
+    opacity: 0.3;
+  }
+}
+
+/* Header */
+.artisticHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45aaf2, #f7b731, #5f27cd) 1;
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.backButton:hover {
+  color: #ff6b6b;
+}
+
+.headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.artisticLogo {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.logoImage {
+  position: relative;
+  z-index: 2;
+}
+
+.brushStroke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(8px);
+  animation: brushMove 3s ease-in-out infinite;
+}
+
+@keyframes brushMove {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
+  }
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+.colorPalette {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.heroContent {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.artistBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #ff6b6b20, #4ecdc420);
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+}
+
+.mainTitle {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.titleWord {
+  display: inline-block;
+  margin: 0 0.2em;
+  position: relative;
+  animation: paintDrip 3s ease-in-out infinite;
+}
+
+.titleWord:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.titleWord:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.titleWord:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes paintDrip {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.heroSubtext {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+/* Artistic Features */
+.artisticFeatures {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.featureIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.featureIcon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+.featureItem span {
+  font-size: 0.95rem;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.artisticButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.artisticButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.artisticButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.artisticButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.artisticButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  color: #333;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.artisticButtonOutline:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  transition: transform 0.3s ease;
+}
+
+.artisticButton:hover .buttonIcon,
+.artisticButtonOutline:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+/* Brush animation */
+.brushAnimation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  opacity: 0.3;
+}
+
+/* Services Section */
+.servicesSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: white;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  position: relative;
+  padding: 2.5rem;
+  background: #fafafa;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.paintDrip {
+  position: absolute;
+  top: -50px;
+  right: 20px;
+  width: 40px;
+  height: 100px;
+  border-radius: 0 0 50% 50%;
+  opacity: 0.8;
+  animation: drip 3s ease-in-out infinite;
+}
+
+@keyframes drip {
+  0%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(10px) scaleY(1.1);
+  }
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.serviceCard p {
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.brushStrokeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.brushStrokeBottom svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Process Section */
+.processSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: linear-gradient(45deg, #ff6b6b10, #4ecdc410);
+}
+
+.processSection h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+.processSteps {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processSteps::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45aaf2, #f7b731);
+  z-index: -1;
+}
+
+.processStep {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.stepNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.processStep h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.processStep p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Component wrapper */
+.artisticComponents {
+  position: relative;
+  z-index: 10;
+}
+
+.artisticComponents > * {
+  background: white;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45aaf2, #f7b731, #5f27cd) 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+  
+  .artisticFeatures {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .artisticButton,
+  .artisticButtonOutline {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .processSteps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .processSteps::before {
+    display: none;
+  }
+  
+  .processStep {
+    margin: 0;
+  }
+}

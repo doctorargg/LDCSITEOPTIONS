@@ -1,0 +1,607 @@
+/* Organic Nature-Inspired Variant */
+
+/* Base wrapper */
+.organicWrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #faf8f3, #f0ebe0);
+  color: #3d3024;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Nature pattern background */
+.naturePattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.patternSvg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Floating leaves */
+.leavesContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.floatingLeaf {
+  position: absolute;
+  color: #94a344;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  animation: floatLeaf 20s infinite ease-in-out;
+}
+
+.floatingLeaf.activeLeaf {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+.leaf1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.leaf2 {
+  top: 30%;
+  right: 20%;
+  animation-delay: -4s;
+}
+
+.leaf3 {
+  top: 60%;
+  left: 30%;
+  animation-delay: -8s;
+}
+
+.leaf4 {
+  top: 40%;
+  right: 10%;
+  animation-delay: -12s;
+}
+
+.leaf5 {
+  top: 80%;
+  left: 20%;
+  animation-delay: -16s;
+}
+
+@keyframes floatLeaf {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(90deg);
+  }
+}
+
+/* Header */
+.organicHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 248, 243, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e6dfd0;
+}
+
+.headerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7c6a5a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.backButton:hover {
+  color: #94a344;
+}
+
+.headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoWrapper {
+  position: relative;
+}
+
+.logoImage {
+  filter: sepia(0.3) hue-rotate(40deg);
+}
+
+.logoGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #94a34420 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d3024;
+  letter-spacing: 0.05em;
+}
+
+.sunIcon {
+  color: #d4a574;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding-top: 100px;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.organicShape1,
+.organicShape2,
+.organicShape3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.organicShape1 {
+  width: 400px;
+  height: 400px;
+  background: #94a344;
+  top: -200px;
+  right: -100px;
+  animation: float 25s ease-in-out infinite;
+}
+
+.organicShape2 {
+  width: 300px;
+  height: 300px;
+  background: #d4a574;
+  bottom: -150px;
+  left: -50px;
+  animation: float 30s ease-in-out infinite reverse;
+}
+
+.organicShape3 {
+  width: 250px;
+  height: 250px;
+  background: #8b7a6b;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.heroContent {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.mainTitle {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #3d3024;
+}
+
+.titleWord {
+  display: inline-block;
+  margin: 0 0.3em;
+  position: relative;
+}
+
+.titleWord:nth-child(2) {
+  color: #94a344;
+  font-style: italic;
+}
+
+.heroSubtext {
+  font-size: 1.25rem;
+  color: #7c6a5a;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Natural Stats */
+.naturalStats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #94a34420, #d4a57420);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #94a344;
+  border: 2px solid #94a34440;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d3024;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: #7c6a5a;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Buttons */
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.organicButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #94a344, #7c8544);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(148, 163, 68, 0.3);
+}
+
+.organicButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(148, 163, 68, 0.4);
+}
+
+.organicButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  color: #94a344;
+  text-decoration: none;
+  border: 2px solid #94a344;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.organicButtonOutline:hover {
+  background: #94a34410;
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  transition: transform 0.3s ease;
+}
+
+.organicButton:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+/* Decorative vines */
+.decorativeVines {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 200px;
+  opacity: 0.3;
+}
+
+/* Services Section */
+.servicesSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #3d3024;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #7c6a5a;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  position: relative;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #faf8f3, #f0ebe0);
+  border-radius: 20px;
+  text-decoration: none;
+  color: #3d3024;
+  border: 1px solid #e6dfd0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #94a34410, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(148, 163, 68, 0.2);
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #3d3024;
+}
+
+.serviceCard p {
+  color: #7c6a5a;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+.cardLeaf {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #94a344;
+  opacity: 0.3;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .cardLeaf {
+  opacity: 0.6;
+  transform: rotate(45deg);
+}
+
+/* Wellness Section */
+.wellnessSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, #94a34410, transparent);
+}
+
+.wellnessContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wellnessContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3d3024;
+}
+
+.wellnessContent p {
+  font-size: 1.1rem;
+  color: #7c6a5a;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.growthStages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stageIcon {
+  font-size: 3rem;
+}
+
+.stage span {
+  font-size: 0.9rem;
+  color: #7c6a5a;
+  font-family: 'Inter', sans-serif;
+}
+
+.stageLine {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, #94a344, #d4a574);
+  opacity: 0.5;
+}
+
+/* Component wrapper */
+.organicComponents {
+  position: relative;
+  z-index: 10;
+}
+
+.organicComponents > * {
+  background: linear-gradient(to bottom, #faf8f3, #f0ebe0);
+  border-top: 1px solid #e6dfd0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+  
+  .naturalStats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .organicButton,
+  .organicButtonOutline {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .growthStages {
+    flex-direction: column;
+  }
+  
+  .stageLine {
+    width: 2px;
+    height: 40px;
+  }
+}

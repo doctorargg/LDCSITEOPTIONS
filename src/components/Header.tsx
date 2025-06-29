@@ -61,6 +61,7 @@ const Header = () => {
           <Link href="/direct-primary-care" className="text-gray-600 hover:text-primary-500 font-medium transition duration-300">Direct Primary Care</Link>
           <Link href="/pricing" className="text-gray-600 hover:text-primary-500 font-medium transition duration-300">Pricing</Link>
           <Link href="/blog" className="text-gray-600 hover:text-primary-500 font-medium transition duration-300">Blog</Link>
+          <Link href="/variants" className="text-gray-600 hover:text-primary-500 font-medium transition duration-300 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent font-bold">Design Variants</Link>
           <Link href="/contact" className="text-gray-600 hover:text-primary-500 font-medium transition duration-300">Contact</Link>
           <a href="https://app.elationpassport.com/passport/login/" target="_blank" rel="noopener noreferrer" className="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
             Patient Portal
@@ -97,6 +98,7 @@ const Header = () => {
             <Link href="/direct-primary-care" className="block text-gray-600 hover:text-primary-500 font-medium">Direct Primary Care</Link>
             <Link href="/pricing" className="block text-gray-600 hover:text-primary-500 font-medium">Pricing</Link>
             <Link href="/blog" className="block text-gray-600 hover:text-primary-500 font-medium">Blog</Link>
+            <Link href="/variants" className="block text-purple-600 hover:text-purple-700 font-bold">🎨 Design Variants</Link>
             <Link href="/contact" className="block text-gray-600 hover:text-primary-500 font-medium">Contact</Link>
             <a href="https://app.elationpassport.com/passport/login/" target="_blank" rel="noopener noreferrer" className="block bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 text-center">
               Patient Portal
