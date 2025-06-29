@@ -203,6 +203,170 @@ const variants = [
     description: 'Adventure theme with earth tones, wildlife elements, and expedition gear.',
     features: ['Earth Tones', 'Wildlife Icons', 'Adventure Elements', 'Safari Colors'],
     color: 'from-yellow-700 to-orange-700'
+  },
+  // Medical & Healthcare Variants
+  {
+    id: 26,
+    name: 'Clinical Excellence',
+    path: '/variants/clinical',
+    description: 'Clean medical white with trust-building blue accents and clinical precision.',
+    features: ['Quality Metrics', 'Clinical Design', 'Trust Indicators', 'Medical Blue'],
+    color: 'from-blue-500 to-cyan-600'
+  },
+  {
+    id: 27,
+    name: 'Wellness Haven',
+    path: '/variants/wellness',
+    description: 'Soft healing colors with spa-like tranquility and mindfulness elements.',
+    features: ['Breathing Widget', 'Spa Colors', 'Zen Elements', 'Healing Focus'],
+    color: 'from-teal-500 to-cyan-500'
+  },
+  {
+    id: 28,
+    name: 'Medical Innovation',
+    path: '/variants/innovation',
+    description: 'Modern healthcare tech with subtle animations and futuristic design.',
+    features: ['Tech Focus', 'Live Stats', 'AI Elements', 'Future Medicine'],
+    color: 'from-indigo-600 to-purple-700'
+  },
+  {
+    id: 29,
+    name: 'Healing Garden',
+    path: '/variants/healing',
+    description: 'Medical professionalism meets botanical serenity with natural elements.',
+    features: ['Nature Blend', 'Leaf Animation', 'Garden Theme', 'Healing Green'],
+    color: 'from-emerald-500 to-teal-600'
+  },
+  {
+    id: 30,
+    name: 'Trust & Care',
+    path: '/variants/trust',
+    description: 'Warm, approachable medical design emphasizing patient relationships.',
+    features: ['Trust Score', 'Warm Colors', 'Patient Focus', 'Care First'],
+    color: 'from-amber-500 to-orange-600'
+  },
+  // Premium Professional Variants
+  {
+    id: 31,
+    name: 'Executive Health',
+    path: '/variants/executive',
+    description: 'C-suite healthcare aesthetic with dark navy and silver accents.',
+    features: ['Executive Portal', 'Navy & Silver', 'VIP Services', 'Business Focus'],
+    color: 'from-slate-700 to-slate-900'
+  },
+  {
+    id: 32,
+    name: 'Platinum Care',
+    path: '/variants/platinum',
+    description: 'Ultra-premium silver/white design with elegant shimmer effects.',
+    features: ['Diamond Effects', 'Platinum Theme', 'White Glove', 'Luxury Care'],
+    color: 'from-gray-300 to-gray-500'
+  },
+  {
+    id: 33,
+    name: 'Royal Treatment',
+    path: '/variants/royal',
+    description: 'Deep purple and gold regal healthcare theme with noble elements.',
+    features: ['Royal Purple', 'Gold Accents', 'Crown Icons', 'Regal Design'],
+    color: 'from-purple-700 to-yellow-600'
+  },
+  {
+    id: 34,
+    name: 'Swiss Precision',
+    path: '/variants/swiss',
+    description: 'Clean Swiss design principles with red cross accents and precision focus.',
+    features: ['Swiss Design', 'Red Cross', 'Precision', 'Minimal Clean'],
+    color: 'from-red-600 to-gray-700'
+  },
+  {
+    id: 35,
+    name: 'Metropolitan',
+    path: '/variants/metropolitan',
+    description: 'Urban professional theme with animated skyline and city elements.',
+    features: ['City Skyline', 'Urban Theme', 'Day/Night', 'Metro Style'],
+    color: 'from-blue-900 to-gray-800'
+  },
+  // Nature & Wellness Variants
+  {
+    id: 36,
+    name: 'Zen Wellness',
+    path: '/variants/zenwellness',
+    description: 'Japanese minimalism meets medical professionalism with zen elements.',
+    features: ['Zen Circles', 'Cherry Blossoms', 'Mindfulness', 'Japanese Style'],
+    color: 'from-pink-400 to-purple-500'
+  },
+  {
+    id: 37,
+    name: 'Mountain Retreat',
+    path: '/variants/mountain',
+    description: 'Alpine wellness theme with misty backgrounds and peak health focus.',
+    features: ['Mountain Mist', 'Alpine Theme', 'Peak Health', 'Snow Effects'],
+    color: 'from-sky-500 to-slate-600'
+  },
+  {
+    id: 38,
+    name: 'Ocean Therapy',
+    path: '/variants/ocean',
+    description: 'Calming seas with therapeutic blue gradients and wave animations.',
+    features: ['Wave Motion', 'Ocean Blues', 'Fish Animation', 'Nautical Theme'],
+    color: 'from-blue-400 to-cyan-600'
+  },
+  {
+    id: 39,
+    name: 'Forest Medicine',
+    path: '/variants/forest',
+    description: 'Deep forest greens with natural wood textures and organic elements.',
+    features: ['Forest Theme', 'Leaf Effects', 'Nature Icons', 'Wood Textures'],
+    color: 'from-green-600 to-emerald-700'
+  },
+  {
+    id: 40,
+    name: 'Desert Bloom',
+    path: '/variants/desertbloom',
+    description: 'Sophisticated desert wellness spa aesthetic with luxury elements.',
+    features: ['Desert Spa', 'Cactus Bloom', 'Warm Tones', 'Oasis Theme'],
+    color: 'from-amber-600 to-rose-600'
+  },
+  // Modern Professional Variants
+  {
+    id: 41,
+    name: 'Architect',
+    path: '/variants/architect',
+    description: 'Bauhaus-inspired medical design with geometric precision and structure.',
+    features: ['Grid Design', 'Bauhaus Style', 'Geometric', 'Blueprint Feel'],
+    color: 'from-red-600 to-blue-600'
+  },
+  {
+    id: 42,
+    name: 'Editorial',
+    path: '/variants/editorial',
+    description: 'Magazine-style layout with professional photography focus.',
+    features: ['Magazine Layout', 'Editorial Style', 'Photo Essays', 'Typography'],
+    color: 'from-gray-800 to-red-800'
+  },
+  {
+    id: 43,
+    name: 'Monochrome Elite',
+    path: '/variants/monochrome',
+    description: 'Black/white/gray palette with emerald green as single accent color.',
+    features: ['B&W Design', 'Green Accent', 'Minimalist', 'Elite Style'],
+    color: 'from-gray-900 to-emerald-600'
+  },
+  {
+    id: 44,
+    name: 'Scandinavian Health',
+    path: '/variants/scandinavian',
+    description: 'Nordic minimalism with hygge elements and cozy healthcare feel.',
+    features: ['Nordic Design', 'Hygge Elements', 'Soft Palette', 'Cozy Health'],
+    color: 'from-blue-400 to-gray-500'
+  },
+  {
+    id: 45,
+    name: 'Gallery',
+    path: '/variants/gallery',
+    description: 'Art gallery aesthetic presenting healthcare as curated experience.',
+    features: ['Gallery Style', 'Art Frames', 'Museum Feel', 'Curated Care'],
+    color: 'from-purple-800 to-gray-700'
   }
 ];
 
@@ -216,7 +380,7 @@ export default function VariantsPage() {
             🪷 Lotus Direct Care
           </h1>
           <p className="text-xl text-purple-200 mb-8">
-            25 Modern Design Variants - Click to Explore
+            45 Modern Design Variants - Click to Explore
           </p>
           <Link 
             href="/"
