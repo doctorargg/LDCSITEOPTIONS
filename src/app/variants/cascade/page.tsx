@@ -32,7 +32,7 @@ export default function CascadeVariant() {
         top: -20,
       }}
       animate={{
-        y: [0, window.innerHeight + 100],
+        y: [0, 1200],
         x: [0, Math.random() * 40 - 20],
       }}
       transition={{
@@ -45,7 +45,7 @@ export default function CascadeVariant() {
   )
 
   // Cascade flow lines
-  const CascadeLine = ({ x, delay }: { x: number; delay: number }) => (
+  const CascadeLine = ({ x, delay }: { x: string; delay: number }) => (
     <motion.div
       className="absolute w-0.5 bg-gradient-to-b from-transparent via-blue-300 to-transparent"
       style={{
@@ -100,7 +100,7 @@ export default function CascadeVariant() {
           <WaterDroplet 
             key={i} 
             delay={i * 0.3} 
-            startX={Math.random() * window.innerWidth}
+            startX={Math.random() * 1920}
           />
         ))}
       </div>
