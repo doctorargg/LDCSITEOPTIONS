@@ -15,7 +15,8 @@ import {
   FaChevronRight,
   FaBolt,
   FaFireAlt,
-  FaCircleNotch
+  FaCircleNotch,
+  FaBalanceScale
 } from 'react-icons/fa'
 
 export default function FusionVariant() {
@@ -439,7 +440,7 @@ export default function FusionVariant() {
               {
                 title: 'East-West Fusion',
                 description: 'Ancient wisdom meets modern science',
-                icon: FaYinYang,
+                icon: FaBalanceScale,
                 image: '/Lotus Midjourney Flowers/lotus_dpc_hero.png',
                 gradient: 'from-orange-500 to-red-500',
                 fusion: ['Traditional Medicine', 'Modern Technology']
