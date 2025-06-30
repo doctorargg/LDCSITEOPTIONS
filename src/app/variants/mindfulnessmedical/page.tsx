@@ -11,9 +11,11 @@ import DoctorSection from '@/components/DoctorSection'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import BlogPreviewSection from '@/components/BlogPreviewSection'
 
+type BreathPhase = 'inhale' | 'hold' | 'exhale' | 'pause'
+
 export default function MindfulnessMedicalVariant() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [breathPhase, setBreathPhase] = useState('inhale')
+  const [breathPhase, setBreathPhase] = useState<BreathPhase>('inhale')
   const [isBreathing, setIsBreathing] = useState(false)
   const [zenQuoteIndex, setZenQuoteIndex] = useState(0)
 
@@ -27,7 +29,7 @@ export default function MindfulnessMedicalVariant() {
 
   useEffect(() => {
     if (isBreathing) {
-      const phases = ['inhale', 'hold', 'exhale', 'pause']
+      const phases: BreathPhase[] = ['inhale', 'hold', 'exhale', 'pause']
       let currentPhaseIndex = 0
       
       const interval = setInterval(() => {
@@ -67,7 +69,7 @@ export default function MindfulnessMedicalVariant() {
     }
   ]
 
-  const breathingColors = {
+  const breathingColors: Record<BreathPhase, string> = {
     inhale: 'from-teal-400 to-blue-500',
     hold: 'from-blue-500 to-purple-500',
     exhale: 'from-purple-500 to-pink-500',
