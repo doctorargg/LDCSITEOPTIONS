@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaDiamond, FaRing, FaCrown, FaGem, FaStar, FaBars, FaTimes, FaInfinity, FaShieldAlt } from 'react-icons/fa'
+import { FaGem, FaRing, FaCrown, FaStar, FaBars, FaTimes, FaInfinity, FaShieldAlt } from 'react-icons/fa'
 import { GiDiamondTrophy, GiCrystalShine, GiSparkles, GiPearlNecklace } from 'react-icons/gi'
 import { HiSparkles } from 'react-icons/hi'
 import { BiDiamond } from 'react-icons/bi'
@@ -62,7 +62,7 @@ export default function PlatinumVariant() {
   ]
 
   const benefits = [
-    { icon: <FaDiamond />, title: "White Glove Service", description: "Personalized attention at every touchpoint" },
+    { icon: <FaGem />, title: "White Glove Service", description: "Personalized attention at every touchpoint" },
     { icon: <FaCrown />, title: "Elite Access", description: "Same-day appointments and 24/7 concierge" },
     { icon: <FaGem />, title: "Premium Facilities", description: "Luxurious, private healthcare environment" },
     { icon: <FaStar />, title: "Top 1% Physicians", description: "Board-certified specialists in every field" }
@@ -305,7 +305,7 @@ export default function PlatinumVariant() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <FaDiamond className="text-platinum-500 text-xl mt-1" />
+                  <FaGem className="text-platinum-500 text-xl mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Bespoke Care Plans</h4>
                     <p className="text-gray-600 font-light">Tailored to your unique health goals and lifestyle</p>

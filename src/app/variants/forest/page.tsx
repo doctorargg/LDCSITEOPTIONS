@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTree, FaLeaf, FaSeedling, FaFeatherAlt, FaPaw, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
-import { GiTreeBranch, GiOakLeaf, GiMushroomGills, GiBirch, GiSquirrel } from 'react-icons/gi';
+import { GiTreeBranch, GiOakLeaf, GiMushroomGills, GiSquirrel } from 'react-icons/gi';
 import { BiLeaf } from 'react-icons/bi';
 import { getVariantConfig } from '../../../lib/variant-utils';
 
@@ -115,7 +115,7 @@ export default function ForestPage() {
     {
       title: 'Direct Primary Care',
       description: 'Rooted in personalized, nature-inspired healthcare',
-      icon: <GiBirch className="w-12 h-12" />,
+      icon: <FaTree className="w-12 h-12" />,
       link: '/direct-primary-care',
       color: 'from-emerald-600 to-green-700',
     },
@@ -247,7 +247,7 @@ export default function ForestPage() {
               <Link href="/blog" className="hover:text-green-700 transition-colors font-medium">Blog</Link>
               <Link href="/contact" className="hover:text-green-700 transition-colors font-medium">Contact</Link>
               <Link 
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-6 py-2 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-full hover:shadow-lg transition-all"
               >
                 Book Consultation
@@ -291,7 +291,7 @@ export default function ForestPage() {
                   ))}
                 </div>
                 <Link
-                  href={config.appointmentUrl}
+                  href={config.external.booking}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-full"
                 >
                   Book Consultation
@@ -322,13 +322,13 @@ export default function ForestPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Enter the Forest
               </Link>
               <Link
-                href={config.membershipUrl}
+                href={config.external.membership}
                 className="px-10 py-4 border-2 border-green-700 text-green-700 rounded-full text-lg hover:bg-green-50 transition-all"
               >
                 Explore Pathways
@@ -506,7 +506,7 @@ export default function ForestPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Start Your Journey

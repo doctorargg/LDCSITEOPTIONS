@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaCrown, FaSceptre, FaGem, FaChessKing, FaRing, FaBars, FaTimes, FaShieldAlt, FaMedal } from 'react-icons/fa'
+import { FaCrown, FaGem, FaChessKing, FaRing, FaBars, FaTimes, FaShieldAlt, FaMedal } from 'react-icons/fa'
 import { GiImperialCrown, GiLaurelCrown, GiQueenCrown, GiRoyalLove, GiCastle, GiThroneKing } from 'react-icons/gi'
 import { BsFillStarFill } from 'react-icons/bs'
 import { variantConfig } from '../../../lib/variant-utils'
@@ -37,7 +37,7 @@ export default function RoyalVariant() {
       features: ["Regal health assessments", "Noble nutrition plans", "Sovereign wellness strategies"]
     },
     {
-      icon: <FaSceptre className="text-5xl mb-4" />,
+      icon: <FaCrown className="text-5xl mb-4" />,
       title: "Imperial Mind Care",
       description: "Premium mental health services for discerning individuals",
       link: "/ketamine-therapy",
@@ -284,7 +284,7 @@ export default function RoyalVariant() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <FaSceptre className="text-gold-400 text-2xl mt-1" />
+                  <FaCrown className="text-gold-400 text-2xl mt-1" />
                   <div>
                     <h4 className="font-serif text-xl text-gold-300 mb-2">Sovereign Health Authority</h4>
                     <p className="text-gold-200">Command over your wellness with expert guidance</p>

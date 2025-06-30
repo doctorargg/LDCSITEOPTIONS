@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWater, FaAnchor, FaShip, FaFish, FaUmbrellaBeach, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
-import { GiWaveCrest, GiSeashell, GiDolphin, GiCoral, GiLighthouse } from 'react-icons/gi';
+import { GiWaveCrest, GiDolphin, GiCoral, GiLighthouse } from 'react-icons/gi';
 import { BiWater } from 'react-icons/bi';
 import { getVariantConfig } from '../../../lib/variant-utils';
 
@@ -132,7 +132,7 @@ export default function OceanPage() {
     {
       title: 'PRP Injections',
       description: 'Harness the regenerative power of ocean vitality',
-      icon: <GiSeashell className="w-12 h-12" />,
+      icon: <FaFish className="w-12 h-12" />,
       link: '/prp-injections',
       color: 'from-cyan-500 to-blue-600',
     },
@@ -243,7 +243,7 @@ export default function OceanPage() {
               <Link href="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
               <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
               <Link 
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-full hover:shadow-lg transition-all"
               >
                 Book Consultation
@@ -287,7 +287,7 @@ export default function OceanPage() {
                   ))}
                 </div>
                 <Link
-                  href={config.appointmentUrl}
+                  href={config.external.booking}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-full"
                 >
                   Book Consultation
@@ -318,13 +318,13 @@ export default function OceanPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Sail to Wellness
               </Link>
               <Link
-                href={config.membershipUrl}
+                href={config.external.membership}
                 className="px-10 py-4 border-2 border-blue-600 text-blue-600 rounded-full text-lg hover:bg-blue-50 transition-all"
               >
                 Explore the Depths
@@ -474,7 +474,7 @@ export default function OceanPage() {
                   </div>
                   <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <GiSeashell key={i} className="w-5 h-5 text-blue-400" />
+                      <FaFish key={i} className="w-5 h-5 text-blue-400" />
                     ))}
                   </div>
                 </div>
@@ -502,7 +502,7 @@ export default function OceanPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Book Your Voyage

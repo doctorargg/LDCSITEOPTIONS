@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaLeaf, FaYinYang, FaBrain, FaMedkit, FaHeart, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
-import { GiLotus, GiBamboo, GiMeditation, GiStoneStack, GiCherryBlossom } from 'react-icons/gi';
+import { GiLotus, GiBamboo, GiMeditation, GiStoneStack } from 'react-icons/gi';
 import { getVariantConfig } from '../../../lib/variant-utils';
 
 const config = getVariantConfig();
@@ -164,7 +164,7 @@ export default function ZenWellnessPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center space-x-3">
-              <GiCherryBlossom className="w-10 h-10 text-pink-500" />
+              <FaLeaf className="w-10 h-10 text-pink-500" />
               <span className="text-2xl font-light tracking-wide">Lotus Zen</span>
             </Link>
 
@@ -213,7 +213,7 @@ export default function ZenWellnessPage() {
               <Link href="/blog" className="hover:text-pink-500 transition-colors">Blog</Link>
               <Link href="/contact" className="hover:text-pink-500 transition-colors">Contact</Link>
               <Link 
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-6 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full hover:shadow-lg transition-all"
               >
                 Book Consultation
@@ -257,7 +257,7 @@ export default function ZenWellnessPage() {
                   ))}
                 </div>
                 <Link
-                  href={config.appointmentUrl}
+                  href={config.external.booking}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full"
                 >
                   Book Consultation
@@ -288,13 +288,13 @@ export default function ZenWellnessPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Begin Your Journey
               </Link>
               <Link
-                href={config.membershipUrl}
+                href={config.external.membership}
                 className="px-10 py-4 border-2 border-pink-500 text-pink-500 rounded-full text-lg hover:bg-pink-50 transition-all"
               >
                 Explore Membership
@@ -444,7 +444,7 @@ export default function ZenWellnessPage() {
                   </div>
                   <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <GiCherryBlossom key={i} className="w-5 h-5 text-pink-400" />
+                      <FaLeaf key={i} className="w-5 h-5 text-pink-400" />
                     ))}
                   </div>
                 </div>
@@ -472,7 +472,7 @@ export default function ZenWellnessPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Schedule Consultation
@@ -559,7 +559,7 @@ export default function ZenWellnessPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <GiCherryBlossom className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+          <FaLeaf className="w-12 h-12 text-pink-400 mx-auto mb-4" />
           <p className="text-gray-400 mb-4">
             © 2024 Lotus Direct Care. All rights reserved.
           </p>

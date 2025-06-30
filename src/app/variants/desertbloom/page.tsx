@@ -245,7 +245,7 @@ export default function DesertBloomPage() {
               <Link href="/blog" className="hover:text-amber-600 transition-colors">Blog</Link>
               <Link href="/contact" className="hover:text-amber-600 transition-colors">Contact</Link>
               <Link 
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-6 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full hover:shadow-lg transition-all"
               >
                 Book Wellness Session
@@ -289,7 +289,7 @@ export default function DesertBloomPage() {
                   ))}
                 </div>
                 <Link
-                  href={config.appointmentUrl}
+                  href={config.external.booking}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full"
                 >
                   Book Wellness Session
@@ -320,13 +320,13 @@ export default function DesertBloomPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Begin Your Bloom
               </Link>
               <Link
-                href={config.membershipUrl}
+                href={config.external.membership}
                 className="px-10 py-4 border-2 border-amber-600 text-amber-600 rounded-full text-lg hover:bg-amber-50 transition-all"
               >
                 Spa Memberships
@@ -504,7 +504,7 @@ export default function DesertBloomPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Book Spa Session

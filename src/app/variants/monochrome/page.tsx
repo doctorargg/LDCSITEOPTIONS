@@ -14,7 +14,7 @@ import {
   FaMapMarkerAlt,
   FaCheck,
   FaArrowRight,
-  FaDiamond,
+  FaGem,
   FaCircle
 } from 'react-icons/fa';
 import { getImagePath } from '../../../lib/variant-utils';
@@ -36,7 +36,7 @@ export default function MonochromeVariant() {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
               <div className="relative">
-                <FaDiamond className="text-3xl text-emerald-500" />
+                <FaGem className="text-3xl text-emerald-500" />
                 <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-emerald-500 rounded-full"></div>
               </div>
               <span className="ml-3 text-2xl font-light tracking-[0.2em]">LOTUS</span>
@@ -251,7 +251,7 @@ export default function MonochromeVariant() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-3 mb-8">
               <div className="w-12 h-[1px] bg-gray-600"></div>
-              <FaDiamond className="text-emerald-500" />
+              <FaGem className="text-emerald-500" />
               <div className="w-12 h-[1px] bg-gray-600"></div>
             </div>
             <h2 className="text-4xl font-light mb-6 tracking-wide">
@@ -360,7 +360,7 @@ export default function MonochromeVariant() {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center mb-4 md:mb-0">
-                <FaDiamond className="text-2xl text-emerald-500 mr-3" />
+                <FaGem className="text-2xl text-emerald-500 mr-3" />
                 <span className="text-xl font-light tracking-[0.2em]">LOTUS</span>
               </div>
               <div className="flex gap-8">

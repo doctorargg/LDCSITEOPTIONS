@@ -213,7 +213,7 @@ export default function MountainPage() {
               <Link href="/blog" className="hover:text-sky-600 transition-colors font-medium">Blog</Link>
               <Link href="/contact" className="hover:text-sky-600 transition-colors font-medium">Contact</Link>
               <Link 
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-6 py-2 bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-lg hover:shadow-lg transition-all font-semibold"
               >
                 Book Consultation
@@ -257,7 +257,7 @@ export default function MountainPage() {
                   ))}
                 </div>
                 <Link
-                  href={config.appointmentUrl}
+                  href={config.external.booking}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-lg font-semibold"
                 >
                   Book Consultation
@@ -289,13 +289,13 @@ export default function MountainPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-lg text-lg hover:shadow-xl transition-all transform hover:scale-105 font-semibold"
               >
                 Start Your Ascent
               </Link>
               <Link
-                href={config.membershipUrl}
+                href={config.external.membership}
                 className="px-10 py-4 border-2 border-slate-700 text-slate-700 rounded-lg text-lg hover:bg-slate-50 transition-all font-semibold"
               >
                 View Trail Map
@@ -473,7 +473,7 @@ export default function MountainPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href={config.appointmentUrl}
+                href={config.external.booking}
                 className="px-10 py-4 bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-lg text-lg hover:shadow-xl transition-all transform hover:scale-105 font-semibold"
               >
                 Schedule Base Camp Visit

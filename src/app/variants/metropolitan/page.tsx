@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaCity, FaBuilding, FaTaxi, FaSubway, FaBriefcase, FaBars, FaTimes, FaMapMarkerAlt, FaCoffee } from 'react-icons/fa'
 import { MdApartment, MdLocationCity, MdElevator, MdLocalHospital } from 'react-icons/md'
-import { GiModernCity, GiCityGate, GiStreetLight } from 'react-icons/gi'
+import { GiModernCity, GiStreetLight } from 'react-icons/gi'
 import { BiBuildings } from 'react-icons/bi'
 import { variantConfig } from '../../../lib/variant-utils'
 
@@ -207,7 +207,7 @@ export default function MetropolitanVariant() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <div className="mb-8">
-              <GiCityGate className="text-6xl text-cyan-400 animate-pulse" />
+              <GiModernCity className="text-6xl text-cyan-400 animate-pulse" />
             </div>
             <h1 className={`text-5xl md:text-7xl font-light mb-6 ${isEvening ? 'text-white' : 'text-gray-900'}`}>
               Healthcare for the

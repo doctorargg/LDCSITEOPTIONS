@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaHandsHelping, FaUserShield, FaHeart, FaAward, FaCertificate, FaBars, FaTimes, FaHandHoldingHeart, FaShieldAlt } from 'react-icons/fa'
 import { MdVerified, MdSecurity, MdPeople, MdFamilyRestroom } from 'react-icons/md'
-import { GiHealthCapsule, GiMedicalPack, GiHeartBeats, GiCareers } from 'react-icons/gi'
+import { GiHealthCapsule, GiMedicalPack, GiHeartBeats } from 'react-icons/gi'
 import { HiOutlineSparkles } from 'react-icons/hi'
 import { variantConfig } from '../../../lib/variant-utils'
 
@@ -60,7 +60,7 @@ export default function TrustVariant() {
       trust: "Advanced care, gentle approach"
     },
     {
-      icon: <GiCareers className="text-4xl mb-4" />,
+      icon: <GiMedicalPack className="text-4xl mb-4" />,
       title: "Addiction Treatment",
       description: "Compassionate support on your recovery journey",
       link: "/addiction-treatment",
