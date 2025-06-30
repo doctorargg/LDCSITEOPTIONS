@@ -13,8 +13,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaChevronRight,
-  FaCircle,
-  FaYinYang,
   FaRecycle
 } from 'react-icons/fa'
 
@@ -210,7 +208,7 @@ export default function InfinityVariant() {
             <div className="mt-12 flex items-center space-x-4">
               <motion.div
                 className="relative w-24 h-12"
-                animate={{ rotate: infinityRotation }}
+                style={{ rotate: infinityRotation }}
               >
                 <FaInfinity className="w-full h-full text-purple-400" />
               </motion.div>
