@@ -13,9 +13,9 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaChevronRight,
-  FaRainbow,
+  FaAdjust,
   FaLightbulb,
-  FaPrism
+  FaGem
 } from 'react-icons/fa'
 
 export default function PrismVariant() {
@@ -140,7 +140,7 @@ export default function PrismVariant() {
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
             >
-              <FaRainbow className="h-8 w-8 text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 bg-clip-text" />
+              <FaAdjust className="h-8 w-8 text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 bg-clip-text" />
               <span className="text-2xl font-bold bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 bg-clip-text text-transparent">
                 Lotus Prism
               </span>
@@ -372,7 +372,7 @@ export default function PrismVariant() {
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: FaRainbow, text: 'Full-Spectrum Diagnostics', color: 'from-red-500 to-purple-500' },
+                  { icon: FaAdjust, text: 'Full-Spectrum Diagnostics', color: 'from-red-500 to-purple-500' },
                   { icon: FaLightbulb, text: 'Illuminating Health Insights', color: 'from-yellow-500 to-orange-500' },
                   { icon: FaPalette, text: 'Colorful Treatment Options', color: 'from-blue-500 to-green-500' }
                 ].map((item, index) => (
