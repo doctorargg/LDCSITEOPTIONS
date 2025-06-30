@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { FiCloud, FiMapPin, FiPhone, FiHeart, FiStar, FiClock, FiArrowRight, FiMoon } from 'react-icons/fi';
+import { FiCloud, FiMapPin, FiPhone, FiHeart, FiStar, FiClock, FiArrowRight, FiCircle } from 'react-icons/fi';
 import JourneySection from "@/components/JourneySection";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -183,7 +183,7 @@ export default function LotusDreamsVariant() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <FiMoon className="w-6 h-6 text-white/80" />
+                <FiCircle className="w-6 h-6 text-white/80" />
                 <span className="text-sm font-medium text-white/70 tracking-wide uppercase">
                   Lotus Dreams
                 </span>

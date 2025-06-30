@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { FiMenu, FiX, FiPhone, FiMail, FiCalendar, FiArrowRight, FiSun, FiMoon, FiStar, FiZap, FiFeather } from 'react-icons/fi';
+import { FiMenu, FiX, FiPhone, FiMail, FiCalendar, FiArrowRight, FiSun, FiCircle, FiStar, FiZap, FiFeather } from 'react-icons/fi';
 
 export default function RadianceVariant() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -340,7 +340,7 @@ export default function RadianceVariant() {
                 title: 'Rose Light Recovery',
                 description: 'Compassionate addiction treatment',
                 color: 'from-pink-400 to-rose-600',
-                icon: FiMoon,
+                icon: FiCircle,
                 image: '/Lotus Midjourney Flowers/lotus-addiction-treatment-hero.png',
                 wavelength: '640nm'
               },

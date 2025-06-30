@@ -649,6 +649,170 @@ const variants = [
     description: 'Ancient wisdom theme with scriptural quotes and timeless aesthetics.',
     features: ['Ancient Quotes', 'Wisdom Scrolls', 'Sacred Symbols', 'Timeless Design'],
     color: 'from-amber-600 to-orange-700'
+  },
+  // NEW: Professional Medical Themes (June 30, 2025)
+  {
+    id: 81,
+    name: 'Clinical Dashboard',
+    path: '/variants/clinicaldashboard',
+    description: 'Stats-heavy design with patient metrics and treatment outcomes.',
+    features: ['Live Metrics', 'Data Cards', 'Performance Stats', 'Activity Feed'],
+    color: 'from-blue-600 to-cyan-600'
+  },
+  {
+    id: 82,
+    name: 'Medical Journal',
+    path: '/variants/medicaljournal',
+    description: 'Academic paper aesthetic with research focus and citations.',
+    features: ['Research Papers', 'Citations', 'Serif Typography', 'Scholarly Design'],
+    color: 'from-gray-700 to-slate-800'
+  },
+  {
+    id: 83,
+    name: 'Hospital Grade',
+    path: '/variants/hospitalgrade',
+    description: 'Ultra-clean clinical design with trust badges and certifications.',
+    features: ['Clinical White', 'Trust Badges', 'Safety Protocols', 'Certifications'],
+    color: 'from-blue-500 to-blue-700'
+  },
+  {
+    id: 84,
+    name: 'Telehealth Focus',
+    path: '/variants/telehealth',
+    description: 'Video consultation interface with digital-first design.',
+    features: ['Video Interface', 'Device Preview', 'Online Booking', 'Digital Tools'],
+    color: 'from-purple-600 to-indigo-700'
+  },
+  {
+    id: 85,
+    name: 'Wellness Calendar',
+    path: '/variants/wellnesscalendar',
+    description: 'Calendar-based layout with appointments and health events.',
+    features: ['Interactive Calendar', 'Time Slots', 'Seasonal Tips', 'Event Booking'],
+    color: 'from-green-500 to-blue-600'
+  },
+  // NEW: Interactive Variations (June 30, 2025)
+  {
+    id: 86,
+    name: 'FAQ Accordion',
+    path: '/variants/faqaccordion',
+    description: 'Question-driven homepage with expandable answer sections.',
+    features: ['Searchable FAQs', 'Accordion UI', 'Categories', 'Quick Answers'],
+    color: 'from-purple-500 to-pink-600'
+  },
+  {
+    id: 87,
+    name: 'Service Carousel',
+    path: '/variants/servicecarousel',
+    description: 'Rotating showcase of treatments with detailed modals.',
+    features: ['Auto-Rotate', 'Service Modals', 'Quick Select', 'Treatment Details'],
+    color: 'from-orange-500 to-red-600'
+  },
+  {
+    id: 88,
+    name: 'Testimonial Stream',
+    path: '/variants/testimonialstream',
+    description: 'Social media-style feed of patient reviews and ratings.',
+    features: ['Social Feed', 'Star Ratings', 'Engagement', 'Filter Options'],
+    color: 'from-blue-500 to-purple-600'
+  },
+  {
+    id: 89,
+    name: 'Before/After Gallery',
+    path: '/variants/beforeafter',
+    description: 'Interactive comparison sliders for treatment results.',
+    features: ['Drag Sliders', 'Case Studies', 'Privacy Focus', 'Results Display'],
+    color: 'from-teal-500 to-blue-600'
+  },
+  {
+    id: 90,
+    name: 'Pricing Calculator',
+    path: '/variants/pricingcalculator',
+    description: 'Interactive tool showing membership savings vs traditional care.',
+    features: ['Cost Calculator', 'Savings Display', 'Family Plans', 'Comparisons'],
+    color: 'from-green-500 to-teal-600'
+  },
+  // NEW: Visual Storytelling (June 30, 2025)
+  {
+    id: 91,
+    name: 'Day in the Life',
+    path: '/variants/dayinthelife',
+    description: 'Timeline showing a typical day at the clinic with patient stories.',
+    features: ['Time Timeline', 'Patient Stories', 'Animated Clock', 'Daily Journey'],
+    color: 'from-amber-500 to-orange-600'
+  },
+  {
+    id: 92,
+    name: 'Health Journey Path',
+    path: '/variants/healthjourney',
+    description: 'Visual roadmap showing patient care progression milestones.',
+    features: ['Journey Map', 'Checkpoints', 'Progress Bar', 'Milestone Markers'],
+    color: 'from-green-600 to-emerald-700'
+  },
+  {
+    id: 93,
+    name: 'Seasonal Wellness',
+    path: '/variants/seasonalwellness',
+    description: 'Dynamic design that changes based on current season.',
+    features: ['Season Effects', 'Weather Display', 'Seasonal Tips', 'Dynamic Colors'],
+    color: 'from-blue-500 to-green-600'
+  },
+  {
+    id: 94,
+    name: 'Icon-Driven',
+    path: '/variants/icondriven',
+    description: 'Heavy use of medical icons with minimal text and strong visuals.',
+    features: ['Icon Grid', 'Visual Hierarchy', 'Hover Effects', 'Icon Timeline'],
+    color: 'from-purple-600 to-pink-700'
+  },
+  {
+    id: 95,
+    name: 'Split Personality',
+    path: '/variants/splitpersonality',
+    description: 'Half traditional/half modern design showing unique approach.',
+    features: ['Split Screen', 'Draggable Divider', 'Contrast Styles', 'Toggle Views'],
+    color: 'from-gray-600 to-purple-600'
+  },
+  // NEW: Emotional Connection (June 30, 2025)
+  {
+    id: 96,
+    name: 'Family Focus',
+    path: '/variants/familyfocus',
+    description: 'Warm design emphasizing multi-generational family care.',
+    features: ['Family Icons', 'Warm Colors', 'All Ages', 'Family Stories'],
+    color: 'from-orange-500 to-amber-600'
+  },
+  {
+    id: 97,
+    name: 'Athletic Performance',
+    path: '/variants/athleticperformance',
+    description: 'Sports medicine angle with performance metrics and energy.',
+    features: ['Performance Stats', 'Athlete Focus', 'Dark Theme', 'Energy Design'],
+    color: 'from-blue-600 to-cyan-700'
+  },
+  {
+    id: 98,
+    name: 'Senior Care',
+    path: '/variants/seniorcare',
+    description: 'Accessible design with larger fonts for older patients.',
+    features: ['Large Fonts', 'High Contrast', 'Easy Nav', 'Senior Focus'],
+    color: 'from-indigo-500 to-purple-600'
+  },
+  {
+    id: 99,
+    name: 'Mindfulness Medical',
+    path: '/variants/mindfulnessmedical',
+    description: 'Meditation-inspired design with breathing exercises.',
+    features: ['Breathing Widget', 'Zen Quotes', 'Calm Design', 'Meditation'],
+    color: 'from-purple-500 to-teal-600'
+  },
+  {
+    id: 100,
+    name: 'Local Vegas',
+    path: '/variants/localvegas',
+    description: 'Vegas-specific design with desert motifs and community focus.',
+    features: ['Vegas Theme', 'Desert Motifs', 'Local Areas', 'Day/Night Mode'],
+    color: 'from-red-600 to-orange-700'
   }
 ];
 
@@ -662,7 +826,7 @@ export default function VariantsPage() {
             🪷 Lotus Direct Care
           </h1>
           <p className="text-xl text-purple-200 mb-8">
-            80 Modern Design Variants - Click to Explore
+            100 Modern Design Variants - Click to Explore
           </p>
           <Link 
             href="/"

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { FiArrowRight, FiPlay, FiSun, FiMoon, FiArrowLeft } from 'react-icons/fi';
+import { FiArrowRight, FiPlay, FiSun, FiCircle, FiArrowLeft } from 'react-icons/fi';
 import JourneySection from "@/components/JourneySection";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -90,7 +90,7 @@ export default function MinimalistVariant() {
             className={styles.darkModeToggle}
             aria-label="Toggle dark mode"
           >
-            {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
+            {isDarkMode ? <FiSun size={20} /> : <FiCircle size={20} />}
           </button>
         </div>
       </header>
