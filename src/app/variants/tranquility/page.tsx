@@ -13,7 +13,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaChevronRight,
-  FaWater,
+  FaTint,
   FaSpa,
   FaHandHoldingHeart
 } from 'react-icons/fa'
@@ -83,7 +83,7 @@ export default function TranquilityVariant() {
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
             >
-              <FaWater className="h-8 w-8 text-blue-500" />
+              <FaTint className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                 Lotus Tranquility
               </span>
@@ -261,7 +261,7 @@ export default function TranquilityVariant() {
               <div className="space-y-4">
                 {[
                   { icon: FaHandHoldingHeart, text: 'Personalized Care Plans' },
-                  { icon: FaWater, text: 'Holistic Wellness Approach' },
+                  { icon: FaTint, text: 'Holistic Wellness Approach' },
                   { icon: FaSpa, text: 'Stress-Free Healthcare Experience' }
                 ].map((item, index) => (
                   <motion.div

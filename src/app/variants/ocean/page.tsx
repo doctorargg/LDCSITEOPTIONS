@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaWater, FaAnchor, FaShip, FaFish, FaUmbrellaBeach, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
+import { FaTint, FaAnchor, FaShip, FaFish, FaUmbrellaBeach, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { GiWaveCrest, GiDolphin, GiCoral, GiLighthouse } from 'react-icons/gi';
 import { BiWater } from 'react-icons/bi';
 import { getVariantConfig } from '../../../lib/variant-utils';
@@ -497,7 +497,7 @@ export default function OceanPage() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <FaWater className="w-16 h-16 mx-auto text-blue-600 mb-6" />
+            <FaTint className="w-16 h-16 mx-auto text-blue-600 mb-6" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Set <span className="text-blue-600">Sail?</span>
             </h2>

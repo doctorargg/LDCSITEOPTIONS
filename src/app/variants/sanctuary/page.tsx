@@ -15,7 +15,7 @@ import {
   FaChevronRight,
   FaOm,
   FaDharmachakra,
-  FaYinYang
+  FaBalanceScale
 } from 'react-icons/fa'
 
 export default function SanctuaryVariant() {
@@ -337,7 +337,7 @@ export default function SanctuaryVariant() {
               <div className="space-y-4">
                 {[
                   { icon: FaOm, text: 'Mind-Body-Spirit Integration' },
-                  { icon: FaYinYang, text: 'Balanced Healing Approach' },
+                  { icon: FaBalanceScale, text: 'Balanced Healing Approach' },
                   { icon: FaDharmachakra, text: 'Holistic Wellness Pathways' }
                 ].map((item, index) => (
                   <motion.div

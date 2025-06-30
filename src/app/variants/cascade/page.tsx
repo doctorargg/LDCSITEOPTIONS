@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { 
-  FaWater, 
+  FaTint, 
   FaHeart, 
   FaUserMd, 
   FaStar,
@@ -326,7 +326,7 @@ export default function CascadeVariant() {
                   ease: 'easeInOut',
                 }}
               >
-                <FaWater className="w-24 h-24 text-blue-300/50" />
+                <FaTint className="w-24 h-24 text-blue-300/50" />
               </motion.div>
             </motion.div>
 
@@ -345,7 +345,7 @@ export default function CascadeVariant() {
                 {[
                   { icon: FaStream, text: 'Continuous Care Flow' },
                   { icon: FaTint, text: 'Purifying Health Protocols' },
-                  { icon: FaWater, text: 'Cascading Treatment Plans' }
+                  { icon: FaTint, text: 'Cascading Treatment Plans' }
                 ].map((item, index) => (
                   <motion.div
                     key={index}

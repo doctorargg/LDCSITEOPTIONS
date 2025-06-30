@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaSun, FaWater, FaLeaf } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaSun, FaTint, FaLeaf } from 'react-icons/fa';
 import { GiCactus, GiPalmTree, GiSandCastle, GiDesert } from 'react-icons/gi';
 
 export default function DesertOasisVariant() {
@@ -93,7 +93,7 @@ export default function DesertOasisVariant() {
                 onClick={() => setShowOasis(!showOasis)}
                 className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                Discover Your Oasis <FaWater className="inline ml-2" />
+                Discover Your Oasis <FaTint className="inline ml-2" />
               </button>
               <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                 Start Your Journey <FaLeaf className="inline ml-2" />
@@ -113,7 +113,7 @@ export default function DesertOasisVariant() {
             </p>
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-white/70 p-4 rounded-xl">
-                <FaWater className="text-3xl text-cyan-600 mb-2" />
+                <FaTint className="text-3xl text-cyan-600 mb-2" />
                 <h4 className="font-semibold text-cyan-800">Refreshing Care</h4>
                 <p className="text-sm text-gray-700">Revitalizing treatments that restore your vitality</p>
               </div>
@@ -150,7 +150,7 @@ export default function DesertOasisVariant() {
               {
                 title: "Oasis Renewal Therapy",
                 description: "Rejuvenating treatments including our specialized ketamine therapy",
-                icon: <FaWater className="text-4xl text-cyan-600" />,
+                icon: <FaTint className="text-4xl text-cyan-600" />,
                 color: "from-cyan-400 to-blue-500"
               },
               {

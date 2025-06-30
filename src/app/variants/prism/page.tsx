@@ -15,7 +15,8 @@ import {
   FaChevronRight,
   FaAdjust,
   FaLightbulb,
-  FaGem
+  FaGem,
+  FaLeaf
 } from 'react-icons/fa'
 
 export default function PrismVariant() {

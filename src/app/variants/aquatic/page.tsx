@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaStethoscope, FaLeaf, FaUserMd, FaSyringe, FaBrain, FaHandHoldingHeart, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFish, FaWater, FaAnchor, FaGem } from 'react-icons/fa';
+import { FaStethoscope, FaLeaf, FaUserMd, FaSyringe, FaBrain, FaHandHoldingHeart, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFish, FaTint, FaAnchor, FaGem } from 'react-icons/fa';
 import { GiSeahorse, GiJellyfish, GiDolphin, GiTropicalFish, GiWaveSurfer, GiOctopus, GiSeaTurtle, GiPlantSeed } from 'react-icons/gi';
 
 // Animated Bubble Component
@@ -218,7 +218,7 @@ export default function AquaticVariant() {
                 Blog
               </Link>
               <Link href="/contact" className="hover:text-cyan-300 transition-colors flex items-center gap-2">
-                <FaWater className="text-sm" />
+                <FaTint className="text-sm" />
                 Contact
               </Link>
             </div>
@@ -364,7 +364,7 @@ export default function AquaticVariant() {
                 href="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-blue-600/80 to-indigo-600/80 backdrop-blur rounded-full font-semibold hover:from-blue-500/80 hover:to-indigo-500/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-3"
               >
-                <FaWater className="text-xl" />
+                <FaTint className="text-xl" />
                 Make Waves With Us
               </Link>
             </div>

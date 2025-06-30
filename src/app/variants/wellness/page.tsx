@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaSpa, FaLeaf, FaHeart, FaHandHoldingHeart, FaYinYang, FaBars, FaTimes, FaWater, FaSun } from 'react-icons/fa'
+import { FaSpa, FaLeaf, FaHeart, FaHandHoldingHeart, FaBalanceScale, FaBars, FaTimes, FaTint, FaSun } from 'react-icons/fa'
 import { GiMeditation, GiHealing, GiLotus, GiBamboo, GiStoneStack } from 'react-icons/gi'
 import { MdSelfImprovement, MdNaturePeople, MdPsychology } from 'react-icons/md'
 import { variantConfig } from '../../../lib/variant-utils'
@@ -77,7 +77,7 @@ export default function WellnessVariant() {
       description: "Harnessing your body's innate ability to heal and thrive"
     },
     {
-      icon: <FaWater />,
+      icon: <FaTint />,
       title: "Flowing Wellness",
       description: "Adaptable care that flows with your life's rhythms"
     }
@@ -366,7 +366,7 @@ export default function WellnessVariant() {
             ].map((testimonial, index) => (
               <div key={index} className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 shadow-lg">
                 <div className="text-teal-600 mb-4">
-                  <FaYinYang className="text-3xl" />
+                  <FaBalanceScale className="text-3xl" />
                 </div>
                 <p className="text-gray-700 mb-4 italic leading-relaxed">"{testimonial.quote}"</p>
                 <div className="flex items-center justify-between">

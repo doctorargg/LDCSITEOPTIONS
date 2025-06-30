@@ -15,7 +15,7 @@ import {
   FaChevronRight,
   FaSun,
   FaCircle,
-  FaYinYang
+  FaAdjust
 } from 'react-icons/fa'
 
 export default function EclipseVariant() {
@@ -132,7 +132,7 @@ export default function EclipseVariant() {
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
             >
-              <FaYinYang className="h-8 w-8 text-yellow-400" />
+              <FaAdjust className="h-8 w-8 text-yellow-400" />
               <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-gray-400 bg-clip-text text-transparent">
                 Lotus Eclipse
               </span>
@@ -330,7 +330,7 @@ export default function EclipseVariant() {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
               >
-                <FaYinYang className="w-24 h-24 text-yellow-400/30" />
+                <FaAdjust className="w-24 h-24 text-yellow-400/30" />
               </motion.div>
             </motion.div>
 
@@ -349,7 +349,7 @@ export default function EclipseVariant() {
                 {[
                   { icon: FaSun, text: 'Illuminating Diagnostics', light: true },
                   { icon: FaMoon, text: 'Shadow Work Integration', light: false },
-                  { icon: FaYinYang, text: 'Balanced Treatment Plans', light: true }
+                  { icon: FaAdjust, text: 'Balanced Treatment Plans', light: true }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -419,7 +419,7 @@ export default function EclipseVariant() {
               {
                 title: 'Eclipse Integration',
                 description: 'Perfect balance of both worlds',
-                icon: FaYinYang,
+                icon: FaAdjust,
                 image: '/Lotus Midjourney Flowers/lotus-ketamine-therapy-hero.png',
                 gradient: 'from-yellow-500 to-gray-600',
                 shadow: false

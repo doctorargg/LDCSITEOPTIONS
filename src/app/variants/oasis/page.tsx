@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { 
-  FaWater, 
+  FaTint, 
   FaHeart, 
   FaUserMd, 
   FaStar,
@@ -200,7 +200,7 @@ export default function OasisVariant() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-600 text-white rounded-full shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2"
               >
-                <FaWater className="w-5 h-5" />
+                <FaTint className="w-5 h-5" />
                 <span>Quench Your Health</span>
               </motion.button>
               <motion.button
@@ -362,7 +362,7 @@ export default function OasisVariant() {
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: FaWater, text: 'Refreshing Healthcare Approach' },
+                  { icon: FaTint, text: 'Refreshing Healthcare Approach' },
                   { icon: FaLeaf, text: 'Natural Healing Environment' },
                   { icon: FaSun, text: 'Warmth & Compassionate Care' }
                 ].map((item, index) => (
@@ -410,7 +410,7 @@ export default function OasisVariant() {
               {
                 title: 'Spring of Primary Care',
                 description: 'Continuous flow of health support',
-                icon: FaWater,
+                icon: FaTint,
                 image: '/Lotus Midjourney Flowers/lotus_dpc_hero.png',
                 gradient: 'from-blue-400 to-cyan-400',
                 element: 'Water'
