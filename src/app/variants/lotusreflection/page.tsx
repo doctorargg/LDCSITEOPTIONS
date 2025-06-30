@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { FiDroplet, FiMapPin, FiPhone, FiHeart, FiStar, FiClock, FiArrowRight, FiWaves } from 'react-icons/fi';
+import { FiDroplet, FiMapPin, FiPhone, FiHeart, FiStar, FiClock, FiArrowRight, FiCircle } from 'react-icons/fi';
 import JourneySection from "@/components/JourneySection";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -165,7 +165,7 @@ export default function LotusReflectionVariant() {
 
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1 text-cyan-700">
-              <FiWaves className="w-4 h-4" />
+              <FiCircle className="w-4 h-4" />
               <span className="text-sm font-medium">Reflection</span>
             </div>
             <Link

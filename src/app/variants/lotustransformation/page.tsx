@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { FiMapPin, FiPhone, FiArrowRight, FiArrowUp, FiSeed } from 'react-icons/fi';
+import { FiMapPin, FiPhone, FiArrowRight, FiArrowUp, FiCircle } from 'react-icons/fi';
 import JourneySection from "@/components/JourneySection";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -155,7 +155,7 @@ export default function LotusTransformationVariant() {
               </div>
               <div className="absolute -bottom-8 -left-8">
                 <div className="w-12 h-12 bg-green-400 rounded-full opacity-60 animate-pulse flex items-center justify-center">
-                  <FiSeed className="w-6 h-6 text-white" />
+                  <FiCircle className="w-6 h-6 text-white" />
                 </div>
               </div>
             </div>
