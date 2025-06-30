@@ -26,7 +26,7 @@ const SandParticle = ({ delay }: { delay: number }) => {
       }}
       initial={{ y: -20, opacity: 0 }}
       animate={{
-        y: window.innerHeight + 50,
+        y: typeof window !== 'undefined' ? window.innerHeight + 50 : 850,
         x: [0, Math.random() * 100 - 50],
         opacity: [0, 0.5, 0],
       }}
@@ -103,10 +103,14 @@ export default function DesertBloomPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (typeof window !== 'undefined') {
+        setScrolled(window.scrollY > 50);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const services = [

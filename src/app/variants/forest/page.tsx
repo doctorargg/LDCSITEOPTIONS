@@ -27,7 +27,7 @@ const FallingLeaf = ({ delay }: { delay: number }) => {
       }}
       initial={{ y: -50, rotate: 0 }}
       animate={{
-        y: window.innerHeight + 100,
+        y: typeof window !== 'undefined' ? window.innerHeight + 100 : 900,
         x: [0, 50, -30, 70, 0],
         rotate: [0, 360, -180, 540, 360],
       }}
@@ -72,8 +72,8 @@ const ForestMist = ({ index }: { index: number }) => {
 
 // Firefly animation
 const Firefly = ({ delay }: { delay: number }) => {
-  const startX = Math.random() * window.innerWidth;
-  const startY = Math.random() * window.innerHeight;
+  const startX = Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1400);
+  const startY = Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800);
   
   return (
     <motion.div
@@ -105,10 +105,14 @@ export default function ForestPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (typeof window !== 'undefined') {
+        setScrolled(window.scrollY > 50);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const services = [

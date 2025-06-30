@@ -52,7 +52,7 @@ const Bubble = ({ delay }: { delay: number }) => {
         bottom: -50,
       }}
       animate={{
-        y: [0, -window.innerHeight - 100],
+        y: [0, typeof window !== 'undefined' ? -window.innerHeight - 100 : -800],
         x: [0, (Math.random() - 0.5) * 100],
         scale: [1, 1.2, 0.8],
       }}
@@ -78,9 +78,9 @@ const Fish = ({ delay }: { delay: number }) => {
         top: `${y}%`,
         fontSize: '24px',
       }}
-      initial={{ x: direction > 0 ? -50 : window.innerWidth + 50 }}
+      initial={{ x: direction > 0 ? -50 : (typeof window !== 'undefined' ? window.innerWidth + 50 : 1450) }}
       animate={{
-        x: direction > 0 ? window.innerWidth + 50 : -50,
+        x: direction > 0 ? (typeof window !== 'undefined' ? window.innerWidth + 50 : 1450) : -50,
       }}
       transition={{
         duration: 20 + Math.random() * 10,
@@ -101,10 +101,14 @@ export default function OceanPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (typeof window !== 'undefined') {
+        setScrolled(window.scrollY > 50);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const services = [
