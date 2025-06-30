@@ -348,7 +348,7 @@ export default function InfinityVariant() {
                 {[
                   { icon: FaInfinity, text: 'Continuous Care Cycles' },
                   { icon: FaRecycle, text: 'Regenerative Health Loops' },
-                  { icon: FaYinYang, text: 'Balanced Infinity Approach' }
+                  { icon: FaInfinity, text: 'Balanced Infinity Approach' }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
