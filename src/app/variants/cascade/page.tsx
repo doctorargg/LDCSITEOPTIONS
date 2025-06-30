@@ -13,8 +13,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaChevronRight,
-  FaStream,
-  FaUmbrellaBeach
+  FaStream
 } from 'react-icons/fa'
 
 export default function CascadeVariant() {

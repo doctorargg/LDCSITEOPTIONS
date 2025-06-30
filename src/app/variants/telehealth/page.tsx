@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import { FiVideo, FiMonitor, FiSmartphone, FiWifi, FiLock, FiCalendar, FiClock, FiHeadphones, FiMessageSquare, FiShare2, FiDownload, FiCheckCircle } from 'react-icons/fi';
+import { FiVideo, FiMonitor, FiSmartphone, FiWifi, FiLock, FiCalendar, FiClock, FiHeadphones, FiMessageSquare, FiShare2, FiDownload, FiCheckCircle, FiHeart } from 'react-icons/fi';
 import JourneySection from '@/components/JourneySection';
 import PricingSection from '@/components/PricingSection';
 import FeaturesSection from '@/components/FeaturesSection';
