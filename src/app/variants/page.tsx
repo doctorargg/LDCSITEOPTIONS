@@ -367,6 +367,207 @@ const variants = [
     description: 'Art gallery aesthetic presenting healthcare as curated experience.',
     features: ['Gallery Style', 'Art Frames', 'Museum Feel', 'Curated Care'],
     color: 'from-purple-800 to-gray-700'
+  },
+  // New Stunning Variants (June 30, 2025)
+  {
+    id: 46,
+    name: 'Bloom',
+    path: '/variants/bloom',
+    description: 'Flower-focused design with rotating lotus images and petal animations.',
+    features: ['Rotating Flowers', 'Petal Effects', 'Garden Theme', 'Bloom Animations'],
+    color: 'from-pink-400 to-rose-600'
+  },
+  {
+    id: 47,
+    name: 'Serenity',
+    path: '/variants/serenity',
+    description: 'Calming design with time-based gradients and meditation features.',
+    features: ['Time Gradients', 'Ripple Effects', 'Journey Steps', 'Breathing Exercise'],
+    color: 'from-teal-400 to-cyan-500'
+  },
+  {
+    id: 48,
+    name: 'Vitality',
+    path: '/variants/vitality',
+    description: 'High-energy design with dynamic particles and performance metrics.',
+    features: ['Energy Grid', 'Power Metrics', 'Dynamic Effects', 'Vitality Meter'],
+    color: 'from-orange-500 to-red-600'
+  },
+  {
+    id: 49,
+    name: 'Harmony',
+    path: '/variants/harmony',
+    description: 'Balance-focused design with wellness wheel and interactive elements.',
+    features: ['Wellness Wheel', 'Balance Theme', 'Mandala Effects', 'Mind-Body-Spirit'],
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    id: 50,
+    name: 'Radiance',
+    path: '/variants/radiance',
+    description: 'Light-infused design with sparkle effects and time-based color transitions.',
+    features: ['Light Rays', 'Sparkle Effects', 'Light Spectrum', 'Glow Animations'],
+    color: 'from-amber-400 to-orange-500'
+  },
+  {
+    id: 51,
+    name: 'Tranquility',
+    path: '/variants/tranquility',
+    description: 'Peaceful water theme with ripple effects and flowing animations.',
+    features: ['Water Ripples', 'Koi Fish', 'Reflection Effects', 'Zen Water'],
+    color: 'from-blue-400 to-teal-500'
+  },
+  {
+    id: 52,
+    name: 'Genesis',
+    path: '/variants/genesis',
+    description: 'Creation theme with growing animations and life-giving elements.',
+    features: ['Growth Animation', 'DNA Helix', 'Life Particles', 'Creation Effects'],
+    color: 'from-green-500 to-emerald-600'
+  },
+  {
+    id: 53,
+    name: 'Aurora',
+    path: '/variants/aurora',
+    description: 'Northern lights theme with flowing color waves and celestial beauty.',
+    features: ['Aurora Waves', 'Color Flows', 'Nordic Style', 'Sky Animation'],
+    color: 'from-indigo-500 to-purple-600'
+  },
+  {
+    id: 54,
+    name: 'Quantum',
+    path: '/variants/quantum',
+    description: 'Scientific theme with molecular structures and particle physics.',
+    features: ['Atom Animation', 'Quantum Grid', 'Science UI', 'Energy Fields'],
+    color: 'from-cyan-500 to-blue-700'
+  },
+  {
+    id: 55,
+    name: 'Phoenix',
+    path: '/variants/phoenix',
+    description: 'Rebirth theme with fire effects and transformation animations.',
+    features: ['Fire Effects', 'Rising Animation', 'Rebirth Theme', 'Flame Particles'],
+    color: 'from-red-500 to-orange-600'
+  },
+  {
+    id: 56,
+    name: 'Crystal',
+    path: '/variants/crystal',
+    description: 'Gem theme with prismatic effects and crystalline structures.',
+    features: ['Crystal Shards', 'Prism Effects', 'Gem Colors', 'Refraction'],
+    color: 'from-purple-400 to-pink-500'
+  },
+  {
+    id: 57,
+    name: 'Nebula',
+    path: '/variants/nebula',
+    description: 'Deep space theme with cosmic clouds and stellar formations.',
+    features: ['Space Clouds', 'Star Formation', 'Cosmic Colors', 'Galaxy Effects'],
+    color: 'from-purple-600 to-indigo-800'
+  },
+  {
+    id: 58,
+    name: 'Sanctuary',
+    path: '/variants/sanctuary',
+    description: 'Sacred space theme with temple aesthetics and peaceful elements.',
+    features: ['Temple Design', 'Sacred Geometry', 'Peaceful Aura', 'Holy Light'],
+    color: 'from-amber-500 to-yellow-600'
+  },
+  {
+    id: 59,
+    name: 'Momentum',
+    path: '/variants/momentum',
+    description: 'Movement theme with flowing transitions and dynamic energy.',
+    features: ['Flow Lines', 'Motion Blur', 'Speed Effects', 'Dynamic UI'],
+    color: 'from-blue-500 to-purple-600'
+  },
+  {
+    id: 60,
+    name: 'Eclipse',
+    path: '/variants/eclipse',
+    description: 'Light and shadow theme with eclipse animations and contrast.',
+    features: ['Eclipse Effect', 'Shadow Play', 'Day/Night', 'Corona Glow'],
+    color: 'from-gray-800 to-orange-500'
+  },
+  {
+    id: 61,
+    name: 'Fusion',
+    path: '/variants/fusion',
+    description: 'Energy merger theme with combining elements and power synthesis.',
+    features: ['Energy Merge', 'Fusion Core', 'Power Combine', 'Synergy Effects'],
+    color: 'from-red-500 to-purple-600'
+  },
+  {
+    id: 62,
+    name: 'Oasis',
+    path: '/variants/oasis',
+    description: 'Desert bloom theme with mirage effects and hidden paradise.',
+    features: ['Mirage Effect', 'Palm Trees', 'Water Shimmer', 'Desert Bloom'],
+    color: 'from-yellow-500 to-teal-500'
+  },
+  {
+    id: 63,
+    name: 'Prism',
+    path: '/variants/prism',
+    description: 'Light refraction theme with rainbow spectrums and color splits.',
+    features: ['Rainbow Split', 'Light Refract', 'Color Spectrum', 'Prism Effects'],
+    color: 'from-red-500 via-yellow-500 to-blue-500'
+  },
+  {
+    id: 64,
+    name: 'Zenith',
+    path: '/variants/zenith',
+    description: 'Peak performance theme with summit imagery and achievement focus.',
+    features: ['Mountain Peak', 'Summit View', 'Achievement UI', 'Elevation Map'],
+    color: 'from-slate-600 to-sky-600'
+  },
+  {
+    id: 65,
+    name: 'Lumina',
+    path: '/variants/lumina',
+    description: 'Bioluminescence theme with glowing organisms and deep sea magic.',
+    features: ['Bio Glow', 'Deep Sea', 'Living Light', 'Luminescent'],
+    color: 'from-cyan-400 to-blue-600'
+  },
+  {
+    id: 66,
+    name: 'Cascade',
+    path: '/variants/cascade',
+    description: 'Waterfall theme with flowing animations and cascading elements.',
+    features: ['Waterfall', 'Flow Animation', 'Cascade Effect', 'Water Power'],
+    color: 'from-blue-400 to-cyan-600'
+  },
+  {
+    id: 67,
+    name: 'Infinity',
+    path: '/variants/infinity',
+    description: 'Endless possibilities theme with fractal patterns and infinite loops.',
+    features: ['Fractal Design', 'Infinite Loop', 'Endless Pattern', 'Möbius Strip'],
+    color: 'from-purple-500 to-indigo-600'
+  },
+  {
+    id: 68,
+    name: 'Solstice',
+    path: '/variants/solstice',
+    description: 'Seasonal transition theme with summer/winter duality.',
+    features: ['Season Change', 'Sun/Moon', 'Equinox Effect', 'Time Cycles'],
+    color: 'from-orange-500 to-blue-500'
+  },
+  {
+    id: 69,
+    name: 'Renaissance',
+    path: '/variants/renaissance',
+    description: 'Artistic rebirth theme with classical elements and golden ratio.',
+    features: ['Classical Art', 'Golden Ratio', 'Fresco Style', 'Art History'],
+    color: 'from-amber-600 to-red-700'
+  },
+  {
+    id: 70,
+    name: 'Ascension',
+    path: '/variants/ascension',
+    description: 'Elevation theme with rising animations and upward momentum.',
+    features: ['Rising Motion', 'Levitation', 'Upward Flow', 'Ascent Path'],
+    color: 'from-indigo-500 to-purple-700'
   }
 ];
 
@@ -380,7 +581,7 @@ export default function VariantsPage() {
             🪷 Lotus Direct Care
           </h1>
           <p className="text-xl text-purple-200 mb-8">
-            45 Modern Design Variants - Click to Explore
+            70 Modern Design Variants - Click to Explore
           </p>
           <Link 
             href="/"
