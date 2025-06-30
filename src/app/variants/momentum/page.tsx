@@ -18,6 +18,49 @@ import {
   FaWind
 } from 'react-icons/fa'
 
+// Speed lines component
+const SpeedLine = ({ delay, position }: { delay: number; position: number }) => (
+  <motion.div
+    className="absolute h-0.5 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+    style={{
+      top: `${position}%`,
+      width: '200px',
+    }}
+    initial={{ x: -200, opacity: 0 }}
+    animate={{
+      x: 2000,
+      opacity: [0, 1, 0],
+    }}
+    transition={{
+      duration: 1.5,
+      delay,
+      repeat: Infinity,
+      ease: 'linear',
+    }}
+  />
+)
+
+// Motion trail component
+const MotionTrail = ({ index }: { index: number }) => (
+  <motion.div
+    className="absolute w-4 h-4 bg-cyan-500 rounded-full"
+    style={{
+      left: '20%',
+      top: '50%',
+    }}
+    animate={{
+      x: [0, -50 * (index + 1)],
+      opacity: [0.8, 0],
+      scale: [1, 0.5],
+    }}
+    transition={{
+      duration: 0.5,
+      delay: index * 0.1,
+      repeat: Infinity,
+    }}
+  />
+)
+
 export default function MomentumVariant() {
   const [velocity, setVelocity] = useState(0)
   const { scrollY } = useScroll()
@@ -42,49 +85,6 @@ export default function MomentumVariant() {
     }, 50)
     return () => clearInterval(interval)
   }, [])
-
-  // Speed lines component
-  const SpeedLine = ({ delay, position }: { delay: number; position: number }) => (
-    <motion.div
-      className="absolute h-0.5 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
-      style={{
-        top: `${position}%`,
-        width: '200px',
-      }}
-      initial={{ x: -200, opacity: 0 }}
-      animate={{
-        x: window.innerWidth + 200,
-        opacity: [0, 1, 0],
-      }}
-      transition={{
-        duration: 1.5,
-        delay,
-        repeat: Infinity,
-        ease: 'linear',
-      }}
-    />
-  )
-
-  // Motion trail component
-  const MotionTrail = ({ index }: { index: number }) => (
-    <motion.div
-      className="absolute w-4 h-4 bg-cyan-500 rounded-full"
-      style={{
-        left: '20%',
-        top: '50%',
-      }}
-      animate={{
-        x: [0, -50 * (index + 1)],
-        opacity: [0.8, 0],
-        scale: [1, 0.5],
-      }}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.1,
-        repeat: Infinity,
-      }}
-    />
-  )
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden">

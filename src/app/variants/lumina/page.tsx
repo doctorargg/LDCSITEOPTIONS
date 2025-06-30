@@ -18,6 +18,64 @@ import {
   FaSun
 } from 'react-icons/fa'
 
+// Bioluminescent particle component
+const BioParticle = ({ delay, startPos }: { delay: number; startPos: { x: number; y: number } }) => (
+  <motion.div
+    className="absolute w-2 h-2"
+    style={{
+      left: startPos.x,
+      top: startPos.y,
+    }}
+    animate={{
+      y: [0, -100, -200],
+      x: [0, Math.random() * 100 - 50],
+      opacity: [0, 1, 0],
+    }}
+    transition={{
+      duration: 5,
+      delay,
+      repeat: Infinity,
+      ease: 'easeOut',
+    }}
+  >
+    <div className="w-full h-full bg-cyan-400 rounded-full blur-sm" 
+      style={{
+        boxShadow: '0 0 20px rgba(34, 211, 238, 0.8)',
+      }}
+    />
+  </motion.div>
+)
+
+// Glowing orb animation component
+const GlowingOrb = ({ size, color, position }: { size: number; color: string; position: { x: string; y: string } }) => (
+  <motion.div
+    className="absolute"
+    style={{
+      width: size,
+      height: size,
+      left: position.x,
+      top: position.y,
+    }}
+    animate={{
+      scale: [1, 1.2, 1],
+      opacity: [0.5, 0.8, 0.5],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    }}
+  >
+    <div 
+      className="w-full h-full rounded-full"
+      style={{
+        background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
+        filter: 'blur(10px)',
+      }}
+    />
+  </motion.div>
+)
+
 export default function LuminaVariant() {
   const [glowIntensity, setGlowIntensity] = useState(0)
   const { scrollY } = useScroll()
@@ -30,64 +88,6 @@ export default function LuminaVariant() {
     return () => clearInterval(interval)
   }, [])
 
-  // Bioluminescent particle
-  const BioParticle = ({ delay, startPos }: { delay: number; startPos: { x: number; y: number } }) => (
-    <motion.div
-      className="absolute w-2 h-2"
-      style={{
-        left: startPos.x,
-        top: startPos.y,
-      }}
-      animate={{
-        y: [0, -100, -200],
-        x: [0, Math.random() * 100 - 50],
-        opacity: [0, 1, 0],
-      }}
-      transition={{
-        duration: 5,
-        delay,
-        repeat: Infinity,
-        ease: 'easeOut',
-      }}
-    >
-      <div className="w-full h-full bg-cyan-400 rounded-full blur-sm" 
-        style={{
-          boxShadow: '0 0 20px rgba(34, 211, 238, 0.8)',
-        }}
-      />
-    </motion.div>
-  )
-
-  // Glowing orb animation
-  const GlowingOrb = ({ size, color, position }: { size: number; color: string; position: { x: string; y: string } }) => (
-    <motion.div
-      className="absolute"
-      style={{
-        width: size,
-        height: size,
-        left: position.x,
-        top: position.y,
-      }}
-      animate={{
-        scale: [1, 1.2, 1],
-        opacity: [0.5, 0.8, 0.5],
-      }}
-      transition={{
-        duration: 4,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      }}
-    >
-      <div 
-        className="w-full h-full rounded-full"
-        style={{
-          background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
-          filter: 'blur(10px)',
-        }}
-      />
-    </motion.div>
-  )
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-cyan-950 to-teal-950 relative overflow-hidden">
       {/* Bioluminescent particles */}
@@ -97,8 +97,8 @@ export default function LuminaVariant() {
             key={i}
             delay={i * 0.3}
             startPos={{
-              x: Math.random() * window.innerWidth,
-              y: window.innerHeight - 100 + Math.random() * 100,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: (typeof window !== 'undefined' ? window.innerHeight : 1080) - 100 + Math.random() * 100,
             }}
           />
         ))}
