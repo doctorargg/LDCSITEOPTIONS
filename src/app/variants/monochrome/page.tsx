@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   FaUserMd, 
   FaHeartbeat, 
@@ -36,7 +37,15 @@ export default function MonochromeVariant() {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
               <div className="relative">
-                <FaGem className="text-3xl text-emerald-500" />
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <Image 
+                    src="/images/lotus_logo.png" 
+                    alt="Lotus Logo" 
+                    width={36} 
+                    height={36} 
+                    className="grayscale contrast-150"
+                  />
+                </div>
                 <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-emerald-500 rounded-full"></div>
               </div>
               <span className="ml-3 text-2xl font-light tracking-[0.2em]">LOTUS</span>
@@ -87,6 +96,15 @@ export default function MonochromeVariant() {
               <div className="relative">
                 <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image 
+                      src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                      alt="Lotus Watermark" 
+                      width={300} 
+                      height={300} 
+                      className="opacity-5 grayscale"
+                    />
+                  </div>
                   <div className="absolute bottom-0 right-0 w-32 h-32 bg-emerald-500"></div>
                   <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-gray-300 rotate-45"></div>
                 </div>
@@ -181,7 +199,15 @@ export default function MonochromeVariant() {
               <div className="relative">
                 <div className="aspect-square bg-gray-100 relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200"></div>
-                  <div className="absolute inset-4 border border-gray-300"></div>
+                  <div className="absolute inset-4 border border-gray-300 flex items-center justify-center">
+                    <Image 
+                      src="/images/lotus_logo_full.png" 
+                      alt="Excellence" 
+                      width={200} 
+                      height={150} 
+                      className="opacity-10 grayscale"
+                    />
+                  </div>
                   <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-emerald-500"></div>
                 </div>
                 <div className="absolute top-8 -left-8 bg-black text-white p-6">
@@ -251,7 +277,13 @@ export default function MonochromeVariant() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-3 mb-8">
               <div className="w-12 h-[1px] bg-gray-600"></div>
-              <FaGem className="text-emerald-500" />
+              <Image 
+                src="/images/lotus_logo.png" 
+                alt="Lotus" 
+                width={20} 
+                height={20} 
+                className="grayscale brightness-0"
+              />
               <div className="w-12 h-[1px] bg-gray-600"></div>
             </div>
             <h2 className="text-4xl font-light mb-6 tracking-wide">
@@ -360,7 +392,13 @@ export default function MonochromeVariant() {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center mb-4 md:mb-0">
-                <FaGem className="text-2xl text-emerald-500 mr-3" />
+                <Image 
+                  src="/images/lotus_logo.png" 
+                  alt="Lotus" 
+                  width={28} 
+                  height={28} 
+                  className="grayscale mr-3"
+                />
                 <span className="text-xl font-light tracking-[0.2em]">LOTUS</span>
               </div>
               <div className="flex gap-8">

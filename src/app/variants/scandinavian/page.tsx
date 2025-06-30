@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   FaUserMd, 
   FaHeartbeat, 
@@ -37,8 +38,14 @@ export default function ScandinavianVariant() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-[#8b9dc3] rounded-full flex items-center justify-center">
-                <FaLeaf className="text-white text-lg" />
+              <div className="w-10 h-10 bg-[#8b9dc3] rounded-full flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                  alt="Lotus" 
+                  width={28} 
+                  height={28} 
+                  className="opacity-90"
+                />
               </div>
               <span className="text-2xl font-light text-[#2c3e50]">Lotus</span>
             </div>
@@ -83,8 +90,17 @@ export default function ScandinavianVariant() {
             </div>
             <div className="relative">
               <div className="aspect-[4/3] bg-white rounded-lg shadow-lg p-8">
-                <div className="h-full bg-[#f5f5f0] rounded flex items-center justify-center">
-                  <div className="text-center">
+                <div className="h-full bg-[#f5f5f0] rounded flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image 
+                      src="/images/lotus_logo_full.png" 
+                      alt="Wellness Background" 
+                      width={400} 
+                      height={300} 
+                      className="opacity-[0.03]"
+                    />
+                  </div>
+                  <div className="text-center relative z-10">
                     <FaHome className="text-6xl text-[#8b9dc3] mb-4 mx-auto" />
                     <p className="text-[#5a6c7d]">Your Health Home</p>
                   </div>
@@ -221,8 +237,17 @@ export default function ScandinavianVariant() {
                 </div>
               </div>
             </div>
-            <div className="bg-[#fafaf8] rounded-lg p-12 text-center">
-              <div className="w-32 h-32 bg-[#8b9dc3] rounded-full mx-auto mb-6 flex items-center justify-center">
+            <div className="bg-[#fafaf8] rounded-lg p-12 text-center relative overflow-hidden">
+              <div className="absolute top-4 right-4">
+                <Image 
+                  src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                  alt="Lotus Accent" 
+                  width={60} 
+                  height={60} 
+                  className="opacity-10"
+                />
+              </div>
+              <div className="w-32 h-32 bg-[#8b9dc3] rounded-full mx-auto mb-6 flex items-center justify-center relative">
                 <FaUserMd className="text-white text-5xl" />
               </div>
               <blockquote className="text-[#5a6c7d] italic mb-4">
@@ -245,7 +270,16 @@ export default function ScandinavianVariant() {
               { name: 'Erik L.', text: 'Dr. Rosenberg takes time to listen and truly understand. Healthcare as it should be.' },
               { name: 'Anna K.', text: 'A perfect blend of modern medicine and holistic wellness. I feel cared for as a whole person.' }
             ].map((testimonial, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-6 text-center">
+              <div key={idx} className="bg-white rounded-lg p-6 text-center relative">
+                <div className="absolute top-2 right-2">
+                  <Image 
+                    src="/images/lotus_logo.png" 
+                    alt="Quote Accent" 
+                    width={20} 
+                    height={20} 
+                    className="opacity-5"
+                  />
+                </div>
                 <div className="w-16 h-16 bg-[#e8e6e1] rounded-full mx-auto mb-4"></div>
                 <p className="text-[#5a6c7d] italic mb-4">"{testimonial.text}"</p>
                 <p className="text-[#2c3e50] font-medium">{testimonial.name}</p>
@@ -303,9 +337,18 @@ export default function ScandinavianVariant() {
                 </button>
               </form>
             </div>
-            <div className="bg-[#fafaf8] rounded-lg p-8">
+            <div className="bg-[#fafaf8] rounded-lg p-8 relative overflow-hidden">
+              <div className="absolute -bottom-8 -right-8">
+                <Image 
+                  src="/images/lotus_logo_full.png" 
+                  alt="Contact Background" 
+                  width={150} 
+                  height={100} 
+                  className="opacity-[0.02] rotate-12"
+                />
+              </div>
               <h3 className="text-2xl font-light text-[#2c3e50] mb-6">Visit Our Health Home</h3>
-              <div className="space-y-4 text-[#5a6c7d]">
+              <div className="space-y-4 text-[#5a6c7d] relative z-10">
                 <div>
                   <p className="font-medium text-[#2c3e50]">Address</p>
                   <p>1234 Wellness Avenue<br />Healthville, HC 12345</p>
@@ -340,7 +383,13 @@ export default function ScandinavianVariant() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-3 mb-4 md:mb-0">
               <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                <FaLeaf className="text-white text-sm" />
+                <Image 
+                  src="/images/lotus_logo.png" 
+                  alt="Lotus" 
+                  width={20} 
+                  height={20} 
+                  className="brightness-0 invert opacity-80"
+                />
               </div>
               <span className="text-xl font-light">Lotus Direct Care</span>
             </div>

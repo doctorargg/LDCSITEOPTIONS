@@ -131,6 +131,26 @@ export default function HealingVariant() {
           <GiFlowerPot className="text-teal-300 text-5xl opacity-20" />
         </div>
         
+        {/* Floating Lotus Elements */}
+        <div className="absolute top-20 right-20 animate-float-slow">
+          <Image 
+            src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+            alt="Floating Lotus" 
+            width={80} 
+            height={80}
+            className="opacity-10"
+          />
+        </div>
+        <div className="absolute bottom-40 left-40 animate-float-reverse">
+          <Image 
+            src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+            alt="Floating Lotus" 
+            width={60} 
+            height={60}
+            className="opacity-10"
+          />
+        </div>
+        
         {/* Animated Butterfly */}
         <div 
           className="absolute transition-all duration-3000 ease-in-out"
@@ -351,13 +371,26 @@ export default function HealingVariant() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
-                  <GiHealingShield className="text-6xl text-emerald-600 mx-auto mb-4" />
-                  <blockquote className="text-lg text-gray-700 italic mb-4">
-                    "True healing occurs when we address the whole person - 
-                    body, mind, and spirit - with both medical expertise and genuine compassion."
-                  </blockquote>
-                  <p className="text-sm font-medium text-emerald-600">- Dr. Aaron Rosenberg</p>
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  <div className="relative h-64">
+                    <Image 
+                      src="/images/dr_rosenberg_optimized.jpg" 
+                      alt="Dr. Aaron Rosenberg" 
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 to-transparent" />
+                    <div className="absolute bottom-4 left-0 right-0 text-center">
+                      <GiHealingShield className="text-4xl text-white mx-auto mb-2" />
+                    </div>
+                  </div>
+                  <div className="p-8 text-center">
+                    <blockquote className="text-lg text-gray-700 italic mb-4">
+                      "True healing occurs when we address the whole person - 
+                      body, mind, and spirit - with both medical expertise and genuine compassion."
+                    </blockquote>
+                    <p className="text-sm font-medium text-emerald-600">- Dr. Aaron Rosenberg</p>
+                  </div>
                 </div>
               </div>
             </div>

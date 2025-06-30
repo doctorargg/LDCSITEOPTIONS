@@ -211,7 +211,15 @@ export default function TrustVariant() {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="absolute top-10 right-10 opacity-5">
+          <Image 
+            src="/images/lotus_logo.png" 
+            alt="Lotus Trust Symbol" 
+            width={400} 
+            height={400}
+          />
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-orange-100 px-5 py-2.5 rounded-full mb-8">
               <MdVerified className="text-orange-600" />
@@ -383,8 +391,17 @@ export default function TrustVariant() {
                   </Link>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-orange-100 to-amber-100 p-12 flex items-center justify-center">
-                <div className="text-center">
+              <div className="bg-gradient-to-br from-orange-100 to-amber-100 p-12 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-30">
+                  <Image 
+                    src="/images/dr_rosenberg_optimized.jpg" 
+                    alt="Dr. Aaron Rosenberg" 
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-100/90 to-amber-100/90" />
+                <div className="relative z-10 text-center">
                   <FaHandsHelping className="text-8xl text-orange-600 mx-auto mb-6" />
                   <blockquote className="text-xl text-gray-700 italic max-w-sm">
                     "Healthcare is not just about treating illness; it's about building 

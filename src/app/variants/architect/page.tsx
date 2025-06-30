@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   FaUserMd, 
   FaHeartbeat, 
@@ -39,7 +40,15 @@ export default function ArchitectVariant() {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-red-500"></div>
+                <div className="w-12 h-12 bg-red-500 flex items-center justify-center">
+                  <Image 
+                    src="/images/lotus_logo.png" 
+                    alt="Lotus Logo" 
+                    width={32} 
+                    height={32} 
+                    className="brightness-0 invert opacity-90"
+                  />
+                </div>
                 <div className="w-8 h-8 bg-blue-500 absolute -bottom-2 -right-2"></div>
                 <div className="w-4 h-4 bg-yellow-500 absolute -top-1 -left-1"></div>
               </div>
@@ -85,12 +94,36 @@ export default function ArchitectVariant() {
             </div>
             <div className="lg:col-span-5 relative">
               <div className="relative">
-                {/* Geometric Composition */}
+                {/* Geometric Composition with Lotus Pattern */}
                 <div className="w-full aspect-square relative">
                   <div className="absolute inset-0 bg-gray-200"></div>
-                  <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-red-500"></div>
+                  <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-red-500">
+                    <div className="relative w-full h-full overflow-hidden">
+                      <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 opacity-10">
+                        {[...Array(9)].map((_, i) => (
+                          <div key={i} className="flex items-center justify-center">
+                            <Image 
+                              src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                              alt="Lotus Pattern" 
+                              width={60} 
+                              height={60} 
+                              className="brightness-0 invert"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                   <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-500"></div>
-                  <div className="absolute top-1/4 left-1/4 w-1/3 h-1/3 bg-yellow-500"></div>
+                  <div className="absolute top-1/4 left-1/4 w-1/3 h-1/3 bg-yellow-500 flex items-center justify-center">
+                    <Image 
+                      src="/images/lotus_logo.png" 
+                      alt="Lotus Center" 
+                      width={80} 
+                      height={80} 
+                      className="opacity-20"
+                    />
+                  </div>
                   <div className="absolute bottom-1/4 right-1/4 w-1/4 h-1/4 bg-black"></div>
                 </div>
               </div>
@@ -183,7 +216,15 @@ export default function ArchitectVariant() {
                   Each patient receives a custom blueprint for optimal health.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="h-32 bg-gray-200"></div>
+                  <div className="h-32 bg-gray-200 flex items-center justify-center">
+                    <Image 
+                      src="/images/lotus_logo.png" 
+                      alt="Excellence" 
+                      width={60} 
+                      height={60} 
+                      className="opacity-30"
+                    />
+                  </div>
                   <div className="h-32 bg-red-500"></div>
                   <div className="h-32 bg-blue-500"></div>
                 </div>
@@ -304,7 +345,15 @@ export default function ArchitectVariant() {
               </div>
               <div className="mt-12 grid grid-cols-3 gap-4">
                 <div className="h-24 bg-red-500"></div>
-                <div className="h-24 bg-blue-500"></div>
+                <div className="h-24 bg-blue-500 flex items-center justify-center">
+                  <Image 
+                    src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                    alt="Contact Lotus" 
+                    width={50} 
+                    height={50} 
+                    className="brightness-0 invert opacity-80"
+                  />
+                </div>
                 <div className="h-24 bg-yellow-500"></div>
               </div>
             </div>
@@ -317,7 +366,15 @@ export default function ArchitectVariant() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
-              <div className="w-8 h-8 bg-black"></div>
+              <div className="w-8 h-8 bg-black flex items-center justify-center">
+                <Image 
+                  src="/images/lotus_logo.png" 
+                  alt="Lotus" 
+                  width={20} 
+                  height={20} 
+                  className="brightness-0 invert"
+                />
+              </div>
               <p className="text-sm text-gray-600 uppercase tracking-wide">© 2025 Lotus Direct Care - Precision Healthcare Architecture</p>
             </div>
             <div className="flex gap-6">

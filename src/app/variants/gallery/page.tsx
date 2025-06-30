@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   FaUserMd, 
   FaHeartbeat, 
@@ -40,7 +41,18 @@ export default function GalleryVariant() {
                 <FaSquare className="text-gray-300" />
               </div>
               <div className="h-8 w-px bg-gray-300"></div>
-              <span className="text-3xl font-light tracking-[0.3em] text-gray-900">LOTUS</span>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 border-2 border-gray-900 flex items-center justify-center">
+                  <Image 
+                    src="/images/lotus_logo.png" 
+                    alt="Lotus Gallery" 
+                    width={28} 
+                    height={28} 
+                    className="opacity-80"
+                  />
+                </div>
+                <span className="text-3xl font-light tracking-[0.3em] text-gray-900">LOTUS</span>
+              </div>
             </div>
             <nav className="hidden md:flex items-center space-x-12">
               <Link href="#exhibition" className="text-gray-600 hover:text-gray-900 transition-colors tracking-wider text-sm">Exhibition</Link>
@@ -86,7 +98,16 @@ export default function GalleryVariant() {
               <div className="relative">
                 <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300"></div>
-                  <div className="absolute inset-8 border-4 border-white"></div>
+                  <div className="absolute inset-8 border-4 border-white flex items-center justify-center">
+                    <Image 
+                      src="/images/lotus_logo_full.png" 
+                      alt="Healthcare Masterpiece" 
+                      width={300} 
+                      height={200} 
+                      className="opacity-60 object-contain"
+                      style={{ filter: 'sepia(20%) contrast(0.9)' }}
+                    />
+                  </div>
                   <div className="absolute bottom-0 left-0 bg-white p-6 shadow-lg">
                     <p className="text-xs tracking-wider text-gray-600 mb-2">PLATE I</p>
                     <p className="text-lg font-light">Personalized Healthcare, 2025</p>
@@ -163,8 +184,18 @@ export default function GalleryVariant() {
                 <div className="bg-gray-100 aspect-[4/5] relative overflow-hidden mb-4 group-hover:shadow-xl transition-shadow">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-200"></div>
                   <div className="absolute inset-4 border-2 border-gray-300 group-hover:border-gray-600 transition-colors"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <service.icon className="text-6xl text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <div className="relative">
+                      <Image 
+                        src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                        alt="Lotus Art" 
+                        width={100} 
+                        height={100} 
+                        className="opacity-10 absolute -top-12 -left-12"
+                        style={{ filter: 'blur(1px)' }}
+                      />
+                      <service.icon className="text-6xl text-gray-400 group-hover:text-gray-600 transition-colors relative z-10" />
+                    </div>
                   </div>
                   <div className="absolute top-4 right-4">
                     <FaExpandAlt className="text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -213,7 +244,16 @@ export default function GalleryVariant() {
               </div>
               <div>
                 <div className="bg-gray-200 aspect-[3/4] relative">
-                  <div className="absolute inset-4 border-2 border-gray-300"></div>
+                  <div className="absolute inset-4 border-2 border-gray-300 flex items-center justify-center">
+                    <Image 
+                      src="/images/dr_rosenberg.jpg" 
+                      alt="Dr. Aaron Rosenberg" 
+                      width={250} 
+                      height={300} 
+                      className="object-cover grayscale contrast-125"
+                      style={{ filter: 'grayscale(100%) contrast(1.2) brightness(1.1)' }}
+                    />
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-white p-4">
                     <p className="text-xs tracking-wider text-gray-600">PORTRAIT</p>
                     <p className="text-sm">The Healer, 2025</p>
@@ -373,7 +413,16 @@ export default function GalleryVariant() {
                 <FaSquare className="text-gray-500 text-xs" />
                 <FaSquare className="text-gray-400 text-xs" />
               </div>
-              <span className="text-xl font-light tracking-[0.2em]">LOTUS GALLERY</span>
+              <div className="flex items-center gap-3">
+                <Image 
+                  src="/images/lotus_logo.png" 
+                  alt="Lotus" 
+                  width={24} 
+                  height={24} 
+                  className="opacity-70"
+                />
+                <span className="text-xl font-light tracking-[0.2em]">LOTUS GALLERY</span>
+              </div>
             </div>
             <div className="flex gap-8 text-sm tracking-wider">
               <Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition-colors">Privacy</Link>

@@ -162,7 +162,15 @@ export default function WellnessVariant() {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="absolute inset-0 opacity-10">
+          <Image 
+            src="/images/artistic_lotus_hero.png" 
+            alt="Artistic Lotus Background" 
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-8">
               <div className="relative">
@@ -308,12 +316,22 @@ export default function WellnessVariant() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl p-8 text-center">
-                  <GiLotus className="text-8xl text-teal-600 mx-auto mb-4" />
-                  <p className="text-xl font-light text-gray-800 mb-2">
-                    "Healing happens when we treat the whole person, not just symptoms."
-                  </p>
-                  <p className="text-sm text-gray-600">- Dr. Aaron Rosenberg</p>
+                <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl p-8 text-center relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-5">
+                    <Image 
+                      src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                      alt="Lotus Watermark" 
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="relative z-10">
+                    <GiLotus className="text-8xl text-teal-600 mx-auto mb-4" />
+                    <p className="text-xl font-light text-gray-800 mb-2">
+                      "Healing happens when we treat the whole person, not just symptoms."
+                    </p>
+                    <p className="text-sm text-gray-600">- Dr. Aaron Rosenberg</p>
+                  </div>
                 </div>
               </div>
             </div>

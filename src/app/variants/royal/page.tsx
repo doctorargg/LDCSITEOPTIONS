@@ -90,8 +90,15 @@ export default function RoyalVariant() {
           <div className="flex justify-between items-center py-5">
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <GiImperialCrown className="text-3xl text-purple-950" />
+                <div className="w-14 h-14 rounded-lg overflow-hidden shadow-lg relative">
+                  <Image 
+                    src="/images/lotus_logo_full_gold.png" 
+                    alt="Lotus Direct Care" 
+                    width={56} 
+                    height={56} 
+                    className="object-contain filter brightness-125"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent"></div>
                 </div>
                 <div className="absolute -top-2 -right-2">
                   <BsFillStarFill className="text-gold-400 text-sm animate-pulse" />
@@ -160,6 +167,16 @@ export default function RoyalVariant() {
       <section className="relative bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9InJveWFsIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0zMCAwTDYwIDMwIDMwIDYwIDAgMzB6IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjEyLDE3NSw1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcm95YWwpIi8+PC9zdmc+')] opacity-50"></div>
+          {/* Royal lotus watermarks */}
+          <div className="absolute top-1/4 right-10 opacity-10">
+            <Image 
+              src="/images/lotus_logo_full_gold.png" 
+              alt="" 
+              width={350} 
+              height={350} 
+              className="filter brightness-200"
+            />
+          </div>
         </div>
 
         {/* Floating Crown Elements */}
@@ -172,8 +189,15 @@ export default function RoyalVariant() {
         
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center">
-            <div className="mb-8">
-              <GiCastle className="text-gold-400 text-6xl mx-auto animate-pulse" />
+            <div className="mb-8 relative inline-block">
+              <Image 
+                src="/images/lotus_logo_full_gold.png" 
+                alt="Lotus Direct Care" 
+                width={150} 
+                height={150} 
+                className="mx-auto filter brightness-150 drop-shadow-2xl"
+              />
+              <GiImperialCrown className="text-4xl text-gold-400 absolute -top-8 left-1/2 transform -translate-x-1/2 animate-pulse" />
             </div>
             <h1 className="text-5xl md:text-7xl font-serif mb-6 text-white">
               Healthcare Worthy of
@@ -293,8 +317,16 @@ export default function RoyalVariant() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-gold-400/20 to-purple-800/20 backdrop-blur-sm rounded-2xl p-8 border-2 border-gold-400/30">
-                <div className="text-center">
+              <div className="bg-gradient-to-br from-gold-400/20 to-purple-800/20 backdrop-blur-sm rounded-2xl p-8 border-2 border-gold-400/30 relative overflow-hidden">
+                <div className="absolute -top-10 -right-10 opacity-10">
+                  <Image 
+                    src="/images/lotus_logo_full_gold.png" 
+                    alt="" 
+                    width={200} 
+                    height={200} 
+                  />
+                </div>
+                <div className="text-center relative z-10">
                   <GiImperialCrown className="text-6xl text-gold-400 mx-auto mb-6" />
                   <h3 className="text-2xl font-serif mb-4 text-white">Royal Membership</h3>
                   <p className="text-gold-200 mb-6">
@@ -311,6 +343,16 @@ export default function RoyalVariant() {
                       <FaGem /> Exclusive Health Privileges
                     </div>
                   </div>
+                  <div className="mt-8">
+                    <Image 
+                      src="/images/dr_rosenberg.jpg" 
+                      alt="Dr. Aaron Rosenberg" 
+                      width={180} 
+                      height={180} 
+                      className="mx-auto rounded-full border-4 border-gold-400 shadow-xl"
+                    />
+                    <p className="text-gold-300 text-sm mt-3">Dr. Aaron Rosenberg, MD</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -319,8 +361,17 @@ export default function RoyalVariant() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02]">
+          <Image 
+            src="/images/lotus_logo_full.png" 
+            alt="" 
+            width={800} 
+            height={800} 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          />
+        </div>
+        <div className="container mx-auto max-w-6xl relative">
           <h2 className="text-4xl font-serif text-center mb-12 text-purple-950">
             Words from the Nobility
           </h2>
@@ -374,7 +425,13 @@ export default function RoyalVariant() {
       <footer className="bg-purple-950 text-white py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4">
-            <GiImperialCrown className="text-4xl text-gold-400" />
+            <Image 
+              src="/images/lotus_logo_full_gold.png" 
+              alt="Lotus Direct Care" 
+              width={70} 
+              height={70} 
+              className="filter brightness-150"
+            />
           </div>
           <p className="mb-2 font-serif">&copy; 2025 Lotus Direct Care - Royal Treatment</p>
           <p className="text-sm text-gold-300">

@@ -88,8 +88,14 @@ export default function SwissVariant() {
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-red-600 rounded-sm flex items-center justify-center">
-                  <FaPlus className="text-3xl text-white" />
+                <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center border-2 border-red-600">
+                  <Image 
+                    src="/images/lotus_logo.png" 
+                    alt="Lotus Direct Care" 
+                    width={40} 
+                    height={40} 
+                    className="object-contain"
+                  />
                 </div>
                 <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-red-600 rounded-full"></div>
               </div>
@@ -356,8 +362,17 @@ export default function SwissVariant() {
       </section>
 
       {/* Swiss Quality Section */}
-      <section className="py-20 px-4 bg-red-600">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-red-600 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image 
+            src="/images/lotus_logo.png" 
+            alt="" 
+            width={500} 
+            height={500} 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 filter invert"
+          />
+        </div>
+        <div className="container mx-auto max-w-6xl relative">
           <div className="text-center text-white">
             <GiMountaintop className="text-6xl mx-auto mb-6 opacity-50" />
             <h2 className="text-4xl font-light mb-6">
@@ -384,6 +399,16 @@ export default function SwissVariant() {
                 <p className="font-light">Swiss standards in every interaction</p>
               </div>
             </div>
+          </div>
+          <div className="mt-12">
+            <Image 
+              src="/images/dr_rosenberg.jpg" 
+              alt="Dr. Aaron Rosenberg" 
+              width={160} 
+              height={160} 
+              className="mx-auto rounded-full border-4 border-white shadow-2xl"
+            />
+            <p className="text-white/80 text-sm mt-4">Dr. Aaron Rosenberg, MD - Precision Medicine Expert</p>
           </div>
         </div>
       </section>
@@ -425,9 +450,13 @@ export default function SwissVariant() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4">
-            <div className="w-10 h-10 bg-red-600 rounded-sm flex items-center justify-center">
-              <FaPlus className="text-2xl" />
-            </div>
+            <Image 
+              src="/images/lotus_logo.png" 
+              alt="Lotus Direct Care" 
+              width={50} 
+              height={50} 
+              className="filter brightness-200"
+            />
           </div>
           <p className="mb-2 font-light">&copy; 2025 Lotus Direct Care - Swiss Precision</p>
           <p className="text-sm text-gray-400 font-light">

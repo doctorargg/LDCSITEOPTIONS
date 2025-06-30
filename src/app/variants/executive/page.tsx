@@ -93,8 +93,14 @@ export default function ExecutiveVariant() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-5">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-silver-400 to-silver-600 rounded-lg flex items-center justify-center">
-                <FaShieldAlt className="text-2xl text-navy-900" />
+              <div className="relative w-12 h-12">
+                <Image 
+                  src="/images/lotus_logo_full_gold.png" 
+                  alt="Lotus Direct Care" 
+                  width={48} 
+                  height={48} 
+                  className="object-contain filter brightness-150 contrast-125"
+                />
               </div>
               <div>
                 <span className="text-2xl font-bold text-white">Lotus Direct Care</span>
@@ -159,6 +165,15 @@ export default function ExecutiveVariant() {
       <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-slate-900 pt-32 pb-20 px-4">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMDMsMjEzLDIyNSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+          <div className="absolute top-10 right-10 opacity-10">
+            <Image 
+              src="/images/lotus_logo_full_gold.png" 
+              alt="" 
+              width={400} 
+              height={400} 
+              className="filter brightness-200"
+            />
+          </div>
         </div>
         
         <div className="container mx-auto max-w-6xl relative">
@@ -280,7 +295,16 @@ export default function ExecutiveVariant() {
               </ul>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-silver-400/10 to-silver-600/10 backdrop-blur-sm rounded-2xl p-8 border border-silver-800">
+              <div className="absolute -top-20 -right-20 opacity-5">
+                <Image 
+                  src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                  alt="" 
+                  width={300} 
+                  height={300} 
+                  className="filter brightness-200"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-silver-400/10 to-silver-600/10 backdrop-blur-sm rounded-2xl p-8 border border-silver-800 relative">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-silver-300 mb-2">15+</div>
@@ -299,6 +323,16 @@ export default function ExecutiveVariant() {
                     <div className="text-sm text-silver-500">Confidential</div>
                   </div>
                 </div>
+                <div className="mt-8 flex justify-center">
+                  <Image 
+                    src="/images/dr_rosenberg.jpg" 
+                    alt="Dr. Aaron Rosenberg" 
+                    width={200} 
+                    height={200} 
+                    className="rounded-full border-4 border-silver-400 shadow-xl"
+                  />
+                </div>
+                <p className="text-center text-silver-400 text-sm mt-4">Dr. Aaron Rosenberg, MD</p>
               </div>
             </div>
           </div>
@@ -306,8 +340,17 @@ export default function ExecutiveVariant() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02]">
+          <Image 
+            src="/images/lotus_logo_full.png" 
+            alt="" 
+            width={800} 
+            height={800} 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          />
+        </div>
+        <div className="container mx-auto max-w-6xl relative">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy-900">
             Trusted by Industry Leaders
           </h2>
@@ -360,7 +403,13 @@ export default function ExecutiveVariant() {
       <footer className="bg-navy-950 text-white py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4">
-            <FaShieldAlt className="text-4xl text-silver-400" />
+            <Image 
+              src="/images/lotus_logo_full_gold.png" 
+              alt="Lotus Direct Care" 
+              width={60} 
+              height={60} 
+              className="filter brightness-150"
+            />
           </div>
           <p className="mb-2">&copy; 2025 Lotus Direct Care - Executive Health Division</p>
           <p className="text-sm text-silver-500">

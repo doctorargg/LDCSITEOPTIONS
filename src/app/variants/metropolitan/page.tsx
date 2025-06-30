@@ -99,8 +99,14 @@ export default function MetropolitanVariant() {
           <div className="flex justify-between items-center py-5">
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center">
-                  <FaCity className="text-2xl text-cyan-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center overflow-hidden">
+                  <Image 
+                    src="/images/lotus_logo.png" 
+                    alt="Lotus Direct Care" 
+                    width={36} 
+                    height={36} 
+                    className="object-contain filter brightness-150"
+                  />
                 </div>
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
               </div>
@@ -175,6 +181,15 @@ export default function MetropolitanVariant() {
       <section className="relative min-h-screen flex items-center pt-20">
         {/* Animated Skyline Background */}
         <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 opacity-10">
+            <Image 
+              src="/images/lotus_logo.png" 
+              alt="" 
+              width={400} 
+              height={400} 
+              className="filter grayscale"
+            />
+          </div>
           <div className="absolute bottom-0 left-0 right-0 h-96">
             {/* Building silhouettes */}
             <div className="absolute bottom-0 left-0 w-full flex items-end justify-center">
@@ -206,8 +221,15 @@ export default function MetropolitanVariant() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <div className="mb-8">
-              <GiModernCity className="text-6xl text-cyan-400 animate-pulse" />
+            <div className="mb-8 relative inline-block">
+              <Image 
+                src="/images/lotus_logo.png" 
+                alt="Lotus Direct Care" 
+                width={100} 
+                height={100} 
+                className="filter brightness-150 drop-shadow-2xl"
+              />
+              <GiModernCity className="text-4xl text-cyan-400 absolute -bottom-2 -right-2 animate-pulse" />
             </div>
             <h1 className={`text-5xl md:text-7xl font-light mb-6 ${isEvening ? 'text-white' : 'text-gray-900'}`}>
               Healthcare for the
@@ -361,8 +383,17 @@ export default function MetropolitanVariant() {
               </div>
             </div>
             <div className="relative">
-              <div className={`${isEvening ? 'bg-slate-700' : 'bg-gray-100'} rounded-xl p-8`}>
-                <h3 className={`text-2xl font-light mb-6 text-center ${isEvening ? 'text-white' : 'text-gray-900'}`}>
+              <div className={`${isEvening ? 'bg-slate-700' : 'bg-gray-100'} rounded-xl p-8 relative overflow-hidden`}>
+                <div className="absolute -top-10 -right-10 opacity-10">
+                  <Image 
+                    src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+                    alt="" 
+                    width={200} 
+                    height={200} 
+                    className={isEvening ? 'filter invert' : ''}
+                  />
+                </div>
+                <h3 className={`text-2xl font-light mb-6 text-center ${isEvening ? 'text-white' : 'text-gray-900'} relative z-10`}>
                   City Coverage Map
                 </h3>
                 <div className="grid grid-cols-3 gap-4">
@@ -404,8 +435,17 @@ export default function MetropolitanVariant() {
       </section>
 
       {/* CTA Section */}
-      <section className={`py-20 px-4 ${isEvening ? 'bg-gradient-to-r from-slate-800 to-slate-900' : 'bg-gradient-to-r from-gray-100 to-white'}`}>
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className={`py-20 px-4 ${isEvening ? 'bg-gradient-to-r from-slate-800 to-slate-900' : 'bg-gradient-to-r from-gray-100 to-white'} relative overflow-hidden`}>
+        <div className="absolute inset-0 opacity-5">
+          <Image 
+            src="/images/lotus_logo.png" 
+            alt="" 
+            width={600} 
+            height={600} 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          />
+        </div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
           <GiModernCity className={`text-6xl ${isEvening ? 'text-cyan-400/30' : 'text-cyan-500/30'} mx-auto mb-6`} />
           <h2 className={`text-4xl font-light ${isEvening ? 'text-white' : 'text-gray-900'} mb-6`}>
             Join the Metropolitan Health Network
@@ -427,6 +467,16 @@ export default function MetropolitanVariant() {
               Find Your Location
             </Link>
           </div>
+          <div className="mt-12">
+            <Image 
+              src="/images/dr_rosenberg.jpg" 
+              alt="Dr. Aaron Rosenberg" 
+              width={150} 
+              height={150} 
+              className="mx-auto rounded-full border-4 border-cyan-500 shadow-xl"
+            />
+            <p className={`${isEvening ? 'text-gray-400' : 'text-gray-600'} text-sm mt-4`}>Dr. Aaron Rosenberg, MD - Urban Health Specialist</p>
+          </div>
         </div>
       </section>
 
@@ -434,7 +484,13 @@ export default function MetropolitanVariant() {
       <footer className={`${isEvening ? 'bg-slate-950' : 'bg-gray-900'} text-white py-12`}>
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4">
-            <FaCity className="text-4xl text-cyan-400" />
+            <Image 
+              src="/images/lotus_logo.png" 
+              alt="Lotus Direct Care" 
+              width={60} 
+              height={60} 
+              className="filter brightness-150"
+            />
           </div>
           <p className="mb-2 font-light">&copy; 2025 Lotus Direct Care - Metropolitan</p>
           <p className="text-sm text-gray-400 font-light">

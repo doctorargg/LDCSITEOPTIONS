@@ -148,8 +148,17 @@ export default function ClinicalVariant() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto max-w-6xl">
+      <section className="pt-24 pb-16 px-4 bg-gradient-to-br from-blue-50 to-white relative">
+        <div className="absolute top-32 right-10 opacity-10">
+          <Image 
+            src="/images/lotus_logo.png" 
+            alt="Lotus Direct Care Symbol" 
+            width={300} 
+            height={300}
+            className="filter grayscale"
+          />
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-blue-100 px-4 py-2 rounded-full mb-6">
@@ -285,10 +294,20 @@ export default function ClinicalVariant() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-8 text-center">
-                  <FaUserMd className="text-6xl text-blue-600 mx-auto mb-4" />
-                  <p className="text-xl font-semibold text-gray-900">Expert Medical Team</p>
-                  <p className="text-gray-600 mt-2">Dedicated to your health outcomes</p>
+                <div className="bg-blue-50 rounded-lg p-8 text-center relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-20">
+                    <Image 
+                      src="/images/dr_rosenberg_optimized.jpg" 
+                      alt="Dr. Aaron Rosenberg" 
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative z-10">
+                    <FaUserMd className="text-6xl text-blue-600 mx-auto mb-4" />
+                    <p className="text-xl font-semibold text-gray-900">Expert Medical Team</p>
+                    <p className="text-gray-600 mt-2">Dedicated to your health outcomes</p>
+                  </div>
                 </div>
               </div>
             )}

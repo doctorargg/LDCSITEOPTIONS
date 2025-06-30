@@ -78,8 +78,15 @@ export default function PlatinumVariant() {
           <div className="flex justify-between items-center py-5">
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-platinum-300 to-white rounded-lg flex items-center justify-center shadow-inner">
-                  <GiDiamondTrophy className="text-2xl text-platinum-600" />
+                <div className="w-12 h-12 rounded-lg overflow-hidden relative">
+                  <Image 
+                    src="/images/lotus_logo_full.png" 
+                    alt="Lotus Direct Care" 
+                    width={48} 
+                    height={48} 
+                    className="object-contain filter brightness-125 hover:brightness-150 transition-all"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-platinum-300/30 to-transparent"></div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-platinum-400 rounded-full animate-pulse"></div>
               </div>
@@ -154,6 +161,25 @@ export default function PlatinumVariant() {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-platinum-200/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-silver-200/20 rounded-full blur-3xl"></div>
+          {/* Premium lotus watermark */}
+          <div className="absolute top-20 left-20 opacity-5">
+            <Image 
+              src="/images/lotus_logo_full.png" 
+              alt="" 
+              width={300} 
+              height={300} 
+              className="animate-pulse"
+            />
+          </div>
+          <div className="absolute bottom-20 right-20 opacity-5">
+            <Image 
+              src="/images/LOGOTRANSPARENTFLOWERONLY1.png" 
+              alt="" 
+              width={250} 
+              height={250} 
+              className="animate-pulse"
+            />
+          </div>
           {/* Floating diamonds */}
           {[...Array(5)].map((_, i) => (
             <div
@@ -174,7 +200,13 @@ export default function PlatinumVariant() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8 relative inline-block">
-              <HiSparkles className="text-platinum-400 text-6xl animate-pulse" />
+              <Image 
+                src="/images/lotus_logo_full.png" 
+                alt="Lotus Direct Care" 
+                width={120} 
+                height={120} 
+                className="mx-auto filter brightness-110 drop-shadow-2xl"
+              />
               <GiSparkles className="text-platinum-300 text-4xl absolute -top-4 -right-4 animate-pulse" />
               <GiSparkles className="text-platinum-300 text-3xl absolute -bottom-2 -left-4 animate-pulse" />
             </div>
@@ -321,8 +353,17 @@ export default function PlatinumVariant() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-platinum-100 to-white rounded-2xl p-12 shadow-xl">
-                <div className="text-center">
+              <div className="bg-gradient-to-br from-platinum-100 to-white rounded-2xl p-12 shadow-xl relative overflow-hidden">
+                <div className="absolute -top-10 -right-10 opacity-10">
+                  <Image 
+                    src="/images/lotus_logo_full_gold.png" 
+                    alt="" 
+                    width={200} 
+                    height={200} 
+                    className="filter brightness-150"
+                  />
+                </div>
+                <div className="text-center relative z-10">
                   <GiCrystalShine className="text-6xl text-platinum-400 mx-auto mb-6" />
                   <h3 className="text-2xl font-light mb-4 text-gray-900">Join the Elite</h3>
                   <p className="text-gray-600 mb-6 font-light">
@@ -344,8 +385,17 @@ export default function PlatinumVariant() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-platinum-600 to-platinum-700">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className="py-20 px-4 bg-gradient-to-r from-platinum-600 to-platinum-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image 
+            src="/images/lotus_logo_full.png" 
+            alt="" 
+            width={600} 
+            height={600} 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5"
+          />
+        </div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
           <GiPearlNecklace className="text-6xl text-white/30 mx-auto mb-6" />
           <h2 className="text-4xl font-light text-white mb-6">
             Your Health Deserves Platinum
@@ -374,7 +424,13 @@ export default function PlatinumVariant() {
       <footer className="bg-gradient-to-br from-gray-900 to-platinum-900 text-white py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4">
-            <GiDiamondTrophy className="text-4xl text-platinum-400" />
+            <Image 
+              src="/images/lotus_logo_full.png" 
+              alt="Lotus Direct Care" 
+              width={60} 
+              height={60} 
+              className="filter brightness-125"
+            />
           </div>
           <p className="mb-2 font-light">&copy; 2025 Lotus Direct Care - Platinum</p>
           <p className="text-sm text-platinum-300 font-light">
