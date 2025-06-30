@@ -44,13 +44,13 @@ export default function SolsticeVariant() {
       <motion.div
         className="absolute"
         initial={{
-          x: Math.random() * window.innerWidth,
+          x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
           y: -50,
           rotate: 0,
         }}
         animate={{
-          y: window.innerHeight + 50,
-          x: Math.random() * window.innerWidth,
+          y: (typeof window !== 'undefined' ? window.innerHeight : 1080) + 50,
+          x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
           rotate: season === 'summer' ? 360 : 720,
         }}
         transition={{

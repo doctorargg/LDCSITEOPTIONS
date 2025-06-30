@@ -90,8 +90,8 @@ export default function ZenithVariant() {
             key={i}
             delay={i * 0.5}
             position={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight * 0.5,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080) * 0.5,
             }}
           />
         ))}

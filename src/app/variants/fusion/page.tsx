@@ -120,8 +120,8 @@ export default function FusionVariant() {
             key={i}
             delay={i * 0.1}
             startPos={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
             }}
           />
         ))}

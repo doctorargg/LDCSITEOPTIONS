@@ -73,13 +73,13 @@ export default function BloomVariant() {
             key={i}
             className="absolute w-8 h-8 bg-pink-200 rounded-full opacity-20"
             initial={{ 
-              x: Math.random() * window.innerWidth,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
               y: -50,
               rotate: 0
             }}
             animate={{
-              y: window.innerHeight + 100,
-              x: Math.random() * window.innerWidth,
+              y: (typeof window !== 'undefined' ? window.innerHeight : 1080) + 100,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
               rotate: 360
             }}
             transition={{

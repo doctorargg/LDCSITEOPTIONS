@@ -36,11 +36,11 @@ export default function OasisVariant() {
       className="absolute w-1 h-1 bg-yellow-600/50 rounded-full"
       initial={{ 
         x: -100,
-        y: Math.random() * window.innerHeight,
+        y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
       }}
       animate={{
-        x: window.innerWidth + 100,
-        y: Math.random() * window.innerHeight,
+        x: (typeof window !== 'undefined' ? window.innerWidth : 1920) + 100,
+        y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
       }}
       transition={{
         duration: 10 + Math.random() * 5,

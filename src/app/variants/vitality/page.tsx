@@ -95,12 +95,12 @@ export default function VitalityVariant() {
             key={i}
             className="absolute w-1 h-1 bg-orange-500 rounded-full"
             initial={{ 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)
             }}
             animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)
             }}
             transition={{
               duration: 10 + Math.random() * 20,
