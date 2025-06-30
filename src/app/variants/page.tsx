@@ -568,6 +568,87 @@ const variants = [
     description: 'Elevation theme with rising animations and upward momentum.',
     features: ['Rising Motion', 'Levitation', 'Upward Flow', 'Ascent Path'],
     color: 'from-indigo-500 to-purple-700'
+  },
+  // NEW: Lotus-Themed Variants Collection (June 30, 2025)
+  {
+    id: 71,
+    name: 'Lotus Awakening',
+    path: '/variants/lotusawakening',
+    description: 'Dawn/sunrise theme with lotus blooming animations and golden hour colors.',
+    features: ['Dawn Transition', 'Light Particles', 'Time-based UI', 'Sunrise Colors'],
+    color: 'from-orange-400 to-pink-500'
+  },
+  {
+    id: 72,
+    name: 'Lotus Reflection',
+    path: '/variants/lotusreflection',
+    description: 'Mirror/water reflection theme with serene pond aesthetics and ripple effects.',
+    features: ['Water Ripples', 'Mirror Effects', 'Calm Waters', 'Reflection UI'],
+    color: 'from-cyan-400 to-blue-500'
+  },
+  {
+    id: 73,
+    name: 'Sacred Lotus',
+    path: '/variants/sacredlotus',
+    description: 'Spiritual/temple theme with Buddhist/Hindu elements and sacred geometry.',
+    features: ['Sacred Geometry', 'Chakra Colors', 'Mandala Patterns', 'Spiritual Symbols'],
+    color: 'from-orange-500 to-red-600'
+  },
+  {
+    id: 74,
+    name: 'Lotus Dreams',
+    path: '/variants/lotusdreams',
+    description: 'Ethereal/dreamy theme with soft pastels and floating elements.',
+    features: ['Dream Particles', 'Soft Blur', 'Pastel Colors', 'Floating Elements'],
+    color: 'from-purple-300 to-pink-400'
+  },
+  {
+    id: 75,
+    name: 'Lotus Mandala',
+    path: '/variants/lotusmandala',
+    description: 'Geometric mandala patterns with rotational symmetries and sacred geometry.',
+    features: ['Rotating Mandala', 'Sacred Patterns', 'Geometric Art', 'Dynamic Canvas'],
+    color: 'from-purple-500 to-pink-600'
+  },
+  {
+    id: 76,
+    name: 'Lotus Purification',
+    path: '/variants/lotuspurification',
+    description: 'Clean/pure theme emphasizing the lotus\'s symbolism of rising from mud.',
+    features: ['Purity Meter', 'Cleansing Rays', 'White Theme', 'Pure Elements'],
+    color: 'from-blue-300 to-cyan-400'
+  },
+  {
+    id: 77,
+    name: 'Lotus Garden',
+    path: '/variants/lotusgarden',
+    description: 'Traditional Japanese/Chinese garden with koi ponds and stone pathways.',
+    features: ['Koi Fish', 'Bamboo Sway', 'Garden Theme', 'Zen Elements'],
+    color: 'from-green-400 to-teal-500'
+  },
+  {
+    id: 78,
+    name: 'Lotus Meditation',
+    path: '/variants/lotusmeditation',
+    description: 'Mindfulness theme with breathing exercises and meditation timers.',
+    features: ['Breath Timer', 'Meditation UI', 'Mindful Design', 'Calm Colors'],
+    color: 'from-indigo-400 to-purple-500'
+  },
+  {
+    id: 79,
+    name: 'Lotus Transformation',
+    path: '/variants/lotustransformation',
+    description: 'Growth/metamorphosis theme showing the journey from seed to bloom.',
+    features: ['Growth Stages', 'Transformation UI', 'Progress Meter', 'Stage Evolution'],
+    color: 'from-amber-500 to-green-600'
+  },
+  {
+    id: 80,
+    name: 'Lotus Wisdom',
+    path: '/variants/lotuswisdom',
+    description: 'Ancient wisdom theme with scriptural quotes and timeless aesthetics.',
+    features: ['Ancient Quotes', 'Wisdom Scrolls', 'Sacred Symbols', 'Timeless Design'],
+    color: 'from-amber-600 to-orange-700'
   }
 ];
 
@@ -581,7 +662,7 @@ export default function VariantsPage() {
             🪷 Lotus Direct Care
           </h1>
           <p className="text-xl text-purple-200 mb-8">
-            70 Modern Design Variants - Click to Explore
+            80 Modern Design Variants - Click to Explore
           </p>
           <Link 
             href="/"
