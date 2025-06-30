@@ -537,21 +537,21 @@ export default function OceanPage() {
                   <FaMapMarkerAlt className="w-6 h-6 text-blue-600 mt-1" />
                   <div>
                     <p className="font-semibold">Visit Our Shore</p>
-                    <p className="text-gray-600">{config.contactInfo.address}</p>
+                    <p className="text-gray-600">{config.contact.address}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <FaPhone className="w-6 h-6 text-blue-600 mt-1" />
                   <div>
                     <p className="font-semibold">Call the Lighthouse</p>
-                    <p className="text-gray-600">{config.contactInfo.phone}</p>
+                    <p className="text-gray-600">{config.contact.phone}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <FaEnvelope className="w-6 h-6 text-blue-600 mt-1" />
                   <div>
                     <p className="font-semibold">Message in a Bottle</p>
-                    <p className="text-gray-600">{config.contactInfo.email}</p>
+                    <p className="text-gray-600">{config.contact.email}</p>
                   </div>
                 </div>
               </div>

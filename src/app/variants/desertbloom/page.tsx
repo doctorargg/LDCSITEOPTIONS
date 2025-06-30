@@ -539,21 +539,21 @@ export default function DesertBloomPage() {
                   <FaMapMarkerAlt className="w-6 h-6 text-amber-600 mt-1" />
                   <div>
                     <p className="font-semibold">Desert Oasis Location</p>
-                    <p className="text-gray-600">{config.contactInfo.address}</p>
+                    <p className="text-gray-600">{config.contact.address}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <FaPhone className="w-6 h-6 text-amber-600 mt-1" />
                   <div>
                     <p className="font-semibold">Spa Concierge</p>
-                    <p className="text-gray-600">{config.contactInfo.phone}</p>
+                    <p className="text-gray-600">{config.contact.phone}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <FaEnvelope className="w-6 h-6 text-amber-600 mt-1" />
                   <div>
                     <p className="font-semibold">Wellness Inquiries</p>
-                    <p className="text-gray-600">{config.contactInfo.email}</p>
+                    <p className="text-gray-600">{config.contact.email}</p>
                   </div>
                 </div>
               </div>
