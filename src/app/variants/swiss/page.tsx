@@ -7,7 +7,7 @@ import { FaPlus, FaClock, FaShieldAlt, FaStethoscope, FaHeartbeat, FaBars, FaTim
 import { MdPrecisionManufacturing, MdHealthAndSafety, MdMedicalServices } from 'react-icons/md'
 import { GiSwissArmyKnife, GiMountaintop, GiCrossMark } from 'react-icons/gi'
 import { BiTimer, BiPulse } from 'react-icons/bi'
-import { variantConfig } from '../../lib/variant-utils'
+import { variantConfig } from '../../../lib/variant-utils'
 
 export default function SwissVariant() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

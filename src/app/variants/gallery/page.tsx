@@ -16,7 +16,7 @@ import {
   FaTh,
   FaBorderAll
 } from 'react-icons/fa';
-import { getImagePath } from '../../lib/variant-utils';
+import { getImagePath } from '../../../lib/variant-utils';
 
 export default function GalleryVariant() {
   const [selectedService, setSelectedService] = useState<number | null>(null);

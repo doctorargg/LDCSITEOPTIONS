@@ -16,7 +16,7 @@ import {
   FaSnowflake,
   FaSeedling
 } from 'react-icons/fa';
-import { getImagePath } from '../../lib/variant-utils';
+import { getImagePath } from '../../../lib/variant-utils';
 
 export default function ScandinavianVariant() {
   return (

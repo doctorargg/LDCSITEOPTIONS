@@ -7,7 +7,7 @@ import { FaDiamond, FaRing, FaCrown, FaGem, FaStar, FaBars, FaTimes, FaInfinity,
 import { GiDiamondTrophy, GiCrystalShine, GiSparkles, GiPearlNecklace } from 'react-icons/gi'
 import { HiSparkles } from 'react-icons/hi'
 import { BiDiamond } from 'react-icons/bi'
-import { variantConfig } from '../../lib/variant-utils'
+import { variantConfig } from '../../../lib/variant-utils'
 
 export default function PlatinumVariant() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

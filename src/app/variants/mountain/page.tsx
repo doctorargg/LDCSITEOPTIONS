@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaMountain, FaTree, FaHiking, FaCompass, FaSnowflake, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { GiMountainClimbing, GiPineTree, GiEagleHead, GiStonePath, GiMountainCave } from 'react-icons/gi';
 import { BiWind } from 'react-icons/bi';
-import { getVariantConfig } from '../../lib/variant-utils';
+import { getVariantConfig } from '../../../lib/variant-utils';
 
 const config = getVariantConfig();
 

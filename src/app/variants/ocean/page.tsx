@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaWater, FaAnchor, FaShip, FaFish, FaUmbrellaBeach, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { GiWaveCrest, GiSeashell, GiDolphin, GiCoral, GiLighthouse } from 'react-icons/gi';
 import { BiWater } from 'react-icons/bi';
-import { getVariantConfig } from '../../lib/variant-utils';
+import { getVariantConfig } from '../../../lib/variant-utils';
 
 const config = getVariantConfig();
 

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { FaCrown, FaSceptre, FaGem, FaChessKing, FaRing, FaBars, FaTimes, FaShieldAlt, FaMedal } from 'react-icons/fa'
 import { GiImperialCrown, GiLaurelCrown, GiQueenCrown, GiRoyalLove, GiCastle, GiThroneKing } from 'react-icons/gi'
 import { BsFillStarFill } from 'react-icons/bs'
-import { variantConfig } from '../../lib/variant-utils'
+import { variantConfig } from '../../../lib/variant-utils'
 
 export default function RoyalVariant() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

@@ -7,7 +7,7 @@ import { FaCity, FaBuilding, FaTaxi, FaSubway, FaBriefcase, FaBars, FaTimes, FaM
 import { MdApartment, MdLocationCity, MdElevator, MdLocalHospital } from 'react-icons/md'
 import { GiModernCity, GiCityGate, GiStreetLight } from 'react-icons/gi'
 import { BiBuildings } from 'react-icons/bi'
-import { variantConfig } from '../../lib/variant-utils'
+import { variantConfig } from '../../../lib/variant-utils'
 
 export default function MetropolitanVariant() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

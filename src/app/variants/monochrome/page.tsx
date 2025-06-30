@@ -17,7 +17,7 @@ import {
   FaDiamond,
   FaCircle
 } from 'react-icons/fa';
-import { getImagePath } from '../../lib/variant-utils';
+import { getImagePath } from '../../../lib/variant-utils';
 
 export default function MonochromeVariant() {
   return (

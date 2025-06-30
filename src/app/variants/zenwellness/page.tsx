@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaLeaf, FaYinYang, FaBrain, FaMedkit, FaHeart, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { GiLotus, GiBamboo, GiMeditation, GiStoneStack, GiCherryBlossom } from 'react-icons/gi';
-import { getVariantConfig } from '../../lib/variant-utils';
+import { getVariantConfig } from '../../../lib/variant-utils';
 
 const config = getVariantConfig();
 

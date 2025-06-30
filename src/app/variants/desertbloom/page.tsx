@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaSun, FaSpa, FaHotjar, FaMortarPestle, FaGem, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { GiCactus, GiDesert, GiOasis, GiSandsOfTime, GiFlowerPot } from 'react-icons/gi';
 import { BiSpa } from 'react-icons/bi';
-import { getVariantConfig } from '../../lib/variant-utils';
+import { getVariantConfig } from '../../../lib/variant-utils';
 
 const config = getVariantConfig();
 

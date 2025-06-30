@@ -16,7 +16,7 @@ import {
   FaNewspaper,
   FaBookOpen
 } from 'react-icons/fa';
-import { getImagePath } from '../../lib/variant-utils';
+import { getImagePath } from '../../../lib/variant-utils';
 
 export default function EditorialVariant() {
   return (

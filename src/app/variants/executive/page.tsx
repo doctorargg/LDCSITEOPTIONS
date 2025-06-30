@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { FaBriefcase, FaChartLine, FaUserTie, FaHandshake, FaAward, FaBars, FaTimes, FaShieldAlt, FaClock, FaGlobe } from 'react-icons/fa'
 import { MdBusinessCenter, MdHealthAndSafety, MdDashboard } from 'react-icons/md'
 import { BsGraphUpArrow, BsPersonCheck, BsCurrencyDollar } from 'react-icons/bs'
-import { variantConfig } from '../../lib/variant-utils'
+import { variantConfig } from '../../../lib/variant-utils'
 
 export default function ExecutiveVariant() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

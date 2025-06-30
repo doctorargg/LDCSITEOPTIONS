@@ -90,3 +90,9 @@ export const designTokens = {
     text: '#212529',
   },
 };
+
+// Helper function to get variant config
+export const getVariantConfig = () => variantConfig;
+
+// Helper function to get image path
+export const getImagePath = (imageName: string) => `/images/${imageName}`;

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaTree, FaLeaf, FaSeedling, FaFeatherAlt, FaPaw, FaEnvelope, FaPhone, FaMapMarkerAlt, FaQuoteLeft, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { GiTreeBranch, GiOakLeaf, GiMushroomGills, GiBirch, GiSquirrel } from 'react-icons/gi';
 import { BiLeaf } from 'react-icons/bi';
-import { getVariantConfig } from '../../lib/variant-utils';
+import { getVariantConfig } from '../../../lib/variant-utils';
 
 const config = getVariantConfig();
 
