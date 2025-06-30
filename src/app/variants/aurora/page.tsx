@@ -14,7 +14,6 @@ import {
   FaMapMarkerAlt,
   FaChevronRight,
   FaMagic,
-  FaSparkles,
   FaMoon
 } from 'react-icons/fa'
 
@@ -164,7 +163,7 @@ export default function AuroraVariant() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2"
               >
-                <FaSparkles className="w-5 h-5" />
+                <FaMagic className="w-5 h-5" />
                 <span>Begin Your Journey</span>
               </motion.button>
               <motion.button
@@ -326,7 +325,7 @@ export default function AuroraVariant() {
                 {[
                   { icon: FaSun, text: 'Illuminating Health Solutions', glow: 'from-yellow-400 to-orange-400' },
                   { icon: FaMoon, text: 'Holistic Night & Day Care', glow: 'from-blue-400 to-purple-400' },
-                  { icon: FaSparkles, text: 'Breakthrough Treatments', glow: 'from-pink-400 to-purple-400' }
+                  { icon: FaMagic, text: 'Breakthrough Treatments', glow: 'from-pink-400 to-purple-400' }
                 ].map((item, index) => (
                   <motion.div
                     key={index}

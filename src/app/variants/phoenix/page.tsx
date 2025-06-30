@@ -14,7 +14,6 @@ import {
   FaMapMarkerAlt,
   FaChevronRight,
   FaFeatherAlt,
-  FaFlame,
   FaSun
 } from 'react-icons/fa'
 
@@ -183,7 +182,7 @@ export default function PhoenixVariant() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-xl hover:shadow-orange-500/25 transition-all flex items-center justify-center space-x-2"
               >
-                <FaFlame className="w-5 h-5" />
+                <FaFire className="w-5 h-5" />
                 <span>Ignite Your Transformation</span>
               </motion.button>
               <motion.button
@@ -342,7 +341,7 @@ export default function PhoenixVariant() {
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: FaFlame, text: 'Transformative Healing Programs', glow: true },
+                  { icon: FaFire, text: 'Transformative Healing Programs', glow: true },
                   { icon: FaFeatherAlt, text: 'Renewal & Regeneration Therapies', glow: false },
                   { icon: FaSun, text: 'Vitality Restoration Protocols', glow: true }
                 ].map((item, index) => (
@@ -404,7 +403,7 @@ export default function PhoenixVariant() {
               {
                 title: 'Transformation Therapy',
                 description: 'Emerge renewed from within',
-                icon: FaFlame,
+                icon: FaFire,
                 image: '/Lotus Midjourney Flowers/lotus-functional-medicine-hero.png',
                 flame: 'from-orange-500 to-yellow-500',
                 delay: 0.2
