@@ -13,7 +13,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaChevronRight,
-  FaTint,
   FaStream,
   FaUmbrellaBeach
 } from 'react-icons/fa'
